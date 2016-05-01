@@ -1,0 +1,29 @@
+{
+  "version": "1.0.0",
+  "name": "Bapul Starter Kit",
+  "launch_path": "/index.html",
+  "description": "빠른 모바일 웹 애플리케이션을 구축 할 수 있도록 도와주는 프런트 엔드 템플릿입니다.",
+  "icons": {
+    "128": "/images/touch/bapul-icon.png"
+  },
+  "developer": {
+    "name": "",
+    "url": ""
+  },
+  "installs_allowed_from": [
+    "*"
+  ],
+  "default_locale": "ko",
+  "permissions": {
+  },
+  "locales": {
+    "ko": {
+      "name": "Bapul Starter Kit",
+      "description": "빠른 모바일 웹 애플리케이션을 구축 할 수 있도록 도와주는 프런트 엔드 템플릿입니다.",
+    },
+    "en": {
+      "name": "Bapul Starter Kit",
+      "description": "A front-end template that helps you build fast, modern mobile web apps."
+    }
+  }
+}

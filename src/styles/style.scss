@@ -1,0 +1,14 @@
+// sprite
+@import 'sprite';
+
+// icon-font
+@import 'bapul-icon-font';
+
+// mixins
+@import 'mixins';
+
+$h1-color: #00f;
+
+h1 {
+  color: $h1-color;
+}

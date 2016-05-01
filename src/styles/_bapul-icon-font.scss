@@ -1,0 +1,33 @@
+@font-face {
+	font-family: "bapul-icon-font";
+	src: url('../fonts/bapul-icon-font/bapul-icon-font.eot');
+	src: url('../fonts/bapul-icon-font/bapul-icon-font.eot?#iefix') format('eot'),
+		url('../fonts/bapul-icon-font/bapul-icon-font.woff') format('woff'),
+		url('../fonts/bapul-icon-font/bapul-icon-font.ttf') format('truetype'),
+		url('../fonts/bapul-icon-font/bapul-icon-font.svg#bapul-icon-font') format('svg');
+}
+
+.bp:before {
+	font-family: "bapul-icon-font";
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	/* speak: none; only necessary if not using the private unicode range (firstGlyph option) */
+	text-decoration: none;
+	text-transform: none;
+}
+
+
+.bp-email:before {
+	content: "\E001";
+}
+
+.bp-radio:before {
+	content: "\E002";
+}
+
+.bp-repair:before {
+	content: "\E003";
+}

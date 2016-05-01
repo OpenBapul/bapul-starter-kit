@@ -1,0 +1,25 @@
+{
+  "name": "Bapul Starter Kit",
+  "short_name": "Bapul",
+  "icons": [{
+    "src": "images/touch/bapul-icon.png",
+    "sizes": "128x128",
+    "type": "image/png"
+  }, {
+    "src": "images/touch/bapul-apple-touch-icon.png",
+    "sizes": "152x152",
+    "type": "image/png"
+  }, {
+    "src": "images/touch/bapul-ms-touch-icon.png",
+    "sizes": "144x144",
+    "type": "image/png"
+  }, {
+    "src": "images/touch/bapul-chrome-touch-icon.png",
+    "sizes": "192x192",
+    "type": "image/png"
+  }],
+  "start_url": "/index.html?homescreen=1",
+  "display": "standalone",
+  "background_color": "#EC407A",
+  "theme_color": "#F06292"
+}

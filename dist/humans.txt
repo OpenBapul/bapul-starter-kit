@@ -1,0 +1,19 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+Web Developer: Jake Joo
+Facebook: https://www.facebook.com/joogeunjae
+Github: https://github.com/gjjoo
+Email: joogeunjae@gmail.com
+From: South of Korea
+
+# THANKS
+name: Me
+
+# TECHNOLOGY COLOPHON
+Last update: 2016/05/01
+Language: Korea
+Standards: HTML5, CSS3,..
+Components: Modernizr, jQuery, Angularjs, etc.
+IDE: WebStorm, Photoshop

@@ -1,0 +1,27 @@
+[class*="sprite-"] {
+  display: block;
+  overflow: hidden;
+  text-indent: -9999em;
+  background-image: url("../images/sprite.png");
+}
+
+.no-img [class*="sprite-"] {
+  overflow: visible;
+  text-indent: 0;
+}
+
+.sprite-ironman_bronze {
+  width: 128px;
+  height: 128px;
+  background-position: 0px 0px;
+}
+.sprite-ironman_gold {
+  width: 128px;
+  height: 128px;
+  background-position: -128px 0px;
+}
+.sprite-ironman_silver {
+  width: 128px;
+  height: 128px;
+  background-position: 0px -128px;
+}

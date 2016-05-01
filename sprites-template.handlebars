@@ -1,0 +1,19 @@
+[class*="sprite-"] {
+  display: block;
+  overflow: hidden;
+  text-indent: -9999em;
+  background-image: url("../images/sprite.png");
+}
+
+.no-img [class*="sprite-"] {
+  overflow: visible;
+  text-indent: 0;
+}
+
+{{#sprites}}
+.sprite-{{name}} {
+  width: {{px.width}};
+  height: {{px.height}};
+  background-position: {{px.offset_x}} {{px.offset_y}};
+}
+{{/sprites}}
