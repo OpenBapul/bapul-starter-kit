@@ -1,5 +1,3 @@
-# Bapul Starter Kit
-
 <div align="center"><img src="./dist/images/bapul-starter-kit.png" alt="bapul-starter-kit"></div>
 
 ## ✿ Overview
