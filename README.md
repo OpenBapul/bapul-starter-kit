@@ -2,14 +2,14 @@
 
 <div align="center"><img src="./dist/images/bapul-starter-kit.png" alt="bapul-starter-kit"></div>
 
-## ❖ Overview
+## ✿ Overview
 __빠른 웹사이트 제작__을 위한 __Front-End 개발 도구__ 입니다.
 기본적으로 [__Node__](https://nodejs.org/), [__NPM__](https://www.npmjs.com/), [__Gulp__](http://gulpjs.com/), [__Sass__](http://www.sass-lang.com/), [__Babel__](https://babeljs.io/)을 사용합니다.<br>
 
 - __v1.x__: `node`, `npm`, `gulp`, `babel`, `sass`, `browserify` / `jQuery`, `angular1.x`
 
 
-## ❖ Features
+## ✿ Features
 Feacture | Summary
 ---------|---------
 실시간 웹 서버 테스트 환경 | `HTML`, `SASS`, `JS` 변경 내용을 실시간으로 확인하고 빌드합니다.
@@ -26,7 +26,7 @@ ES2015(ES6) | 최신 자바스크립트 버전인 ES2015를 지원합니다.
 웹브라우저 파일 캐쉬 | 파일 캐쉬를 통하여 웹사이트 속도 개선합니다.
 
 
-## ❖ Dependent Modules
+## ✿ Dependent Modules
 - __유틸리티(Utillities)__
   - [del](https://github.com/sindresorhus/del) - 폴더 및 파일 제거
   - [gulp](https://github.com/gulpjs/gulp) - 스트리밍 업무별 빌드 시스템
@@ -83,7 +83,7 @@ ES2015(ES6) | 최신 자바스크립트 버전인 ES2015를 지원합니다.
   - [gulp-ttf2woff2](https://github.com/nfroidure/gulp-ttf2woff2) - TTF 글꼴에서 WOFF2 글꼴 만들기
 
 
-## ❖ Installation & Version
+## ✿ Installation & Version
 ```sh
   node -version  # Nodejs 설치 및 버전 확인
   npm -version  # NPM 버전 확인
@@ -92,13 +92,13 @@ ES2015(ES6) | 최신 자바스크립트 버전인 ES2015를 지원합니다.
 ```
 
 
-## ❖ Requirements
+## ✿ Requirements
 - [Node](http://nodejs.org/) >=4.4.3
 - [NPM](https://www.npmjs.com/) >=2.15.1
 - [Sass](http://sass-lang.com/) >= 3.4.2
 
 
-## ❖ Gulp Tasks
+## ✿ Gulp Tasks
 - __기본 업무__
 ```sh
   gulp  # Gulp의 모든 업무를 수행 (clean 제외)
@@ -149,7 +149,7 @@ ES2015(ES6) | 최신 자바스크립트 버전인 ES2015를 지원합니다.
 ```
 
 
-## ❖ Browser Support
+## ✿ Browser Support
 - Chrome
 - Edge
 - Firefox
@@ -158,5 +158,5 @@ ES2015(ES6) | 최신 자바스크립트 버전인 ES2015를 지원합니다.
 - Internet Explorer 10+
 
 
-## ❖ License
+## ✿ License
 Copyright © 2016 [Bapul](https://about.bapul.net) Inc.
