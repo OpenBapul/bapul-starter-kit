@@ -1,3 +1,5 @@
+/*! Copyright 2016 Bapul, jake <gjjoo@bapul.net> */
+
 'use strict';
 
 import path from 'path';
@@ -5,7 +7,7 @@ import del from 'del';
 import runSequence from 'run-sequence';
 import browserSync from 'browser-sync';
 import gulp from 'gulp';
-import gulpfileConfig from './gulpfile.config';
+import {config} from './gulpfile.config';
 import gulpLoadPlugins from 'gulp-load-plugins';
 import buffer from 'vinyl-buffer';
 import source from 'vinyl-source-stream';
@@ -20,12 +22,12 @@ import babelify from 'babelify';
 import watchify from 'watchify';
 import assign from 'lodash.assign';
 
-const config = gulpfileConfig();
 const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
 
 /**
  * Default Task
+ * 걸프(Gulp)의 모든 업무 수행
  */
 gulp.task('default', (cb) => {
   runSequence(
@@ -36,6 +38,7 @@ gulp.task('default', (cb) => {
 
 /**
  * Clean Task
+ * 파일 및 폴더 삭제 처리
  */
 gulp.task('clean', () => {
   del(config.dir.clean, {dot: true});
@@ -43,8 +46,9 @@ gulp.task('clean', () => {
 
 /**
  * Copy Task
+ * 별도의 다른 처리과정 없이 복사만 하여 사용하는 파일들
  */
-gulp.task('copy', ['copy:font'], () => {
+gulp.task('copy', ['copy:font', 'copy:sw-scripts'], () => {
   gulp.src(config.dir.copy.root.src)
     .pipe($.size({title: 'copy: '}))
     .pipe(gulp.dest(config.dir.copy.root.dest));
@@ -60,6 +64,7 @@ gulp.task('copy:sw-scripts', () => {
 
 /**
  * Server Task
+ * Javascript, Sass, HTML을 지속적인 감시를 통해 변경 항목만 웹브라우저 자동 리로딩
  */
 gulp.task('serve', ['views', 'styles', 'scripts'], () => {
   browserSync.init(config.BROWSER_SYNC);
@@ -71,6 +76,7 @@ gulp.task('serve', ['views', 'styles', 'scripts'], () => {
 
 /**
  * View Task
+ * HTML 압축
  */
 gulp.task('views', () => {
   gulp.src(config.dir.html.src)
@@ -81,6 +87,7 @@ gulp.task('views', () => {
 
 /**
  * Style Task
+ * Sass를 CSS로 변환한다.
  */
 gulp.task('styles', () => {
   gulp.src(config.dir.sass.src)
@@ -95,9 +102,9 @@ gulp.task('styles', () => {
 
 /**
  * Sass Lint Task
- * Sass파일을 유효검사 한다.
+ * Sass 유효성 검사
  */
-gulp.task('sass:lint', () => {
+gulp.task('styles:lint', () => {
   gulp.src(config.dir.sass.src)
     .pipe($.sassLint())
     .pipe($.sassLint.format())
@@ -125,9 +132,9 @@ gulp.task('scripts', bundleHandler);
 
 /**
  * Script Lint Task
- * 자바스크립트 스타일(jscs) 및 유효검사(jshint)를 한다.
+ * 자바스크립트 코드 스타일(jscs) 및 유효성 검사(jshint)
  */
-gulp.task('js:lint', () => {
+gulp.task('scripts:lint', () => {
   gulp.src(config.dir.js.src)
     .pipe($.print())
     .pipe($.jscs())
@@ -138,7 +145,7 @@ gulp.task('js:lint', () => {
 
 /**
  * Image Task
- * 이미지를 캐쉬 및 압축하여 용량을 줄인다.
+ * 이미지를 캐쉬 및 압축
  */
 gulp.task('images', () => {
   gulp.src(config.dir.img.src)
@@ -152,7 +159,7 @@ gulp.task('images', () => {
 
 /**
  * Sprite Task
- * 이미지를 스프라이트 하여 Request 수를 줄인다.
+ * 이미지를 스프라이트 처리하여 Request 수 감소
  */
 gulp.task('sprite', () => {
   const spriteData = gulp.src('src/images/sprites/*.png').pipe($.spritesmith({
@@ -183,7 +190,7 @@ gulp.task('sprite', () => {
 
 /**
  * Iconfont Task
- * SVG를 폰트화 한다. (※ 폰트화 할 경우 단색만 적용 가능)
+ * SVG를 폰트화 (※ 폰트화 할 경우 단색만 적용 가능)
  */
 gulp.task('iconfont', () => {
   gulp.src(['src/icons/*.svg'])
@@ -203,6 +210,7 @@ gulp.task('iconfont', () => {
 
 /**
  * Service Worker Task
+ * 파일을 캐쉬하여 사용하고자 할 경우 (※ Production에서만 사용)
  */
 gulp.task('generate-service-worker', ['copy:sw-scripts'], () => {
   const rootDir = 'dist';
@@ -215,7 +223,6 @@ gulp.task('generate-service-worker', ['copy:sw-scripts'], () => {
       'scripts/sw/runtime-caching.js'
     ],
     staticFileGlobs: [
-      // Add/remove glob patterns to match your directory setup.
       `${rootDir}/images/**/*`,
       `${rootDir}/scripts/**/*.js`,
       `${rootDir}/styles/**/*.css`,
