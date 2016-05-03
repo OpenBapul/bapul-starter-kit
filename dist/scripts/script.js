@@ -42781,7 +42781,7 @@ dev();
 foo = foo;exports.
 bar = bar; /**
             * Created by gjjoo on 2016. 5. 1..
-            */function foo() {console.log('foo');}function bar() {console.log('bar');}
+            */function foo() {console.log('푸우우우우우');}function bar() {console.log('바아아아아아알');}
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/src/scripts/test.js","/src/scripts")
 
