@@ -4,11 +4,23 @@
 // icon-font
 @import 'bapul-icon-font';
 
-// mixins
-@import 'mixins';
+// ------------------------------
+// Utils
+// ------------------------------
+@import 'utils/variables';
+@import 'utils/variables-colors';
+@import 'utils/mixins';
+@import 'utils/functions';
+@import 'utils/helpers';
 
-$h1-color: #00f;
+// ------------------------------
+// Components
+// ------------------------------
+@import 'components/font';
+@import 'components/color';
 
-h1 {
-  color: $h1-color;
-}
+// ------------------------------
+// Base
+// ------------------------------
+@import 'base/base';
+

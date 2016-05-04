@@ -1,0 +1,35 @@
+// Google Web Fonts
+//@import url('http://fonts.googleapis.com/css?family=Roboto:400,300italic,100,100italic,300,400italic,500,500italic,700,700italic,900,900italic');
+//@import url('http://fonts.googleapis.com/earlyaccess/notosanskr.css');
+//@import url('http://fonts.googleapis.com/earlyaccess/notosansjp.css');
+//@import url('http://fonts.googleapis.com/earlyaccess/notosanssc.css');
+
+// Generate Roboto Font
+@include roboto-font-pair('Thin', 100);
+@include roboto-font-pair('Light', 300);
+@include roboto-font-pair('Regular', 400);
+@include roboto-font-pair('Medium', 500);
+@include roboto-font-pair('Bold', 700);
+@include roboto-font-pair('Black', 900);
+
+// Generate Noto Font (Korea, Japan, China)
+@include noto-font('Noto Sans KR', 'NotoSansKR', 'Thin', 100);
+@include noto-font('Noto Sans KR', 'NotoSansKR', 'Light', 300);
+@include noto-font('Noto Sans KR', 'NotoSansKR', 'Regular', 400);
+@include noto-font('Noto Sans KR', 'NotoSansKR', 'Medium', 500);
+@include noto-font('Noto Sans KR', 'NotoSansKR', 'Bold', 700);
+@include noto-font('Noto Sans KR', 'NotoSansKR', 'Black', 900);
+
+@include noto-font('Noto Sans JP', 'NotoSansJP', 'Thin', 100);
+@include noto-font('Noto Sans JP', 'NotoSansJP', 'Light', 300);
+@include noto-font('Noto Sans JP', 'NotoSansJP', 'Regular', 400);
+@include noto-font('Noto Sans JP', 'NotoSansJP', 'Medium', 500);
+@include noto-font('Noto Sans JP', 'NotoSansJP', 'Bold', 700);
+@include noto-font('Noto Sans JP', 'NotoSansJP', 'Black', 900);
+
+@include noto-font('Noto Sans SC', 'NotoSansSC', 'Thin', 100);
+@include noto-font('Noto Sans SC', 'NotoSansSC', 'Light', 300);
+@include noto-font('Noto Sans SC', 'NotoSansSC', 'Regular', 400);
+@include noto-font('Noto Sans SC', 'NotoSansSC', 'Medium', 500);
+@include noto-font('Noto Sans SC', 'NotoSansSC', 'Bold', 700);
+@include noto-font('Noto Sans SC', 'NotoSansSC', 'Black', 900);

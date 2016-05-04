@@ -1,4 +1,5 @@
 # Default application configuration that all configurations inherit from.
+# https://github.com/brigade/scss-lint/tree/master/lib/scss_lint/linter
 
 scss_files: "**/*.scss"
 plugin_directories: ['.scss-linters']
@@ -31,7 +32,7 @@ linters:
     enabled: true
 
   ColorVariable:
-    enabled: true
+    enabled: false
 
   Comment:
     enabled: true
@@ -69,7 +70,7 @@ linters:
 
   HexLength:
     enabled: true
-    style: short # or 'long'
+    style: long # or 'long'
 
   HexNotation:
     enabled: true
@@ -82,7 +83,7 @@ linters:
     enabled: true
 
   ImportantRule:
-    enabled: true
+    enabled: false
 
   ImportPath:
     enabled: true
@@ -104,7 +105,7 @@ linters:
     force_nesting: true
 
   NameFormat:
-    enabled: true
+    enabled: false
     allow_leading_underscore: true
     convention: hyphenated_lowercase # or 'camel_case', or 'snake_case', or a regex pattern
 

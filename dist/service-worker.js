@@ -31,7 +31,7 @@ importScripts("scripts/sw/sw-toolbox.js","scripts/sw/runtime-caching.js");
 
 
 /* eslint-disable quotes, comma-spacing */
-var PrecacheConfig = [["index.html","40937cb72544e2f0d87acb52a523dbde"],["manifest.json","0b4e770a3a2987441f2bc4436c0a9924"],["scripts/script.js","35eed1f08bd0a1e01ebf85415d017d57"],["scripts/sw/runtime-caching.js","b1d20291b8132f3b6a4d80faee7e0778"],["scripts/sw/sw-toolbox.js","42dd9073ba0a0c8e0ae2230432870678"],["styles/style.css","65270444fea1950e67042c57bd40bd00"]];
+var PrecacheConfig = [["images/bapul-starter-kit.png","e20045274d7f097dd5bcfbca03279ae1"],["images/sprite.png","8cac544f6b799dec59c4618052341aba"],["images/touch/bapul-apple-touch-icon.png","5f2682a41d5ad8ea725110a1b39f37ab"],["images/touch/bapul-chrome-touch-icon.png","f40fbb65a84e2bf82906d6f00dd68cc6"],["images/touch/bapul-icon.png","2fa096d82ba7a65a03d2f4aff3d2008b"],["images/touch/bapul-ms-touch-icon.png","fd96fdf7b1a9d5780a038899aa6d08b2"],["images/touch/bapul.png","14f9d4549d7fc43626812bed5b6b5031"],["index.html","74d0e29ca278c8d4b8d12291f11469d4"],["manifest.json","0b4e770a3a2987441f2bc4436c0a9924"],["scripts/script.js","35eed1f08bd0a1e01ebf85415d017d57"],["scripts/sw/runtime-caching.js","b1d20291b8132f3b6a4d80faee7e0778"],["scripts/sw/sw-toolbox.js","42dd9073ba0a0c8e0ae2230432870678"],["styles/style.css","b945d911f8a7e092858418813c729158"]];
 /* eslint-enable quotes, comma-spacing */
 var CacheNamePrefix = 'sw-precache-v1-bapul-starter-kit-' + (self.registration ? self.registration.scope : '') + '-';
 

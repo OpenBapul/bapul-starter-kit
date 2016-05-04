@@ -87,7 +87,7 @@ const _BROWSER_SYNC = {
  * @private
  */
 const _SASS_OPTION = {
-  outputStyle: 'compressed',  // CSS 출력 스타일 (expanded, nested, compact, compressed)
+  outputStyle: 'expanded',  // CSS 출력 스타일 (expanded, nested, compact, compressed)
   indentType: 'space',        // 들여쓰기 유형 (space, tab)
   indentWidth: 2,             // 들여쓰기 폭 (2 ~ 10)
   percision: 4,               // 수치 정확도 (소수점 이하 자리 수)

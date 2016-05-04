@@ -23,7 +23,6 @@ import watchify from 'watchify';
 import assign from 'lodash.assign';
 
 const $ = gulpLoadPlugins();
-const reload = browserSync.reload;
 
 /**
  * Default Task
@@ -70,8 +69,8 @@ gulp.task('copy:sw-scripts', () => {
 gulp.task('serve', ['views', 'styles', 'scripts'], () => {
   browserSync.init(config.BROWSER_SYNC);
 
-  gulp.watch([config.dir.html.src], ['views', reload]);
-  gulp.watch([config.dir.sass.src], ['styles', reload]);
+  gulp.watch([config.dir.html.src], ['views']);
+  gulp.watch([config.dir.sass.src], ['styles']);
   bundler.on('update', bundleHandler).on('log', $.util.log);
 });
 
@@ -83,7 +82,8 @@ gulp.task('views', () => {
   gulp.src(config.dir.html.src)
     .pipe($.htmlmin(config.HTML_MIN))
     .pipe($.size({title: 'views: '}))
-    .pipe(gulp.dest(config.dir.html.dest));
+    .pipe(gulp.dest(config.dir.html.dest))
+    .pipe(browserSync.stream());
 });
 
 /**
@@ -98,7 +98,8 @@ gulp.task('styles', () => {
     .pipe($.autoprefixer(config.AUTOPREFIXER))
     .pipe($.size({title: 'styles: '}))
     .pipe($.sourcemaps.write('./'))
-    .pipe(gulp.dest(config.dir.sass.dest));
+    .pipe(gulp.dest(config.dir.sass.dest))
+    .pipe(browserSync.stream());
 });
 
 /**
