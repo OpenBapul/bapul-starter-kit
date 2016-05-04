@@ -1,4 +1,4 @@
-/*! Copyright 2016 Bapul, jake <gjjoo@bapul.net> */
+/*! Copyright © 2016 Bapul, jake <gjjoo@bapul.net> */
 
 'use strict';
 
@@ -31,6 +31,7 @@ const reload = browserSync.reload;
  */
 gulp.task('default', (cb) => {
   runSequence(
+    ['sprite', 'iconfont'],
     ['views', 'styles', 'scripts', 'images', 'copy'],
     'generate-service-worker',
     cb);
@@ -75,7 +76,7 @@ gulp.task('serve', ['views', 'styles', 'scripts'], () => {
 });
 
 /**
- * View Task
+ * Views Task
  * HTML 압축
  */
 gulp.task('views', () => {
@@ -86,7 +87,7 @@ gulp.task('views', () => {
 });
 
 /**
- * Style Task
+ * Styles Task
  * Sass를 CSS로 변환한다.
  */
 gulp.task('styles', () => {
@@ -101,7 +102,7 @@ gulp.task('styles', () => {
 });
 
 /**
- * Sass Lint Task
+ * Styles Lint Task
  * Sass 유효성 검사
  */
 gulp.task('styles:lint', () => {
@@ -112,7 +113,7 @@ gulp.task('styles:lint', () => {
 });
 
 /**
- * Script Task
+ * Scripts Task
  * 자바스크립트 번들링
  */
 const opts = assign({}, watchify.args, config.BROWSERIFY);
@@ -131,8 +132,8 @@ const bundleHandler = () => {
 gulp.task('scripts', bundleHandler);
 
 /**
- * Script Lint Task
- * 자바스크립트 코드 스타일(jscs) 및 유효성 검사(jshint)
+ * Scripts Lint Task
+ * 자바스크립트 코드 스타일(jscs) 확인 및 유효성 검사(jshint)
  */
 gulp.task('scripts:lint', () => {
   gulp.src(config.dir.js.src)
@@ -144,8 +145,8 @@ gulp.task('scripts:lint', () => {
 });
 
 /**
- * Image Task
- * 이미지를 캐쉬 및 압축
+ * Images Task
+ * 이미지 캐쉬 및 압축
  */
 gulp.task('images', () => {
   gulp.src(config.dir.img.src)
@@ -203,7 +204,7 @@ gulp.task('iconfont', () => {
     .pipe($.iconfont({
       fontName: 'bapul-icon-font',
       prependUnicode: true,
-      formats: ['ttf', 'eot', 'woff']
+      formats: ['ttf', 'eot', 'woff', 'svg']
     }))
     .pipe(gulp.dest('src/fonts/bapul-icon-font/'));
 });

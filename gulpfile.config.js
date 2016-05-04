@@ -1,4 +1,4 @@
-/*! Copyright 2016 Bapul, jake <gjjoo@bapul.net> */
+/*! Copyright © 2016 Bapul, jake <gjjoo@bapul.net> */
 
 'use strict';
 
@@ -18,6 +18,8 @@ const _development = 'dist/';
 
 /**
  * 폴더 경로 설정
+ * @type {object}
+ * @private
  */
 const _dir = {
   // 제거
@@ -69,6 +71,7 @@ const _dir = {
 /**
  * browser-sync options
  * @reference https://www.browsersync.io/docs/gulp/
+ * @private
  */
 const _BROWSER_SYNC = {
   server: {
@@ -81,6 +84,7 @@ const _BROWSER_SYNC = {
 /**
  * gulp-sass options
  * @reference https://github.com/sass/node-sass#options
+ * @private
  */
 const _SASS_OPTION = {
   outputStyle: 'compressed',  // CSS 출력 스타일 (expanded, nested, compact, compressed)
@@ -93,6 +97,7 @@ const _SASS_OPTION = {
 /**
  * gulp-autoprefixer options
  * @reference https://github.com/postcss/autoprefixer#options
+ * @private
  */
 const _AUTOPREFIXER = [
   'ie >= 10',       // Internet Explorer
@@ -109,6 +114,7 @@ const _AUTOPREFIXER = [
 /**
  * gulp-htmlmin options
  * @reference https://github.com/kangax/html-minifier
+ * @private
  */
 const _HTML_MIN = {
   collapseWhitespace: true
@@ -117,6 +123,7 @@ const _HTML_MIN = {
 /**
  * gulp-uglify options
  * @reference https://github.com/terinjokes/gulp-uglify#options
+ * @private
  */
 const _UGLIFY = {
   preserveComments: 'some'
@@ -125,6 +132,7 @@ const _UGLIFY = {
 /**
  * browserify options
  * @reference https://www.npmjs.com/package/browserify#browserifyfiles--opts
+ * @private
  */
 const _BROWSERIFY = {
   entries: './src/scripts/script.js', // 번들 엔트리 파일 설정

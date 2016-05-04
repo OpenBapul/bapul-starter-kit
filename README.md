@@ -70,15 +70,15 @@ ES2015(ES6) | 최신 자바스크립트 버전인 ES2015를 지원합니다.
   - [gulp-imagemin](https://github.com/sindresorhus/gulp-imagemin) - `PNG`, `JPEG`, `GIF` 및 `SVG` 이미지를 압축
   - [imagemin-pngquant](https://github.com/imagemin/imagemin-pngquant) - `imagemin`을 위한 최적화 플러그인
 - __이미지 스프라이트(Sprites) 및 아이콘폰트(Iconfont)__
-  - [gulp-iconfont](https://github.com/nfroidure/gulp-iconfont) - 여러 SVG 아이콘을 이용하여 아이콘 글꼴 생성
+  - [gulp-iconfont](https://github.com/nfroidure/gulp-iconfont) - 여러 `SVG` 아이콘을 이용하여 아이콘 글꼴 생성
   - [gulp-iconfont-css](https://github.com/backflip/gulp-iconfont-css) - `iconfont`로 글꼴을 만들 때 `Sass/SCSS` 또는 `CSS`를 만들어 주는 플러그인
-  - [gulp.spritesmith](https://github.com/twolfson/gulp.spritesmith) - 스프라이트 이미지 및 CSS 변수를 생성
-  - [gulp-svg-sprite](https://github.com/jkphl/gulp-svg-sprite) - SVG 스프라이트
-  - [gulp-svg2ttf](https://github.com/nfroidure/gulp-svg2ttf) - SVG 글꼴에서 TTF 글꼴 만들기
-  - [gulp-svgicons2svgfont](https://github.com/nfroidure/gulp-svgicons2svgfont) - 하나의 글꼴에 여러 SVG를 번들
-  - [gulp-ttf2eot](https://github.com/nfroidure/gulp-ttf2eot) - TTF 글꼴에서 EOF 글꼴 만들기
-  - [gulp-ttf2woff](https://github.com/nfroidure/gulp-ttf2woff) - TTF 글꼴에서 WOFF 글꼴 만들기
-  - [gulp-ttf2woff2](https://github.com/nfroidure/gulp-ttf2woff2) - TTF 글꼴에서 WOFF2 글꼴 만들기
+  - [gulp.spritesmith](https://github.com/twolfson/gulp.spritesmith) - 스프라이트 이미지 및 `CSS` 변수를 생성
+  - [gulp-svg-sprite](https://github.com/jkphl/gulp-svg-sprite) - `SVG` 스프라이트
+  - [gulp-svg2ttf](https://github.com/nfroidure/gulp-svg2ttf) - `SVG` 글꼴에서 `TTF` 글꼴 만들기
+  - [gulp-svgicons2svgfont](https://github.com/nfroidure/gulp-svgicons2svgfont) - 하나의 글꼴에 여러 `SVG`를 번들(Bundle)
+  - [gulp-ttf2eot](https://github.com/nfroidure/gulp-ttf2eot) - `TTF` 글꼴에서 `EOF` 글꼴 만들기
+  - [gulp-ttf2woff](https://github.com/nfroidure/gulp-ttf2woff) - `TTF` 글꼴에서 `WOFF` 글꼴 만들기
+  - [gulp-ttf2woff2](https://github.com/nfroidure/gulp-ttf2woff2) - `TTF` 글꼴에서 `WOFF2` 글꼴 만들기
 
 
 ## ✿ Installation
@@ -161,7 +161,7 @@ ES2015(ES6) | 최신 자바스크립트 버전인 ES2015를 지원합니다.
 - Firefox
 - Safari
 - Opera
-- Internet Explorer 10+ (※ include Angularjs1.x)
+- Internet Explorer 10+ __(※ include Angularjs1.x)__
 
 
 ## ✿ License
