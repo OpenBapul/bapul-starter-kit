@@ -18,7 +18,8 @@
   "license": "ISC",
   "dependencies": {
     "angular": "^1.5.5",
-    "jquery": "^2.2.3"
+    "jquery": "^2.2.3",
+    "normalize-scss": "^4.2.1"
   },
   "devDependencies": {
     "babel-core": "^6.7.7",
@@ -63,6 +64,7 @@
     "sassdoc": "^2.1.20",
     "sw-precache": "^3.1.1",
     "sw-toolbox": "^3.1.1",
+    "uninstall": "0.0.0-reserved",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0",
     "watchify": "^3.7.0"

@@ -1,0 +1,52 @@
+/// 색상의 밝기 상태에 대비되는 색상 추출
+///
+/// @author jake <gjjoo@bapul.net>
+/// @access public
+/// @param {String} $color - 색상
+/// @example scss - 사용법
+///   .foo {
+///     background-color: #ffebee;
+///     color: auto-text-color(#ffebee);
+///   }
+///   .bar {
+///     background-color: #b71c1c;
+///     color: auto-text-color(#b71c1c);
+///   }
+/// @example css - CSS 아웃풋
+///   .foo {
+///     background-color: #ffebee;
+///     color: rgba(0, 0, 0, .87);
+///   }
+///   .bar {
+///     background-color: #b71c1c;
+///     color: rgb(255, 255, 255);
+///   }
+@function auto-text-color($color) {
+  @if (lightness($color) > 67) {
+    @return rgba(0, 0, 0, 0.87); // Lighter background, return dark color
+  } @else {
+    @return rgba(255, 255, 255, 0.87); // Darker background, return light color
+  }
+}
+
+/// RGBA 값을 추출 해주는 템플릿
+///
+/// @author jake <gjjoo@bapul.net>
+/// @access public
+/// @param {String} $color - 색상
+/// @param {Number} $alpha - 알파
+/// @example scss - 사용법
+///   .foo {
+///     color: rgba-tpl(rgb(0, 0, 0), 0.87);
+///   }
+/// @example css - CSS 아웃풋
+///   .foo {
+///     color: rgba(0, 0, 0, 0.87);
+///   }
+@function rgba-tpl($color, $alpha) {
+  @if type-of($color) == color {
+    @return rgba($color, $alpha);
+  } @else {
+    @return unquote("rgba(#{$color}, #{$alpha})");
+  }
+}

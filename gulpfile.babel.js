@@ -185,7 +185,7 @@ gulp.task('sprite', () => {
     .pipe(gulp.dest('src/images/'));
 
   const cssStream = spriteData.css
-    .pipe(gulp.dest('src/styles/'));
+    .pipe(gulp.dest('src/styles/components/'));
 
   return merge(imgStream, cssStream);
 });
@@ -199,7 +199,7 @@ gulp.task('iconfont', () => {
     .pipe($.iconfontCss({
       fontName: 'bapul-icon-font',
       cssClass: 'bp',
-      targetPath: '../../styles/_bapul-icon-font.scss',
+      targetPath: '../../styles/components/_iconfont.scss',
       fontPath: '../fonts/bapul-icon-font/'
     }))
     .pipe($.iconfont({

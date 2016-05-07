@@ -1,26 +1,47 @@
-// sprite
-@import 'sprite';
-
-// icon-font
-@import 'bapul-icon-font';
+// ------------------------------
+// Vendors
+// ------------------------------
+@import '../../node_modules/normalize-scss/sass/normalize/import-now';
 
 // ------------------------------
-// Utils
+// Mixins
 // ------------------------------
-@import 'utils/variables';
-@import 'utils/variables-colors';
-@import 'utils/mixins';
-@import 'utils/functions';
-@import 'utils/helpers';
+@import 'utils/mixins/size';
+@import 'utils/mixins/font';
+@import 'utils/mixins/typography';
+
+// ------------------------------
+// Functions
+// ------------------------------
+@import 'utils/functions/color';
+
+// ------------------------------
+// Variables
+// ------------------------------
+@import 'utils/variables/variables-colors';
+@import 'utils/variables/variables';
+
+// ------------------------------
+// Helpers
+// ------------------------------
+@import 'utils/helpers/float';
 
 // ------------------------------
 // Components
 // ------------------------------
 @import 'components/font';
+@import 'components/typography';
 @import 'components/color';
+@import 'components/sprite';
+@import 'components/iconfont';
 
 // ------------------------------
 // Base
 // ------------------------------
 @import 'base/base';
+
+// ------------------------------
+// Layout
+// ------------------------------
+@import 'layout/guide';
 
