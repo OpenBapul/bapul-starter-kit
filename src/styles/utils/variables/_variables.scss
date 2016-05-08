@@ -1,8 +1,33 @@
+// ------------------------------
+// 경로 설정
+// ------------------------------
+// 폰트 경로
 $font-path: '../fonts';
 
+
+// ------------------------------
+// 텍스트 색상 변수 설정
+// ------------------------------
+// 텍스트 검정색
 $text-color-black: rgba-tpl($color-black, 0.87) !default;
+// 텍스트 하얀색
 $text-color-white: rgba-tpl($color-white, 0.87) !default;
 
+
+// ------------------------------
+// 테마 기본 색상
+// ------------------------------
+// 기본 색상
 $color-primary: $palette-indigo-500 !default;
+// 어두운 기본색상
 $color-primary-dark: $palette-indigo-700 !default;
+// 강조 색상
 $color-accent: $palette-pink-A200 !default;
+// 기본 색상과 대비되는 색상
+$color-primary-contrast: $color-dark-contrast !default;
+// 강조 색상과 대비되는 색상
+$color-accent-contrast: $color-dark-contrast !default;
+// 기본 텍스트 색상
+$text-color-primary: rgba-tpl($color-black, 0.87) !default;
+// 링크 색상
+$text-link-color: $color-accent !default;

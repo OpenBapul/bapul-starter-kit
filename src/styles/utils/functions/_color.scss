@@ -19,7 +19,7 @@
 ///   }
 ///   .bar {
 ///     background-color: #b71c1c;
-///     color: rgb(255, 255, 255);
+///     color: rgb(255, 255, 255, 0.87);
 ///   }
 @function auto-text-color($color) {
   @if (lightness($color) > 67) {

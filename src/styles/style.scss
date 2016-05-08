@@ -1,9 +1,4 @@
 // ------------------------------
-// Vendors
-// ------------------------------
-@import '../../node_modules/normalize-scss/sass/normalize/import-now';
-
-// ------------------------------
 // Mixins
 // ------------------------------
 @import 'utils/mixins/size';
@@ -27,6 +22,12 @@
 @import 'utils/helpers/float';
 
 // ------------------------------
+// Base
+// ------------------------------
+@import 'base/normalize';
+@import 'base/base';
+
+// ------------------------------
 // Components
 // ------------------------------
 @import 'components/font';
@@ -34,11 +35,6 @@
 @import 'components/color';
 @import 'components/sprite';
 @import 'components/iconfont';
-
-// ------------------------------
-// Base
-// ------------------------------
-@import 'base/base';
 
 // ------------------------------
 // Layout
