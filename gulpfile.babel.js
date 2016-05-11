@@ -197,17 +197,17 @@ gulp.task('sprite', () => {
 gulp.task('iconfont', () => {
   gulp.src(['src/icons/*.svg'])
     .pipe($.iconfontCss({
-      fontName: 'bapul-icon-font',
+      fontName: 'BapulIcons-Regular',
       cssClass: 'bp',
-      targetPath: '../../styles/components/_iconfont.scss',
-      fontPath: '../fonts/bapul-icon-font/'
+      targetPath: '../../styles/components/_bapul-icons.scss',
+      fontPath: '../fonts/Bapul-Icons/'
     }))
     .pipe($.iconfont({
-      fontName: 'bapul-icon-font',
+      fontName: 'BapulIcons-Regular',
       prependUnicode: true,
-      formats: ['ttf', 'eot', 'woff', 'svg']
+      formats: ['ttf', 'eot', 'woff', 'woff2', 'svg']
     }))
-    .pipe(gulp.dest('src/fonts/bapul-icon-font/'));
+    .pipe(gulp.dest('src/fonts/Bapul-Icons/'));
 });
 
 /**

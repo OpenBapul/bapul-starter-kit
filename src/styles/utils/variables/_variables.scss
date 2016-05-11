@@ -1,22 +1,20 @@
-// ------------------------------
-// 경로 설정
-// ------------------------------
-// 폰트 경로
+// Roboto, Noto sans
 $font-path: '../fonts';
+// Material Design Iconic Font
+$zmdi-font-path: '../fonts/Material-Design-Iconic-Font';
+$md-font-path: '../fonts/Material-Design-Iconic-Font';
+// Material Design Icons
+$material-font-path: '../fonts/Material-Design-Icons';
+// Weather Icons
+$wi-path: '../fonts/Weather-Icons';
 
 
-// ------------------------------
-// 텍스트 색상 변수 설정
-// ------------------------------
 // 텍스트 검정색
 $text-color-black: rgba-tpl($color-black, 0.87) !default;
 // 텍스트 하얀색
 $text-color-white: rgba-tpl($color-white, 0.87) !default;
 
 
-// ------------------------------
-// 테마 기본 색상
-// ------------------------------
 // 기본 색상
 $color-primary: $palette-indigo-500 !default;
 // 어두운 기본색상

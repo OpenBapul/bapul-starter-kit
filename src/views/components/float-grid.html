@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>Grid</title>
+  <link rel="stylesheet" href="/styles/style.css">
+  <style>
+    body {
+      width: 480px;
+    }
+    .demo .col {
+      border: 1px solid #eee;
+      border-radius: 4px;
+      background: #F44336;
+      color: #fff;
+    }
+
+    @media screen and (min-width: 601px) and (max-width: 992px) {
+      body {
+        width: 720px;
+      }
+      .demo .col {
+        background: #E91E63;
+      }
+    }
+
+    @media screen and (min-width: 993px) and (max-width: 1200px) {
+      body {
+        width: 1100px;
+      }
+      .demo .col {
+        background: #9C27B0;
+      }
+    }
+
+    @media screen and (min-width: 1201px) {
+      body {
+        width: 1280px;
+      }
+      .demo .col {
+        background: #3F51B5;
+      }
+
+    }
+  </style>
+</head>
+<body class="demo">
+
+  <h1 class="color-text--grey-700">Float Grid</h1>
+
+  <div class="row">
+    <div class="col s1">s1</div>
+    <div class="col s1">s1</div>
+    <div class="col s1">s1</div>
+    <div class="col s1">s1</div>
+    <div class="col s1">s1</div>
+    <div class="col s1">s1</div>
+    <div class="col s1">s1</div>
+    <div class="col s1">s1</div>
+    <div class="col s1 hidden-s">s1</div>
+    <div class="col s1">s1</div>
+    <div class="col s1">s1</div>
+    <div class="col s1">s1</div>
+  </div>
+  <div class="row">
+    <div class="col s2">s2</div>
+    <div class="col s2">s2</div>
+    <div class="col s2">s2</div>
+    <div class="col s2">s2</div>
+    <div class="col s2">s2</div>
+    <div class="col s2">s2</div>
+  </div>
+  <div class="row">
+    <div class="col s3">s3</div>
+    <div class="col s3">s3</div>
+    <div class="col s3">s3</div>
+    <div class="col s3">s3</div>
+  </div>
+  <div class="row">
+    <div class="col s4">s4</div>
+    <div class="col s4">s4</div>
+    <div class="col s4">s4</div>
+  </div>
+  <div class="row">
+    <div class="col s6 offset-s3">s6</div>
+  </div>
+  <div class="row">
+    <div class="col s12">s12</div>
+  </div>
+  <div class="row">
+    <div class="col s2">A</div>
+    <div class="col s2 push-s6">B</div>
+    <div class="col s2">C</div>
+  </div>
+
+</body>
+</html>
