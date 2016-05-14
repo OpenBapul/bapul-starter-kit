@@ -91,3 +91,17 @@
          url('#{$font-path}/#{$name}/#{$name}-#{$type}.otf') format('opentype');
   }
 }
+
+@mixin spoqa-font($local, $name, $type, $weight, $style: normal) {
+  @font-face {
+    font-family: '#{$local}';
+    font-style: $style;
+    font-weight: $weight;
+    src: local('#{$local}'),
+         local('#{$name}-#{$type}'),
+         url('#{$font-path}/#{$name}/#{$name}-#{$type}.eot') format('eot'),
+         url('#{$font-path}/#{$name}/#{$name}-#{$type}.svg') format('svg'),
+         url('#{$font-path}/#{$name}/#{$name}-#{$type}.ttf') format('truetype'),
+         url('#{$font-path}/#{$name}/#{$name}-#{$type}.woff') format('woff');
+  }
+}

@@ -1,10 +1,12 @@
 // Google Web Fonts
-//@import url('http://fonts.googleapis.com/css?family=Roboto:400,300italic,100,100italic,300,400italic,500,500italic,700,700italic,900,900italic');
-//@import url('http://fonts.googleapis.com/earlyaccess/notosanskr.css');
-//@import url('http://fonts.googleapis.com/earlyaccess/notosansjp.css');
-//@import url('http://fonts.googleapis.com/earlyaccess/notosanssc.css');
+// @import url('http://fonts.googleapis.com/css?family=Roboto:400,300italic,100,100italic,300,400italic,500,500italic,700,700italic,900,900italic');
+// @import url('http://fonts.googleapis.com/earlyaccess/notosanskr.css');
+// @import url('http://fonts.googleapis.com/earlyaccess/notosansjp.css');
+// @import url('http://fonts.googleapis.com/earlyaccess/notosanssc.css');
+// @import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
+// @import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-jp.css);
 
-// Generate Roboto Font
+// Generate Roboto Font (English)
 @include roboto-font-pair('Thin', 100);
 @include roboto-font-pair('Light', 300);
 @include roboto-font-pair('Regular', 400);
@@ -33,3 +35,40 @@
 @include noto-font('Noto Sans SC', 'NotoSansSC', 'Medium', 500);
 @include noto-font('Noto Sans SC', 'NotoSansSC', 'Bold', 700);
 @include noto-font('Noto Sans SC', 'NotoSansSC', 'Black', 900);
+
+// Spoqa Han Sans Font (English, Korea, Japan)
+@include spoqa-font('Spoqa Han Sans', 'SpoqaHanSans', 'Thin', 200);
+@include spoqa-font('Spoqa Han Sans', 'SpoqaHanSans', 'Regular', 400);
+@include spoqa-font('Spoqa Han Sans', 'SpoqaHanSans', 'Bold', 700);
+
+@include spoqa-font('Spoqa Han Sans JP', 'SpoqaHanSansJP', 'Thin', 200);
+@include spoqa-font('Spoqa Han Sans JP', 'SpoqaHanSansJP', 'Regular', 400);
+@include spoqa-font('Spoqa Han Sans JP', 'SpoqaHanSansJP', 'Bold', 700);
+
+.Roboto:lang(en) {
+  font-family: 'Roboto', sans-serif;
+}
+
+.NotoSansKR:lang(ko) {
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.NotoSansJP:lang(ja) {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+.NotoSasnSC:lang(zh-Hans) {
+  font-family: 'Noto Sans SC', sans-serif;
+}
+
+.SpoqaHanSans:lang(en) {
+  font-family: 'Spoqa Han Sans', sans-serif;
+}
+
+.SpoqaHanSans:lang(ko) {
+  font-family: 'Spoqa Han Sans', sans-serif;
+}
+
+.SpoqaHanSansJP:lang(ja) {
+  font-family: 'Spoqa Han Sans JP', sans-serif;
+}

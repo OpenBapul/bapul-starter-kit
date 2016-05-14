@@ -722,6 +722,76 @@ textarea {
   src: local("Noto Sans SC"), local("NotoSansSC-Black"), url("../fonts/NotoSansSC/NotoSansSC-Black.woff2") format("woff2"), url("../fonts/NotoSansSC/NotoSansSC-Black.woff") format("woff"), url("../fonts/NotoSansSC/NotoSansSC-Black.otf") format("opentype");
 }
 
+@font-face {
+  font-family: "Spoqa Han Sans";
+  font-style: normal;
+  font-weight: 200;
+  src: local("Spoqa Han Sans"), local("SpoqaHanSans-Thin"), url("../fonts/SpoqaHanSans/SpoqaHanSans-Thin.eot") format("eot"), url("../fonts/SpoqaHanSans/SpoqaHanSans-Thin.svg") format("svg"), url("../fonts/SpoqaHanSans/SpoqaHanSans-Thin.ttf") format("truetype"), url("../fonts/SpoqaHanSans/SpoqaHanSans-Thin.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Spoqa Han Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Spoqa Han Sans"), local("SpoqaHanSans-Regular"), url("../fonts/SpoqaHanSans/SpoqaHanSans-Regular.eot") format("eot"), url("../fonts/SpoqaHanSans/SpoqaHanSans-Regular.svg") format("svg"), url("../fonts/SpoqaHanSans/SpoqaHanSans-Regular.ttf") format("truetype"), url("../fonts/SpoqaHanSans/SpoqaHanSans-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Spoqa Han Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Spoqa Han Sans"), local("SpoqaHanSans-Bold"), url("../fonts/SpoqaHanSans/SpoqaHanSans-Bold.eot") format("eot"), url("../fonts/SpoqaHanSans/SpoqaHanSans-Bold.svg") format("svg"), url("../fonts/SpoqaHanSans/SpoqaHanSans-Bold.ttf") format("truetype"), url("../fonts/SpoqaHanSans/SpoqaHanSans-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Spoqa Han Sans JP";
+  font-style: normal;
+  font-weight: 200;
+  src: local("Spoqa Han Sans JP"), local("SpoqaHanSansJP-Thin"), url("../fonts/SpoqaHanSansJP/SpoqaHanSansJP-Thin.eot") format("eot"), url("../fonts/SpoqaHanSansJP/SpoqaHanSansJP-Thin.svg") format("svg"), url("../fonts/SpoqaHanSansJP/SpoqaHanSansJP-Thin.ttf") format("truetype"), url("../fonts/SpoqaHanSansJP/SpoqaHanSansJP-Thin.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Spoqa Han Sans JP";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Spoqa Han Sans JP"), local("SpoqaHanSansJP-Regular"), url("../fonts/SpoqaHanSansJP/SpoqaHanSansJP-Regular.eot") format("eot"), url("../fonts/SpoqaHanSansJP/SpoqaHanSansJP-Regular.svg") format("svg"), url("../fonts/SpoqaHanSansJP/SpoqaHanSansJP-Regular.ttf") format("truetype"), url("../fonts/SpoqaHanSansJP/SpoqaHanSansJP-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Spoqa Han Sans JP";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Spoqa Han Sans JP"), local("SpoqaHanSansJP-Bold"), url("../fonts/SpoqaHanSansJP/SpoqaHanSansJP-Bold.eot") format("eot"), url("../fonts/SpoqaHanSansJP/SpoqaHanSansJP-Bold.svg") format("svg"), url("../fonts/SpoqaHanSansJP/SpoqaHanSansJP-Bold.ttf") format("truetype"), url("../fonts/SpoqaHanSansJP/SpoqaHanSansJP-Bold.woff") format("woff");
+}
+
+.Roboto:lang(en) {
+  font-family: 'Roboto', sans-serif;
+}
+
+.NotoSansKR:lang(ko) {
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.NotoSansJP:lang(ja) {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+.NotoSasnSC:lang(zh-Hans) {
+  font-family: 'Noto Sans SC', sans-serif;
+}
+
+.SpoqaHanSans:lang(en) {
+  font-family: 'Spoqa Han Sans', sans-serif;
+}
+
+.SpoqaHanSans:lang(ko) {
+  font-family: 'Spoqa Han Sans', sans-serif;
+}
+
+.SpoqaHanSansJP:lang(ja) {
+  font-family: 'Spoqa Han Sans JP', sans-serif;
+}
+
 body {
   font-family: 'Noto Sans KR', sans-serif;
   font-size: 14px;
