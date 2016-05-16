@@ -1,0 +1,214 @@
+
+$button-min-width: 64px !default;
+$button-height: 36px !default;
+$button-padding: 16px !default;
+$button-border-radius: 2px !default;
+
+.button {
+  position: relative;
+  margin: 0;
+  padding: 0 $button-padding;
+  border: none;
+  border-radius: $button-border-radius;
+  display: inline-block;
+  min-width: $button-min-width;
+  height: $button-height;
+  @include typo-button();
+  line-height: $button-height;
+  background: transparent;
+  overflow: hidden;
+  outline: none;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  vertical-align: middle;
+  will-change: opacity, transform;
+  transition: all .3s ease-out;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+
+  &:hover {
+    box-shadow: 0 5px 11px 0 rgba(0,0,0,0.18),0 4px 15px 0 rgba(0,0,0,0.15);
+  }
+
+  & > i {
+    width: 1em;
+    height: 1em;
+    font-size: 1.3rem;
+    line-height: inherit;
+    vertical-align: top;
+
+    &.pull-left { margin-right: 10px; }
+    &.pull-right { margin-left: 10px; }
+  }
+}
+
+.button--red {
+  background: $palette-red-500;
+  color: #fff;
+
+  &:hover {
+    background: $palette-red-400;
+  }
+}
+
+.button--pink {
+  background: $palette-pink-500;
+  color: #fff;
+
+  &:hover {
+    background: $palette-pink-400;
+  }
+}
+
+.button--purple {
+  background: $palette-purple-500;
+  color: #fff;
+
+  &:hover {
+    background: $palette-purple-400;
+  }
+}
+
+.button--deep-purple {
+  background: $palette-deep-purple-500;
+  color: #fff;
+
+  &:hover {
+    background: $palette-deep-purple-400;
+  }
+}
+
+.button--indigo {
+  background: $palette-indigo-500;
+  color: #fff;
+
+  &:hover {
+    background: $palette-indigo-400;
+  }
+}
+
+.button--blue {
+  background: $palette-blue-500;
+  color: #fff;
+
+  &:hover {
+    background: $palette-blue-400;
+  }
+}
+
+.button--light-blue {
+  background: $palette-light-blue-500;
+  color: #fff;
+
+  &:hover {
+    background: $palette-light-blue-400;
+  }
+}
+
+.button--cyan {
+  background: $palette-cyan-500;
+  color: #fff;
+
+  &:hover {
+    background: $palette-cyan-400;
+  }
+}
+
+.button--teal {
+  background: $palette-teal-500;
+  color: #fff;
+
+  &:hover {
+    background: $palette-teal-400;
+  }
+}
+
+.button--green {
+  background: $palette-green-500;
+  color: #fff;
+
+  &:hover {
+    background: $palette-green-400;
+  }
+}
+
+.button--light-green {
+  background: $palette-light-green-500;
+  color: #fff;
+
+  &:hover {
+    background: $palette-light-green-400;
+  }
+}
+
+.button--lime {
+  background: $palette-lime-500;
+  color: #fff;
+
+  &:hover {
+    background: $palette-lime-400;
+  }
+}
+
+.button--yellow {
+  background: $palette-yellow-500;
+  color: #fff;
+
+  &:hover {
+    background: $palette-yellow-400;
+  }
+}
+
+.button--amber {
+  background: $palette-amber-500;
+  color: #fff;
+
+  &:hover {
+    background: $palette-amber-400;
+  }
+}
+
+.button--orange {
+  background: $palette-orange-500;
+  color: #fff;
+
+  &:hover {
+    background: $palette-orange-400;
+  }
+}
+
+.button--deep-orange {
+  background: $palette-deep-orange-500;
+  color: #fff;
+
+  &:hover {
+    background: $palette-deep-orange-400;
+  }
+}
+
+.button--brown {
+  background: $palette-brown-500;
+  color: #fff;
+
+  &:hover {
+    background: $palette-brown-400;
+  }
+}
+
+.button--grey {
+  background: $palette-grey-500;
+  color: #fff;
+
+  &:hover {
+    background: $palette-grey-400;
+  }
+}
+
+.button--blue-grey {
+  background: $palette-blue-grey-500;
+  color: #fff;
+
+  &:hover {
+    background: $palette-blue-grey-400;
+  }
+}

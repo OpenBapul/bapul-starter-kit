@@ -55,7 +55,6 @@
 .float-grid--push-9 { left: 75%; }
 .float-grid--push-10 { left: 83.33333333%; }
 .float-grid--push-11 { left: 91.66666667%; }
-.float-grid--push-12 { left: 100%; }
 .float-grid--pull-1 { right: 8.33333333%; }
 .float-grid--pull-2 { right: 16.66666667%; }
 .float-grid--pull-3 { right: 25%; }
@@ -67,8 +66,8 @@
 .float-grid--pull-9 { right: 75%; }
 .float-grid--pull-10 { right: 83.33333333%; }
 .float-grid--pull-11 { right: 91.66666667%; }
-.float-grid--pull-12 { right: 100%; }
 
+// Phone
 @media (max-width: 479px) {
   .float-grid--hide-phone { display: none;}
   .float-grid--col-phone-1 { width: 8.33333333%; }
@@ -105,7 +104,6 @@
   .float-grid--push-phone-9 { left: 75%; }
   .float-grid--push-phone-10 { left: 83.33333333%; }
   .float-grid--push-phone-11 { left: 91.66666667%; }
-  .float-grid--push-phone-12 { left: 100%; }
   .float-grid--pull-phone-1 { right: 8.33333333%; }
   .float-grid--pull-phone-2 { right: 16.66666667%; }
   .float-grid--pull-phone-3 { right: 25%; }
@@ -117,9 +115,9 @@
   .float-grid--pull-phone-9 { right: 75%; }
   .float-grid--pull-phone-10 { right: 83.33333333%; }
   .float-grid--pull-phone-11 { right: 91.66666667%; }
-  .float-grid--pull-phone-12 { right: 100%; }
 }
 
+// Tablet
 @media (min-width: 480px) and (max-width: 839px) {
   .float-grid--hide-tablet { display: none;}
   .float-grid--col-tablet-1 { width: 8.33333333%; }
@@ -156,7 +154,6 @@
   .float-grid--push-tablet-9 { left: 75%; }
   .float-grid--push-tablet-10 { left: 83.33333333%; }
   .float-grid--push-tablet-11 { left: 91.66666667%; }
-  .float-grid--push-tablet-12 { left: 100%; }
   .float-grid--pull-tablet-1 { right: 8.33333333%; }
   .float-grid--pull-tablet-2 { right: 16.66666667%; }
   .float-grid--pull-tablet-3 { right: 25%; }
@@ -168,9 +165,9 @@
   .float-grid--pull-tablet-9 { right: 75%; }
   .float-grid--pull-tablet-10 { right: 83.33333333%; }
   .float-grid--pull-tablet-11 { right: 91.66666667%; }
-  .float-grid--pull-tablet-12 { right: 100%; }
 }
 
+// Desktop
 @media (min-width: 840px) {
   .float-grid--hide-desktop { display: none;}
   .float-grid--col-desktop-1 { width: 8.33333333%; }
@@ -207,7 +204,6 @@
   .float-grid--push-desktop-9 { left: 75%; }
   .float-grid--push-desktop-10 { left: 83.33333333%; }
   .float-grid--push-desktop-11 { left: 91.66666667%; }
-  .float-grid--push-desktop-12 { left: 100%; }
   .float-grid--pull-desktop-1 { right: 8.33333333%; }
   .float-grid--pull-desktop-2 { right: 16.66666667%; }
   .float-grid--pull-desktop-3 { right: 25%; }
@@ -219,5 +215,4 @@
   .float-grid--pull-desktop-9 { right: 75%; }
   .float-grid--pull-desktop-10 { right: 83.33333333%; }
   .float-grid--pull-desktop-11 { right: 91.66666667%; }
-  .float-grid--pull-desktop-12 { right: 100%; }
 }
