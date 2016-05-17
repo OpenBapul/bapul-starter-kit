@@ -1,3 +1,4 @@
+// Core
 .flex-grid {
   display: flex;
   flex-flow: row wrap;
@@ -9,6 +10,7 @@
   box-sizing: border-box;
 }
 
+// Common
 .flex-grid--top { align-self: flex-start; }
 .flex-grid--middle { align-self: center; }
 .flex-gird--bottom { align-self: flex-end; }

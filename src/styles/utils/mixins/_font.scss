@@ -5,36 +5,6 @@
 /// @param {String} $type - font 타입
 /// @param {String} $weight - font 굵기
 /// @param {String} $style [normal] - font 스타일
-/// @example scss - 사용법
-///   @include roboto-font-pair('Regular', 400);
-/// @example css - CSS 아웃풋
-/// @font-face {
-///   font-family: 'Roboto';
-///   src: url('../fonts/Roboto/Roboto-Regular.eot');
-///   src: url('../fonts/Roboto/Roboto-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/Roboto/Roboto-Regular.woff2') format('woff2'), url('../fonts/Roboto/Roboto-Regular.woff') format('woff'), url('../fonts/Roboto/Roboto-Regular.ttf') format('truetype'), url('../fonts/Roboto/Roboto-Regular.svg#Roboto') format('svg');
-///   font-weight: 400;
-///   font-style: normal;
-/// }
-///
-/// @font-face {
-///   font-family: 'Roboto-Regular';
-///   src: url('../fonts/Roboto/Roboto-Regular.eot');
-///   src: url('../fonts/Roboto/Roboto-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/Roboto/Roboto-Regular.woff2') format('woff2'), url('../fonts/Roboto/Roboto-Regular.woff') format('woff'), url('../fonts/Roboto/Roboto-Regular.ttf') format('truetype'), url('../fonts/Roboto/Roboto-Regular.svg#Roboto') format('svg');
-/// }
-///
-/// @font-face {
-///   font-family: 'Roboto';
-///   src: url('../fonts/Roboto/Roboto-RegularItalic.eot');
-///   src: url('../fonts/Roboto/Roboto-RegularItalic.eot?#iefix') format('embedded-opentype'), url('../fonts/Roboto/Roboto-RegularItalic.woff2') format('woff2'), url('../fonts/Roboto/Roboto-RegularItalic.woff') format('woff'), url('../fonts/Roboto/Roboto-RegularItalic.ttf') format('truetype'), url('../fonts/Roboto/Roboto-RegularItalic.svg#Roboto') format('svg');
-///   font-weight: 400;
-///   font-style: italic;
-/// }
-///
-/// @font-face {
-///   font-family: 'Roboto-RegularItalic';
-///   src: url('../fonts/Roboto/Roboto-RegularItalic.eot');
-///   src: url('../fonts/Roboto/Roboto-RegularItalic.eot?#iefix') format('embedded-opentype'), url('../fonts/Roboto/Roboto-RegularItalic.woff2') format('woff2'), url('../fonts/Roboto/Roboto-RegularItalic.woff') format('woff'), url('../fonts/Roboto/Roboto-RegularItalic.ttf') format('truetype'), url('../fonts/Roboto/Roboto-RegularItalic.svg#Roboto') format('svg');
-/// }
 @mixin roboto-font($type, $weight, $style: normal) {
   @font-face {
     font-family: 'Roboto';
@@ -70,15 +40,6 @@
 /// @param {String} $type - font 타입
 /// @param {String} $weight - font 굵기
 /// @param {String} $style [normal] - font 스타일
-/// @example scss - 사용법
-///   @include noto-font('Noto Sans KR', 'NotoSansKR', 'Regular', 400);
-/// @example css - CSS 아웃풋
-///   @font-face {
-///     font-family: "Noto Sans KR";
-///     font-style: normal;
-///     font-weight: 400;
-///     src: url("../fonts/NotoSansKR/NotoSansKR-Regular.woff2") format("woff2"), url("../fonts/NotoSansKR/NotoSansKR-Regular.woff") format("woff"), url("../fonts/NotoSansKR/NotoSansKR-Regular.otf") format("opentype");
-///   }
 @mixin noto-font($local, $name, $type, $weight, $style: normal) {
   @font-face {
     font-family: '#{$local}';
@@ -92,6 +53,15 @@
   }
 }
 
+/// Spoqa font 생성 믹스인
+///
+/// @author jake <gjjoo@bapul.net>
+/// @access public
+/// @param {String} $local - 시스템에 설치된 폰트 이름
+/// @param {String} $name - font 이름
+/// @param {String} $type - font 타입
+/// @param {String} $weight - font 굵기
+/// @param {String} $style [normal] - font 스타일
 @mixin spoqa-font($local, $name, $type, $weight, $style: normal) {
   @font-face {
     font-family: '#{$local}';

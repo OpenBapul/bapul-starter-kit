@@ -14,7 +14,7 @@
 @include roboto-font-pair('Bold', 700);
 @include roboto-font-pair('Black', 900);
 
-// Generate Noto Font (Korea, Japan, China)
+// Generate Noto Font (Korea)
 @include noto-font('Noto Sans KR', 'NotoSansKR', 'Thin', 100);
 @include noto-font('Noto Sans KR', 'NotoSansKR', 'Light', 300);
 @include noto-font('Noto Sans KR', 'NotoSansKR', 'Regular', 400);
@@ -22,6 +22,7 @@
 @include noto-font('Noto Sans KR', 'NotoSansKR', 'Bold', 700);
 @include noto-font('Noto Sans KR', 'NotoSansKR', 'Black', 900);
 
+// Generate Noto Font (Japan)
 @include noto-font('Noto Sans JP', 'NotoSansJP', 'Thin', 100);
 @include noto-font('Noto Sans JP', 'NotoSansJP', 'Light', 300);
 @include noto-font('Noto Sans JP', 'NotoSansJP', 'Regular', 400);
@@ -29,6 +30,7 @@
 @include noto-font('Noto Sans JP', 'NotoSansJP', 'Bold', 700);
 @include noto-font('Noto Sans JP', 'NotoSansJP', 'Black', 900);
 
+// Generate Noto Font (Japan)
 @include noto-font('Noto Sans SC', 'NotoSansSC', 'Thin', 100);
 @include noto-font('Noto Sans SC', 'NotoSansSC', 'Light', 300);
 @include noto-font('Noto Sans SC', 'NotoSansSC', 'Regular', 400);
@@ -36,15 +38,17 @@
 @include noto-font('Noto Sans SC', 'NotoSansSC', 'Bold', 700);
 @include noto-font('Noto Sans SC', 'NotoSansSC', 'Black', 900);
 
-// Spoqa Han Sans Font (English, Korea, Japan)
+// Spoqa Han Sans Font (English, Korea)
 @include spoqa-font('Spoqa Han Sans', 'SpoqaHanSans', 'Thin', 200);
 @include spoqa-font('Spoqa Han Sans', 'SpoqaHanSans', 'Regular', 400);
 @include spoqa-font('Spoqa Han Sans', 'SpoqaHanSans', 'Bold', 700);
 
+// Spoqa Han Sans Font (Japan)
 @include spoqa-font('Spoqa Han Sans JP', 'SpoqaHanSansJP', 'Thin', 200);
 @include spoqa-font('Spoqa Han Sans JP', 'SpoqaHanSansJP', 'Regular', 400);
 @include spoqa-font('Spoqa Han Sans JP', 'SpoqaHanSansJP', 'Bold', 700);
 
+// Class Style
 .Roboto:lang(en) {
   font-family: 'Roboto', sans-serif;
 }

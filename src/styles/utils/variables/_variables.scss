@@ -29,3 +29,13 @@ $color-accent-contrast: $color-dark-contrast !default;
 $text-color-primary: rgba-tpl($color-black, 0.87) !default;
 // 링크 색상
 $text-link-color: $color-accent !default;
+
+
+// 버튼 최스 넓이
+$button-min-width: 64px !default;
+// 버튼 높이
+$button-height: 36px !default;
+// 버튼 패딩
+$button-padding: 16px !default;
+// 버튼 테두리 라운드
+$button-border-radius: 2px !default;

@@ -1,39 +1,32 @@
 // Mixins
-// ------------------------------
 @import 'utils/mixins/size';
 @import 'utils/mixins/font';
 @import 'utils/mixins/typography';
 
 
 // Functions
-// ------------------------------
 @import 'utils/functions/color';
 
 
 // Variables
-// ------------------------------
 @import 'utils/variables/variables-colors';
 @import 'utils/variables/variables';
 
 
 // Base
-// ------------------------------
 @import 'vendors/normalize/normalize';
 @import 'base/base';
 
 
 // Helpers
-// ------------------------------
 @import 'utils/helpers/float';
 
 
 // Layout
-// ------------------------------
 @import 'layout/guide';
 
 
 // Components
-// ------------------------------
 @import 'components/font';
 @import 'components/typography';
 @import 'components/color';

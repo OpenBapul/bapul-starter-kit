@@ -1,9 +1,4 @@
-
-$button-min-width: 64px !default;
-$button-height: 36px !default;
-$button-padding: 16px !default;
-$button-border-radius: 2px !default;
-
+// Core
 .button {
   position: relative;
   margin: 0;
@@ -42,6 +37,7 @@ $button-border-radius: 2px !default;
   }
 }
 
+// Colorful Button
 .button--red {
   background: $palette-red-500;
   color: #fff;
