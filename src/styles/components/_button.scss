@@ -1,4 +1,4 @@
-// Core
+// Common
 .button {
   position: relative;
   margin: 0;
@@ -10,7 +10,7 @@
   height: $button-height;
   @include typo-button();
   line-height: $button-height;
-  background: transparent;
+  background-color: transparent;
   overflow: hidden;
   outline: none;
   cursor: pointer;
@@ -18,193 +18,568 @@
   text-align: center;
   vertical-align: middle;
   will-change: opacity, transform;
-  transition: all .3s ease-out;
-  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+  transition: all 0.3s ease-out;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 
   &:hover {
-    box-shadow: 0 5px 11px 0 rgba(0,0,0,0.18),0 4px 15px 0 rgba(0,0,0,0.15);
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+  }
+
+  &[disabled] {
+    box-shadow: none;
+
+    &:hover {
+      box-shadow: none;
+      cursor: not-allowed;
+    }
   }
 
   & > i {
-    width: 1em;
-    height: 1em;
-    font-size: 1.3rem;
     line-height: inherit;
-    vertical-align: top;
-
     &.pull-left { margin-right: 10px; }
     &.pull-right { margin-left: 10px; }
   }
 }
 
+// Default Button
+.button--default {
+  background-color: #fafafa;
+
+  & > i { font-size: 20px; }
+
+  &.button--default-large {
+    height: 44px;
+    line-height: 44px;
+  }
+
+  &.button--default-small {
+    height: 30px;
+    line-height: 30px;
+  }
+}
+
+// FAB Button
+.button--fab {
+  border-radius: 50%;
+  margin: auto;
+  padding: 0;
+  width: 56px;
+  min-width: 56px;
+  height: 56px;
+  font-size: 24px;
+
+  & > i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 24px;
+    line-height: 24px;
+  }
+
+  &.button--fab-large {
+    width: 72px;
+    min-width: 72px;
+    height: 72px;
+  }
+
+  &.button--fab-small {
+    width: 40px;
+    min-width: 40px;
+    height: 40px;
+  }
+}
+
+// Flat Button
+.button--flat {
+  background-color: transparent;
+  box-shadow: none;
+
+  &:hover {
+    background-color: rgba(158, 158, 158, 0.2);
+    box-shadow: none;
+  }
+
+  &[disabled] {
+    background-color: transparent;
+
+    &:hover {
+      background-color: transparent;
+    }
+  }
+
+  & > i { font-size: 20px; }
+
+  &.button--flat-large {
+    font-size: 20px;
+    line-height: 20px;
+
+    & > i { font-size: 24px; }
+  }
+
+  &.button--flat-small {
+    font-size: 12px;
+    line-height: 12px;
+
+    & > i { font-size: 16px; }
+  }
+}
+
+// Icon Button
+.button--icon {
+  border-radius: 50%;
+  margin: 0;
+  padding: 0;
+  width: 32px;
+  min-width: 32px;
+  height: 32px;
+  font-size: 24px;
+  background-color: transparent;
+  box-shadow: none;
+
+  &:hover {
+    background-color: rgba(158, 158, 158, 0.2);
+    box-shadow: none;
+  }
+
+  &[disabled] {
+    background-color: transparent;
+
+    &:hover {
+      background-color: transparent;
+    }
+  }
+
+  & > i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 24px;
+    line-height: 24px;
+  }
+
+  &.button--icon-large {
+    width: 38px;
+    min-width: 38px;
+    height: 38px;
+    font-size: 30px;
+
+    & > i {
+      width: 30px;
+      line-height: 30px;
+    }
+  }
+
+  &.button--icon-small {
+    width: 26px;
+    min-width: 26px;
+    height: 26px;
+    font-size: 18px;
+
+    & > i {
+      width: 18px;
+      line-height: 18px;
+    }
+  }
+}
+
 // Colorful Button
 .button--red {
-  background: $palette-red-500;
+  background-color: $palette-red-500;
   color: #fff;
 
   &:hover {
-    background: $palette-red-400;
+    background-color: $palette-red-400;
+  }
+
+  &[disabled] {
+    background-color: $palette-red-200;
+  }
+}
+
+.button--red-text {
+  color: $palette-red-500;
+
+  &[disabled] {
+    color: $palette-red-200;
   }
 }
 
 .button--pink {
-  background: $palette-pink-500;
+  background-color: $palette-pink-500;
   color: #fff;
 
   &:hover {
-    background: $palette-pink-400;
+    background-color: $palette-pink-400;
+  }
+
+  &[disabled] {
+    background-color: $palette-pink-200;
+  }
+}
+
+.button--pink-text {
+  color: $palette-pink-500;
+
+  &[disabled] {
+    color: $palette-pink-200;
   }
 }
 
 .button--purple {
-  background: $palette-purple-500;
+  background-color: $palette-purple-500;
   color: #fff;
 
   &:hover {
-    background: $palette-purple-400;
+    background-color: $palette-purple-400;
+  }
+
+  &[disabled] {
+    background-color: $palette-purple-200;
+  }
+}
+
+.button--purple-text {
+  color: $palette-purple-500;
+
+  &[disabled] {
+    color: $palette-purple-200;
   }
 }
 
 .button--deep-purple {
-  background: $palette-deep-purple-500;
+  background-color: $palette-deep-purple-500;
   color: #fff;
 
   &:hover {
-    background: $palette-deep-purple-400;
+    background-color: $palette-deep-purple-400;
+  }
+
+  &[disabled] {
+    background-color: $palette-deep-purple-200;
+  }
+}
+
+.button--deep-purple-text {
+  color: $palette-deep-purple-500;
+
+  &[disabled] {
+    color: $palette-deep-purple-200;
   }
 }
 
 .button--indigo {
-  background: $palette-indigo-500;
+  background-color: $palette-indigo-500;
   color: #fff;
 
   &:hover {
-    background: $palette-indigo-400;
+    background-color: $palette-indigo-400;
+  }
+
+  &[disabled] {
+    background-color: $palette-indigo-200;
+  }
+}
+
+.button--indigo-text {
+  color: $palette-indigo-500;
+
+  &[disabled] {
+    color: $palette-indigo-200;
   }
 }
 
 .button--blue {
-  background: $palette-blue-500;
+  background-color: $palette-blue-500;
   color: #fff;
 
   &:hover {
-    background: $palette-blue-400;
+    background-color: $palette-blue-400;
+  }
+
+  &[disabled] {
+    background-color: $palette-blue-200;
+  }
+}
+
+.button--blue-text {
+  color: $palette-blue-500;
+
+  &[disabled] {
+    color: $palette-blue-200;
   }
 }
 
 .button--light-blue {
-  background: $palette-light-blue-500;
+  background-color: $palette-light-blue-500;
   color: #fff;
 
   &:hover {
-    background: $palette-light-blue-400;
+    background-color: $palette-light-blue-400;
+  }
+
+  &[disabled] {
+    background-color: $palette-light-blue-200;
+  }
+}
+
+.button--light-blue-text {
+  color: $palette-light-blue-500;
+
+  &[disabled] {
+    color: $palette-light-blue-200;
   }
 }
 
 .button--cyan {
-  background: $palette-cyan-500;
+  background-color: $palette-cyan-500;
   color: #fff;
 
   &:hover {
-    background: $palette-cyan-400;
+    background-color: $palette-cyan-400;
+  }
+
+  &[disabled] {
+    background-color: $palette-cyan-200;
+  }
+}
+
+.button--cyan-text {
+  color: $palette-cyan-500;
+
+  &[disabled] {
+    color: $palette-cyan-200;
   }
 }
 
 .button--teal {
-  background: $palette-teal-500;
+  background-color: $palette-teal-500;
   color: #fff;
 
   &:hover {
-    background: $palette-teal-400;
+    background-color: $palette-teal-400;
+  }
+
+  &[disabled] {
+    background-color: $palette-teal-200;
+  }
+}
+
+.button--teal-text {
+  color: $palette-teal-500;
+
+  &[disabled] {
+    color: $palette-teal-200;
   }
 }
 
 .button--green {
-  background: $palette-green-500;
+  background-color: $palette-green-500;
   color: #fff;
 
   &:hover {
-    background: $palette-green-400;
+    background-color: $palette-green-400;
+  }
+
+  &[disabled] {
+    background-color: $palette-green-200;
+  }
+}
+
+.button--green-text {
+  color: $palette-green-500;
+
+  &[disabled] {
+    color: $palette-green-200;
   }
 }
 
 .button--light-green {
-  background: $palette-light-green-500;
+  background-color: $palette-light-green-500;
   color: #fff;
 
   &:hover {
-    background: $palette-light-green-400;
+    background-color: $palette-light-green-400;
+  }
+
+  &[disabled] {
+    background-color: $palette-light-green-200;
+  }
+}
+
+.button--light-green-text {
+  color: $palette-light-green-500;
+
+  &[disabled] {
+    color: $palette-light-green-200;
   }
 }
 
 .button--lime {
-  background: $palette-lime-500;
+  background-color: $palette-lime-500;
   color: #fff;
 
   &:hover {
-    background: $palette-lime-400;
+    background-color: $palette-lime-400;
+  }
+
+  &[disabled] {
+    background-color: $palette-lime-200;
+  }
+}
+
+.button--lime-text {
+  color: $palette-lime-500;
+
+  &[disabled] {
+    color: $palette-lime-200;
   }
 }
 
 .button--yellow {
-  background: $palette-yellow-500;
+  background-color: $palette-yellow-500;
   color: #fff;
 
   &:hover {
-    background: $palette-yellow-400;
+    background-color: $palette-yellow-400;
+  }
+
+  &[disabled] {
+    background-color: $palette-yellow-200;
+  }
+}
+
+.button--yellow-text {
+  color: $palette-yellow-500;
+
+  &[disabled] {
+    color: $palette-yellow-200;
   }
 }
 
 .button--amber {
-  background: $palette-amber-500;
+  background-color: $palette-amber-500;
   color: #fff;
 
   &:hover {
-    background: $palette-amber-400;
+    background-color: $palette-amber-400;
+  }
+
+  &[disabled] {
+    background-color: $palette-amber-200;
+  }
+}
+
+.button--amber-text {
+  color: $palette-amber-500;
+
+  &[disabled] {
+    color: $palette-amber-200;
   }
 }
 
 .button--orange {
-  background: $palette-orange-500;
+  background-color: $palette-orange-500;
   color: #fff;
 
   &:hover {
-    background: $palette-orange-400;
+    background-color: $palette-orange-400;
+  }
+
+  &[disabled] {
+    background-color: $palette-orange-200;
+  }
+}
+
+.button--orange-text {
+  color: $palette-orange-500;
+
+  &[disabled] {
+    color: $palette-orange-200;
   }
 }
 
 .button--deep-orange {
-  background: $palette-deep-orange-500;
+  background-color: $palette-deep-orange-500;
   color: #fff;
 
   &:hover {
-    background: $palette-deep-orange-400;
+    background-color: $palette-deep-orange-400;
+  }
+
+  &[disabled] {
+    background-color: $palette-deep-orange-200;
+  }
+}
+
+.button--deep-orange-text {
+  color: $palette-deep-orange-500;
+
+  &[disabled] {
+    color: $palette-deep-orange-200;
   }
 }
 
 .button--brown {
-  background: $palette-brown-500;
+  background-color: $palette-brown-500;
   color: #fff;
 
   &:hover {
-    background: $palette-brown-400;
+    background-color: $palette-brown-400;
+  }
+
+  &[disabled] {
+    background-color: $palette-brown-200;
+  }
+}
+
+.button--brown-text {
+  color: $palette-brown-500;
+
+  &[disabled] {
+    color: $palette-brown-200;
   }
 }
 
 .button--grey {
-  background: $palette-grey-500;
+  background-color: $palette-grey-500;
   color: #fff;
 
   &:hover {
-    background: $palette-grey-400;
+    background-color: $palette-grey-400;
+  }
+
+  &[disabled] {
+    background-color: $palette-grey-200;
+  }
+}
+
+.button--grey-text {
+  color: $palette-grey-500;
+
+  &[disabled] {
+    color: $palette-grey-200;
   }
 }
 
 .button--blue-grey {
-  background: $palette-blue-grey-500;
+  background-color: $palette-blue-grey-500;
   color: #fff;
 
   &:hover {
-    background: $palette-blue-grey-400;
+    background-color: $palette-blue-grey-400;
+  }
+
+  &[disabled] {
+    background-color: $palette-blue-grey-200;
+  }
+}
+
+.button--blue-grey-text {
+  color: $palette-blue-grey-500;
+
+  &[disabled] {
+    color: $palette-blue-grey-200;
   }
 }
