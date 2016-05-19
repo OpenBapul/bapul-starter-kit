@@ -25,7 +25,8 @@
     box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
   }
 
-  &[disabled] {
+  &[disabled],
+  &.button--disabled {
     box-shadow: none;
 
     &:hover {
@@ -100,7 +101,8 @@
     box-shadow: none;
   }
 
-  &[disabled] {
+  &[disabled],
+  &.button--disabled {
     background-color: transparent;
 
     &:hover {
@@ -142,7 +144,8 @@
     box-shadow: none;
   }
 
-  &[disabled] {
+  &[disabled],
+  &.button--disabled {
     background-color: transparent;
 
     &:hover {
@@ -193,7 +196,8 @@
     background-color: $palette-red-400;
   }
 
-  &[disabled] {
+  &[disabled],
+  &.button--disabled {
     background-color: $palette-red-200;
   }
 }
@@ -201,7 +205,8 @@
 .button--red-text {
   color: $palette-red-500;
 
-  &[disabled] {
+  &[disabled],
+  &.button--disabled {
     color: $palette-red-200;
   }
 }
@@ -214,7 +219,8 @@
     background-color: $palette-pink-400;
   }
 
-  &[disabled] {
+  &[disabled],
+  &.button--disabled {
     background-color: $palette-pink-200;
   }
 }
@@ -222,7 +228,8 @@
 .button--pink-text {
   color: $palette-pink-500;
 
-  &[disabled] {
+  &[disabled],
+  &.button--disabled {
     color: $palette-pink-200;
   }
 }
@@ -235,7 +242,8 @@
     background-color: $palette-purple-400;
   }
 
-  &[disabled] {
+  &[disabled],
+  &.button--disabled {
     background-color: $palette-purple-200;
   }
 }
@@ -243,7 +251,8 @@
 .button--purple-text {
   color: $palette-purple-500;
 
-  &[disabled] {
+  &[disabled],
+  &.button--disabled {
     color: $palette-purple-200;
   }
 }
@@ -256,7 +265,8 @@
     background-color: $palette-deep-purple-400;
   }
 
-  &[disabled] {
+  &[disabled],
+  &.button--disabled {
     background-color: $palette-deep-purple-200;
   }
 }
@@ -264,7 +274,8 @@
 .button--deep-purple-text {
   color: $palette-deep-purple-500;
 
-  &[disabled] {
+  &[disabled],
+  &.button--disabled {
     color: $palette-deep-purple-200;
   }
 }
@@ -277,7 +288,8 @@
     background-color: $palette-indigo-400;
   }
 
-  &[disabled] {
+  &[disabled],
+  &.button--disabled {
     background-color: $palette-indigo-200;
   }
 }
@@ -285,7 +297,8 @@
 .button--indigo-text {
   color: $palette-indigo-500;
 
-  &[disabled] {
+  &[disabled],
+  &.button--disabled {
     color: $palette-indigo-200;
   }
 }
@@ -298,7 +311,8 @@
     background-color: $palette-blue-400;
   }
 
-  &[disabled] {
+  &[disabled],
+  &.button--disabled {
     background-color: $palette-blue-200;
   }
 }
@@ -306,7 +320,8 @@
 .button--blue-text {
   color: $palette-blue-500;
 
-  &[disabled] {
+  &[disabled],
+  &.button--disabled {
     color: $palette-blue-200;
   }
 }
@@ -319,7 +334,8 @@
     background-color: $palette-light-blue-400;
   }
 
-  &[disabled] {
+  &[disabled],
+  &.button--disabled {
     background-color: $palette-light-blue-200;
   }
 }
@@ -327,7 +343,8 @@
 .button--light-blue-text {
   color: $palette-light-blue-500;
 
-  &[disabled] {
+  &[disabled],
+  &.button--disabled {
     color: $palette-light-blue-200;
   }
 }
@@ -340,7 +357,8 @@
     background-color: $palette-cyan-400;
   }
 
-  &[disabled] {
+  &[disabled],
+  &.button--disabled {
     background-color: $palette-cyan-200;
   }
 }
@@ -348,7 +366,8 @@
 .button--cyan-text {
   color: $palette-cyan-500;
 
-  &[disabled] {
+  &[disabled],
+  &.button--disabled {
     color: $palette-cyan-200;
   }
 }
@@ -361,7 +380,8 @@
     background-color: $palette-teal-400;
   }
 
-  &[disabled] {
+  &[disabled],
+  &.button--disabled {
     background-color: $palette-teal-200;
   }
 }
@@ -382,7 +402,8 @@
     background-color: $palette-green-400;
   }
 
-  &[disabled] {
+  &[disabled],
+  &.button--disabled {
     background-color: $palette-green-200;
   }
 }
@@ -390,7 +411,8 @@
 .button--green-text {
   color: $palette-green-500;
 
-  &[disabled] {
+  &[disabled],
+  &.button--disabled {
     color: $palette-green-200;
   }
 }
@@ -403,7 +425,8 @@
     background-color: $palette-light-green-400;
   }
 
-  &[disabled] {
+  &[disabled],
+  &.button--disabled {
     background-color: $palette-light-green-200;
   }
 }
@@ -411,7 +434,8 @@
 .button--light-green-text {
   color: $palette-light-green-500;
 
-  &[disabled] {
+  &[disabled],
+  &.button--disabled {
     color: $palette-light-green-200;
   }
 }
@@ -424,7 +448,8 @@
     background-color: $palette-lime-400;
   }
 
-  &[disabled] {
+  &[disabled],
+  &.button--disabled {
     background-color: $palette-lime-200;
   }
 }
@@ -432,7 +457,8 @@
 .button--lime-text {
   color: $palette-lime-500;
 
-  &[disabled] {
+  &[disabled],
+  &.button--disabled {
     color: $palette-lime-200;
   }
 }
@@ -445,7 +471,8 @@
     background-color: $palette-yellow-400;
   }
 
-  &[disabled] {
+  &[disabled],
+  &.button--disabled {
     background-color: $palette-yellow-200;
   }
 }
@@ -453,7 +480,8 @@
 .button--yellow-text {
   color: $palette-yellow-500;
 
-  &[disabled] {
+  &[disabled],
+  &.button--disabled {
     color: $palette-yellow-200;
   }
 }
@@ -466,7 +494,8 @@
     background-color: $palette-amber-400;
   }
 
-  &[disabled] {
+  &[disabled],
+  &.button--disabled {
     background-color: $palette-amber-200;
   }
 }
@@ -474,7 +503,8 @@
 .button--amber-text {
   color: $palette-amber-500;
 
-  &[disabled] {
+  &[disabled],
+  &.button--disabled {
     color: $palette-amber-200;
   }
 }
@@ -487,7 +517,8 @@
     background-color: $palette-orange-400;
   }
 
-  &[disabled] {
+  &[disabled],
+  &.button--disabled {
     background-color: $palette-orange-200;
   }
 }
@@ -495,7 +526,8 @@
 .button--orange-text {
   color: $palette-orange-500;
 
-  &[disabled] {
+  &[disabled],
+  &.button--disabled {
     color: $palette-orange-200;
   }
 }
@@ -508,7 +540,8 @@
     background-color: $palette-deep-orange-400;
   }
 
-  &[disabled] {
+  &[disabled],
+  &.button--disabled {
     background-color: $palette-deep-orange-200;
   }
 }
@@ -516,7 +549,8 @@
 .button--deep-orange-text {
   color: $palette-deep-orange-500;
 
-  &[disabled] {
+  &[disabled],
+  &.button--disabled {
     color: $palette-deep-orange-200;
   }
 }
@@ -529,7 +563,8 @@
     background-color: $palette-brown-400;
   }
 
-  &[disabled] {
+  &[disabled],
+  &.button--disabled {
     background-color: $palette-brown-200;
   }
 }
@@ -537,7 +572,8 @@
 .button--brown-text {
   color: $palette-brown-500;
 
-  &[disabled] {
+  &[disabled],
+  &.button--disabled {
     color: $palette-brown-200;
   }
 }
@@ -550,7 +586,8 @@
     background-color: $palette-grey-400;
   }
 
-  &[disabled] {
+  &[disabled],
+  &.button--disabled {
     background-color: $palette-grey-200;
   }
 }
@@ -558,7 +595,8 @@
 .button--grey-text {
   color: $palette-grey-500;
 
-  &[disabled] {
+  &[disabled],
+  &.button--disabled {
     color: $palette-grey-200;
   }
 }
@@ -571,7 +609,8 @@
     background-color: $palette-blue-grey-400;
   }
 
-  &[disabled] {
+  &[disabled],
+  &.button--disabled {
     background-color: $palette-blue-grey-200;
   }
 }
@@ -579,7 +618,8 @@
 .button--blue-grey-text {
   color: $palette-blue-grey-500;
 
-  &[disabled] {
+  &[disabled],
+  &.button--disabled {
     color: $palette-blue-grey-200;
   }
 }
