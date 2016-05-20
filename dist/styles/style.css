@@ -14227,11 +14227,13 @@ ul, ol {
   line-height: inherit;
 }
 
-.button > i.pull-left {
+.button > i.left {
+  float: left;
   margin-right: 10px;
 }
 
-.button > i.pull-right {
+.button > i.right {
+  float: right;
   margin-left: 10px;
 }
 

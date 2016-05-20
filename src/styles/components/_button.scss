@@ -37,8 +37,16 @@
 
   & > i {
     line-height: inherit;
-    &.pull-left { margin-right: 10px; }
-    &.pull-right { margin-left: 10px; }
+
+    &.left {
+      float: left;
+      margin-right: 10px;
+    }
+
+    &.right {
+      float: right;
+      margin-left: 10px;
+    }
   }
 }
 
