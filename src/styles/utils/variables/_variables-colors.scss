@@ -1,623 +1,973 @@
 // Red
-$palette-red: (
-  rgb(255, 235, 238),
-  rgb(255, 205, 210),
-  rgb(239, 154, 154),
-  rgb(229, 115, 115),
-  rgb(239, 83, 80),
-  rgb(244, 67, 54),
-  rgb(229, 57, 53),
-  rgb(211, 47, 47),
-  rgb(198, 40, 40),
-  rgb(183, 28, 28),
-  rgb(255, 138, 128),
-  rgb(255, 82, 82),
-  rgb(255, 23, 68),
-  rgb(213, 0, 0)
+$palette-red-50: rgb(255, 235, 238);
+$palette-red-100: rgb(255, 205, 210);
+$palette-red-200: rgb(239, 154, 154);
+$palette-red-300: rgb(229, 115, 115);
+$palette-red-400: rgb(239, 83, 80);
+$palette-red-500: rgb(244, 67, 54);
+$palette-red-600: rgb(229, 57, 53);
+$palette-red-700: rgb(211, 47, 47);
+$palette-red-800: rgb(198, 40, 40);
+$palette-red-900: rgb(183, 28, 28);
+$palette-red-A100: rgb(255, 138, 128);
+$palette-red-A200: rgb(255, 82, 82);
+$palette-red-A400: rgb(255, 23, 68);
+$palette-red-A700: rgb(213, 0, 0);
+
+$red: (
+  'red': $palette-red-500,
+  'red-50': $palette-red-50,
+  'red-100': $palette-red-100,
+  'red-200': $palette-red-200,
+  'red-300': $palette-red-300,
+  'red-400': $palette-red-400,
+  'red-500': $palette-red-500,
+  'red-600': $palette-red-600,
+  'red-700': $palette-red-700,
+  'red-800': $palette-red-800,
+  'red-900': $palette-red-900,
+  'red-A100': $palette-red-A100,
+  'red-A200': $palette-red-A200,
+  'red-A400': $palette-red-A400,
+  'red-A700': $palette-red-A700
 );
 
-$palette-red-50: nth($palette-red, 1);
-$palette-red-100: nth($palette-red, 2);
-$palette-red-200: nth($palette-red, 3);
-$palette-red-300: nth($palette-red, 4);
-$palette-red-400: nth($palette-red, 5);
-$palette-red-500: nth($palette-red, 6);
-$palette-red-600: nth($palette-red, 7);
-$palette-red-700: nth($palette-red, 8);
-$palette-red-800: nth($palette-red, 9);
-$palette-red-900: nth($palette-red, 10);
-$palette-red-A100: nth($palette-red, 11);
-$palette-red-A200: nth($palette-red, 12);
-$palette-red-A400: nth($palette-red, 13);
-$palette-red-A700: nth($palette-red, 14);
+$red-text: (
+  'red-text': $palette-red-500,
+  'red-text-50': $palette-red-50,
+  'red-text-100': $palette-red-100,
+  'red-text-200': $palette-red-200,
+  'red-text-300': $palette-red-300,
+  'red-text-400': $palette-red-400,
+  'red-text-500': $palette-red-500,
+  'red-text-600': $palette-red-600,
+  'red-text-700': $palette-red-700,
+  'red-text-800': $palette-red-800,
+  'red-text-900': $palette-red-900,
+  'red-text-A100': $palette-red-A100,
+  'red-text-A200': $palette-red-A200,
+  'red-text-A400': $palette-red-A400,
+  'red-text-A700': $palette-red-A700
+);
 
 
 // Pink
-$palette-pink: (
-  rgb(252, 228, 236),
-  rgb(248, 187, 208),
-  rgb(244, 143, 177),
-  rgb(240, 98, 146),
-  rgb(236, 64, 122),
-  rgb(233, 30, 99),
-  rgb(216, 27, 96),
-  rgb(194, 24, 91),
-  rgb(173, 20, 87),
-  rgb(136, 14, 79),
-  rgb(255, 128, 171),
-  rgb(255, 64, 129),
-  rgb(245, 0, 87),
-  rgb(197, 17, 98)
+$palette-pink-50: rgb(252, 228, 236);
+$palette-pink-100: rgb(248, 187, 208);
+$palette-pink-200: rgb(244, 143, 177);
+$palette-pink-300: rgb(240, 98, 146);
+$palette-pink-400: rgb(236, 64, 122);
+$palette-pink-500: rgb(233, 30, 99);
+$palette-pink-600: rgb(216, 27, 96);
+$palette-pink-700: rgb(194, 24, 91);
+$palette-pink-800: rgb(173, 20, 87);
+$palette-pink-900: rgb(136, 14, 79);
+$palette-pink-A100: rgb(255, 128, 171);
+$palette-pink-A200: rgb(255, 64, 129);
+$palette-pink-A400: rgb(245, 0, 87);
+$palette-pink-A700: rgb(197, 17, 98);
+
+$pink: (
+  'pink': $palette-pink-500,
+  'pink-50': $palette-pink-50,
+  'pink-100': $palette-pink-100,
+  'pink-200': $palette-pink-200,
+  'pink-300': $palette-pink-300,
+  'pink-400': $palette-pink-400,
+  'pink-500': $palette-pink-500,
+  'pink-600': $palette-pink-600,
+  'pink-700': $palette-pink-700,
+  'pink-800': $palette-pink-800,
+  'pink-900': $palette-pink-900,
+  'pink-A100': $palette-pink-A100,
+  'pink-A200': $palette-pink-A200,
+  'pink-A400': $palette-pink-A400,
+  'pink-A700': $palette-pink-A700
 );
 
-$palette-pink-50: nth($palette-pink, 1);
-$palette-pink-100: nth($palette-pink, 2);
-$palette-pink-200: nth($palette-pink, 3);
-$palette-pink-300: nth($palette-pink, 4);
-$palette-pink-400: nth($palette-pink, 5);
-$palette-pink-500: nth($palette-pink, 6);
-$palette-pink-600: nth($palette-pink, 7);
-$palette-pink-700: nth($palette-pink, 8);
-$palette-pink-800: nth($palette-pink, 9);
-$palette-pink-900: nth($palette-pink, 10);
-$palette-pink-A100: nth($palette-pink, 11);
-$palette-pink-A200: nth($palette-pink, 12);
-$palette-pink-A400: nth($palette-pink, 13);
-$palette-pink-A700: nth($palette-pink, 14);
+$pink-text: (
+  'pink-text': $palette-pink-500,
+  'pink-text-50': $palette-pink-50,
+  'pink-text-100': $palette-pink-100,
+  'pink-text-200': $palette-pink-200,
+  'pink-text-300': $palette-pink-300,
+  'pink-text-400': $palette-pink-400,
+  'pink-text-500': $palette-pink-500,
+  'pink-text-600': $palette-pink-600,
+  'pink-text-700': $palette-pink-700,
+  'pink-text-800': $palette-pink-800,
+  'pink-text-900': $palette-pink-900,
+  'pink-text-A100': $palette-pink-A100,
+  'pink-text-A200': $palette-pink-A200,
+  'pink-text-A400': $palette-pink-A400,
+  'pink-text-A700': $palette-pink-A700
+);
 
 
 // Purple
-$palette-purple: (
-  rgb(243, 229, 245),
-  rgb(225, 190, 231),
-  rgb(206, 147, 216),
-  rgb(186, 104, 200),
-  rgb(171, 71, 188),
-  rgb(156, 39, 176),
-  rgb(142, 36, 170),
-  rgb(123, 31, 162),
-  rgb(106, 27, 154),
-  rgb(74, 20, 140),
-  rgb(234, 128, 252),
-  rgb(224, 64, 251),
-  rgb(213, 0, 249),
-  rgb(170, 0, 255)
+$palette-purple-50: rgb(243, 229, 245);
+$palette-purple-100: rgb(225, 190, 231);
+$palette-purple-200: rgb(206, 147, 216);
+$palette-purple-300: rgb(186, 104, 200);
+$palette-purple-400: rgb(171, 71, 188);
+$palette-purple-500: rgb(156, 39, 176);
+$palette-purple-600: rgb(142, 36, 170);
+$palette-purple-700: rgb(123, 31, 162);
+$palette-purple-800: rgb(106, 27, 154);
+$palette-purple-900: rgb(74, 20, 140);
+$palette-purple-A100: rgb(234, 128, 252);
+$palette-purple-A200: rgb(224, 64, 251);
+$palette-purple-A400: rgb(213, 0, 249);
+$palette-purple-A700: rgb(170, 0, 255);
+
+$purple: (
+  'purple': $palette-purple-500,
+  'purple-50': $palette-purple-50,
+  'purple-100': $palette-purple-100,
+  'purple-200': $palette-purple-200,
+  'purple-300': $palette-purple-300,
+  'purple-400': $palette-purple-400,
+  'purple-500': $palette-purple-500,
+  'purple-600': $palette-purple-600,
+  'purple-700': $palette-purple-700,
+  'purple-800': $palette-purple-800,
+  'purple-900': $palette-purple-900,
+  'purple-A100': $palette-purple-A100,
+  'purple-A200': $palette-purple-A200,
+  'purple-A400': $palette-purple-A400,
+  'purple-A700': $palette-purple-A700
 );
 
-$palette-purple-50: nth($palette-purple, 1);
-$palette-purple-100: nth($palette-purple, 2);
-$palette-purple-200: nth($palette-purple, 3);
-$palette-purple-300: nth($palette-purple, 4);
-$palette-purple-400: nth($palette-purple, 5);
-$palette-purple-500: nth($palette-purple, 6);
-$palette-purple-600: nth($palette-purple, 7);
-$palette-purple-700: nth($palette-purple, 8);
-$palette-purple-800: nth($palette-purple, 9);
-$palette-purple-900: nth($palette-purple, 10);
-$palette-purple-A100: nth($palette-purple, 11);
-$palette-purple-A200: nth($palette-purple, 12);
-$palette-purple-A400: nth($palette-purple, 13);
-$palette-purple-A700: nth($palette-purple, 14);
+$purple-text: (
+  'purple-text': $palette-purple-500,
+  'purple-text-50': $palette-purple-50,
+  'purple-text-100': $palette-purple-100,
+  'purple-text-200': $palette-purple-200,
+  'purple-text-300': $palette-purple-300,
+  'purple-text-400': $palette-purple-400,
+  'purple-text-500': $palette-purple-500,
+  'purple-text-600': $palette-purple-600,
+  'purple-text-700': $palette-purple-700,
+  'purple-text-800': $palette-purple-800,
+  'purple-text-900': $palette-purple-900,
+  'purple-text-A100': $palette-purple-A100,
+  'purple-text-A200': $palette-purple-A200,
+  'purple-text-A400': $palette-purple-A400,
+  'purple-text-A700': $palette-purple-A700
+);
 
 
 // Deep Purple
-$palette-deep-purple: (
-  rgb(237, 231, 246),
-  rgb(209, 196, 233),
-  rgb(179, 157, 219),
-  rgb(149, 117, 205),
-  rgb(126, 87, 194),
-  rgb(103, 58, 183),
-  rgb(94, 53, 177),
-  rgb(81, 45, 168),
-  rgb(69, 39, 160),
-  rgb(49, 27, 146),
-  rgb(179, 136, 255),
-  rgb(124, 77, 255),
-  rgb(101, 31, 255),
-  rgb(98, 0, 234)
+$palette-deep-purple-50: rgb(237, 231, 246);
+$palette-deep-purple-100: rgb(209, 196, 233);
+$palette-deep-purple-200: rgb(179, 157, 219);
+$palette-deep-purple-300: rgb(149, 117, 205);
+$palette-deep-purple-400: rgb(126, 87, 194);
+$palette-deep-purple-500: rgb(103, 58, 183);
+$palette-deep-purple-600: rgb(94, 53, 177);
+$palette-deep-purple-700: rgb(81, 45, 168);
+$palette-deep-purple-800: rgb(69, 39, 160);
+$palette-deep-purple-900: rgb(49, 27, 146);
+$palette-deep-purple-A100: rgb(179, 136, 255);
+$palette-deep-purple-A200: rgb(124, 77, 255);
+$palette-deep-purple-A400: rgb(101, 31, 255);
+$palette-deep-purple-A700: rgb(98, 0, 234);
+
+$deep-purple: (
+  'deep-purple': $palette-deep-purple-500,
+  'deep-purple-50': $palette-deep-purple-50,
+  'deep-purple-100': $palette-deep-purple-100,
+  'deep-purple-200': $palette-deep-purple-200,
+  'deep-purple-300': $palette-deep-purple-300,
+  'deep-purple-400': $palette-deep-purple-400,
+  'deep-purple-500': $palette-deep-purple-500,
+  'deep-purple-600': $palette-deep-purple-600,
+  'deep-purple-700': $palette-deep-purple-700,
+  'deep-purple-800': $palette-deep-purple-800,
+  'deep-purple-900': $palette-deep-purple-900,
+  'deep-purple-A100': $palette-deep-purple-A100,
+  'deep-purple-A200': $palette-deep-purple-A200,
+  'deep-purple-A400': $palette-deep-purple-A400,
+  'deep-purple-A700': $palette-deep-purple-A700
 );
 
-$palette-deep-purple-50: nth($palette-deep-purple, 1);
-$palette-deep-purple-100: nth($palette-deep-purple, 2);
-$palette-deep-purple-200: nth($palette-deep-purple, 3);
-$palette-deep-purple-300: nth($palette-deep-purple, 4);
-$palette-deep-purple-400: nth($palette-deep-purple, 5);
-$palette-deep-purple-500: nth($palette-deep-purple, 6);
-$palette-deep-purple-600: nth($palette-deep-purple, 7);
-$palette-deep-purple-700: nth($palette-deep-purple, 8);
-$palette-deep-purple-800: nth($palette-deep-purple, 9);
-$palette-deep-purple-900: nth($palette-deep-purple, 10);
-$palette-deep-purple-A100: nth($palette-deep-purple, 11);
-$palette-deep-purple-A200: nth($palette-deep-purple, 12);
-$palette-deep-purple-A400: nth($palette-deep-purple, 13);
-$palette-deep-purple-A700: nth($palette-deep-purple, 14);
+$deep-purple-text: (
+  'deep-purple-text': $palette-deep-purple-500,
+  'deep-purple-text-50': $palette-deep-purple-50,
+  'deep-purple-text-100': $palette-deep-purple-100,
+  'deep-purple-text-200': $palette-deep-purple-200,
+  'deep-purple-text-300': $palette-deep-purple-300,
+  'deep-purple-text-400': $palette-deep-purple-400,
+  'deep-purple-text-500': $palette-deep-purple-500,
+  'deep-purple-text-600': $palette-deep-purple-600,
+  'deep-purple-text-700': $palette-deep-purple-700,
+  'deep-purple-text-800': $palette-deep-purple-800,
+  'deep-purple-text-900': $palette-deep-purple-900,
+  'deep-purple-text-A100': $palette-deep-purple-A100,
+  'deep-purple-text-A200': $palette-deep-purple-A200,
+  'deep-purple-text-A400': $palette-deep-purple-A400,
+  'deep-purple-text-A700': $palette-deep-purple-A700
+);
 
 
 // Indigo
-$palette-indigo: (
-  rgb(232, 234, 246),
-  rgb(197, 202, 233),
-  rgb(159, 168, 218),
-  rgb(121, 134, 203),
-  rgb(92, 107, 192),
-  rgb(63, 81, 181),
-  rgb(57, 73, 171),
-  rgb(48, 63, 159),
-  rgb(40, 53, 147),
-  rgb(26, 35, 126),
-  rgb(140, 158, 255),
-  rgb(83, 109, 254),
-  rgb(61, 90, 254),
-  rgb(48, 79, 254)
+$palette-indigo-50: rgb(232, 234, 246);
+$palette-indigo-100: rgb(197, 202, 233);
+$palette-indigo-200: rgb(159, 168, 218);
+$palette-indigo-300: rgb(121, 134, 203);
+$palette-indigo-400: rgb(92, 107, 192);
+$palette-indigo-500: rgb(63, 81, 181);
+$palette-indigo-600: rgb(57, 73, 171);
+$palette-indigo-700: rgb(48, 63, 159);
+$palette-indigo-800: rgb(40, 53, 147);
+$palette-indigo-900: rgb(26, 35, 126);
+$palette-indigo-A100: rgb(140, 158, 255);
+$palette-indigo-A200: rgb(83, 109, 254);
+$palette-indigo-A400: rgb(61, 90, 254);
+$palette-indigo-A700: rgb(48, 79, 254);
+
+$indigo: (
+  'indigo': $palette-indigo-500,
+  'indigo-50': $palette-indigo-50,
+  'indigo-100': $palette-indigo-100,
+  'indigo-200': $palette-indigo-200,
+  'indigo-300': $palette-indigo-300,
+  'indigo-400': $palette-indigo-400,
+  'indigo-500': $palette-indigo-500,
+  'indigo-600': $palette-indigo-600,
+  'indigo-700': $palette-indigo-700,
+  'indigo-800': $palette-indigo-800,
+  'indigo-900': $palette-indigo-900,
+  'indigo-A100': $palette-indigo-A100,
+  'indigo-A200': $palette-indigo-A200,
+  'indigo-A400': $palette-indigo-A400,
+  'indigo-A700': $palette-indigo-A700
 );
 
-$palette-indigo-50: nth($palette-indigo, 1);
-$palette-indigo-100: nth($palette-indigo, 2);
-$palette-indigo-200: nth($palette-indigo, 3);
-$palette-indigo-300: nth($palette-indigo, 4);
-$palette-indigo-400: nth($palette-indigo, 5);
-$palette-indigo-500: nth($palette-indigo, 6);
-$palette-indigo-600: nth($palette-indigo, 7);
-$palette-indigo-700: nth($palette-indigo, 8);
-$palette-indigo-800: nth($palette-indigo, 9);
-$palette-indigo-900: nth($palette-indigo, 10);
-$palette-indigo-A100: nth($palette-indigo, 11);
-$palette-indigo-A200: nth($palette-indigo, 12);
-$palette-indigo-A400: nth($palette-indigo, 13);
-$palette-indigo-A700: nth($palette-indigo, 14);
+$indigo-text: (
+  'indigo-text': $palette-indigo-500,
+  'indigo-text-50': $palette-indigo-50,
+  'indigo-text-100': $palette-indigo-100,
+  'indigo-text-200': $palette-indigo-200,
+  'indigo-text-300': $palette-indigo-300,
+  'indigo-text-400': $palette-indigo-400,
+  'indigo-text-500': $palette-indigo-500,
+  'indigo-text-600': $palette-indigo-600,
+  'indigo-text-700': $palette-indigo-700,
+  'indigo-text-800': $palette-indigo-800,
+  'indigo-text-900': $palette-indigo-900,
+  'indigo-text-A100': $palette-indigo-A100,
+  'indigo-text-A200': $palette-indigo-A200,
+  'indigo-text-A400': $palette-indigo-A400,
+  'indigo-text-A700': $palette-indigo-A700
+);
 
 
 // Blue
-$palette-blue: (
-  rgb(227, 242, 253),
-  rgb(187, 222, 251),
-  rgb(144, 202, 249),
-  rgb(100, 181, 246),
-  rgb(66, 165, 245),
-  rgb(33, 150, 243),
-  rgb(30, 136, 229),
-  rgb(25, 118, 210),
-  rgb(21, 101, 192),
-  rgb(13, 71, 161),
-  rgb(130, 177, 255),
-  rgb(68, 138, 255),
-  rgb(41, 121, 255),
-  rgb(41, 98, 255)
+$palette-blue-50: rgb(227, 242, 253);
+$palette-blue-100: rgb(187, 222, 251);
+$palette-blue-200: rgb(144, 202, 249);
+$palette-blue-300: rgb(100, 181, 246);
+$palette-blue-400: rgb(66, 165, 245);
+$palette-blue-500: rgb(33, 150, 243);
+$palette-blue-600: rgb(30, 136, 229);
+$palette-blue-700: rgb(25, 118, 210);
+$palette-blue-800: rgb(21, 101, 192);
+$palette-blue-900: rgb(13, 71, 161);
+$palette-blue-A100: rgb(130, 177, 255);
+$palette-blue-A200: rgb(68, 138, 255);
+$palette-blue-A400: rgb(41, 121, 255);
+$palette-blue-A700: rgb(41, 98, 255);
+
+$blue: (
+  'blue': $palette-blue-500,
+  'blue-50': $palette-blue-50,
+  'blue-100': $palette-blue-100,
+  'blue-200': $palette-blue-200,
+  'blue-300': $palette-blue-300,
+  'blue-400': $palette-blue-400,
+  'blue-500': $palette-blue-500,
+  'blue-600': $palette-blue-600,
+  'blue-700': $palette-blue-700,
+  'blue-800': $palette-blue-800,
+  'blue-900': $palette-blue-900,
+  'blue-A100': $palette-blue-A100,
+  'blue-A200': $palette-blue-A200,
+  'blue-A400': $palette-blue-A400,
+  'blue-A700': $palette-blue-A700
 );
 
-$palette-blue-50: nth($palette-blue, 1);
-$palette-blue-100: nth($palette-blue, 2);
-$palette-blue-200: nth($palette-blue, 3);
-$palette-blue-300: nth($palette-blue, 4);
-$palette-blue-400: nth($palette-blue, 5);
-$palette-blue-500: nth($palette-blue, 6);
-$palette-blue-600: nth($palette-blue, 7);
-$palette-blue-700: nth($palette-blue, 8);
-$palette-blue-800: nth($palette-blue, 9);
-$palette-blue-900: nth($palette-blue, 10);
-$palette-blue-A100: nth($palette-blue, 11);
-$palette-blue-A200: nth($palette-blue, 12);
-$palette-blue-A400: nth($palette-blue, 13);
-$palette-blue-A700: nth($palette-blue, 14);
+$blue-text: (
+  'blue-text': $palette-blue-500,
+  'blue-text-50': $palette-blue-50,
+  'blue-text-100': $palette-blue-100,
+  'blue-text-200': $palette-blue-200,
+  'blue-text-300': $palette-blue-300,
+  'blue-text-400': $palette-blue-400,
+  'blue-text-500': $palette-blue-500,
+  'blue-text-600': $palette-blue-600,
+  'blue-text-700': $palette-blue-700,
+  'blue-text-800': $palette-blue-800,
+  'blue-text-900': $palette-blue-900,
+  'blue-text-A100': $palette-blue-A100,
+  'blue-text-A200': $palette-blue-A200,
+  'blue-text-A400': $palette-blue-A400,
+  'blue-text-A700': $palette-blue-A700
+);
 
 
 // Light Blue
-$palette-light-blue: (
-  rgb(225, 245, 254),
-  rgb(179, 229, 252),
-  rgb(129, 212, 250),
-  rgb(79, 195, 247),
-  rgb(41, 182, 246),
-  rgb(3, 169, 244),
-  rgb(3, 155, 229),
-  rgb(2, 136, 209),
-  rgb(2, 119, 189),
-  rgb(1, 87, 155),
-  rgb(128, 216, 255),
-  rgb(64, 196, 255),
-  rgb(0, 176, 255),
-  rgb(0, 145, 234)
+$palette-light-blue-50: rgb(225, 245, 254);
+$palette-light-blue-100: rgb(179, 229, 252);
+$palette-light-blue-200: rgb(129, 212, 250);
+$palette-light-blue-300: rgb(79, 195, 247);
+$palette-light-blue-400: rgb(41, 182, 246);
+$palette-light-blue-500: rgb(3, 169, 244);
+$palette-light-blue-600: rgb(3, 155, 229);
+$palette-light-blue-700: rgb(2, 136, 209);
+$palette-light-blue-800: rgb(2, 119, 189);
+$palette-light-blue-900: rgb(1, 87, 155);
+$palette-light-blue-A100: rgb(128, 216, 255);
+$palette-light-blue-A200: rgb(64, 196, 255);
+$palette-light-blue-A400: rgb(0, 176, 255);
+$palette-light-blue-A700: rgb(0, 145, 234);
+
+$light-blue: (
+  'light-blue': $palette-light-blue-500,
+  'light-blue-50': $palette-light-blue-50,
+  'light-blue-100': $palette-light-blue-100,
+  'light-blue-200': $palette-light-blue-200,
+  'light-blue-300': $palette-light-blue-300,
+  'light-blue-400': $palette-light-blue-400,
+  'light-blue-500': $palette-light-blue-500,
+  'light-blue-600': $palette-light-blue-600,
+  'light-blue-700': $palette-light-blue-700,
+  'light-blue-800': $palette-light-blue-800,
+  'light-blue-900': $palette-light-blue-900,
+  'light-blue-A100': $palette-light-blue-A100,
+  'light-blue-A200': $palette-light-blue-A200,
+  'light-blue-A400': $palette-light-blue-A400,
+  'light-blue-A700': $palette-light-blue-A700
 );
 
-$palette-light-blue-50: nth($palette-light-blue, 1);
-$palette-light-blue-100: nth($palette-light-blue, 2);
-$palette-light-blue-200: nth($palette-light-blue, 3);
-$palette-light-blue-300: nth($palette-light-blue, 4);
-$palette-light-blue-400: nth($palette-light-blue, 5);
-$palette-light-blue-500: nth($palette-light-blue, 6);
-$palette-light-blue-600: nth($palette-light-blue, 7);
-$palette-light-blue-700: nth($palette-light-blue, 8);
-$palette-light-blue-800: nth($palette-light-blue, 9);
-$palette-light-blue-900: nth($palette-light-blue, 10);
-$palette-light-blue-A100: nth($palette-light-blue, 11);
-$palette-light-blue-A200: nth($palette-light-blue, 12);
-$palette-light-blue-A400: nth($palette-light-blue, 13);
-$palette-light-blue-A700: nth($palette-light-blue, 14);
+$light-blue-text: (
+  'light-blue-text': $palette-light-blue-500,
+  'light-blue-text-50': $palette-light-blue-50,
+  'light-blue-text-100': $palette-light-blue-100,
+  'light-blue-text-200': $palette-light-blue-200,
+  'light-blue-text-300': $palette-light-blue-300,
+  'light-blue-text-400': $palette-light-blue-400,
+  'light-blue-text-500': $palette-light-blue-500,
+  'light-blue-text-600': $palette-light-blue-600,
+  'light-blue-text-700': $palette-light-blue-700,
+  'light-blue-text-800': $palette-light-blue-800,
+  'light-blue-text-900': $palette-light-blue-900,
+  'light-blue-text-A100': $palette-light-blue-A100,
+  'light-blue-text-A200': $palette-light-blue-A200,
+  'light-blue-text-A400': $palette-light-blue-A400,
+  'light-blue-text-A700': $palette-light-blue-A700
+);
 
 
 // Cyan
-$palette-cyan: (
-  rgb(224, 247, 250),
-  rgb(178, 235, 242),
-  rgb(128, 222, 234),
-  rgb(77, 208, 225),
-  rgb(38, 198, 218),
-  rgb(0, 188, 212),
-  rgb(0, 172, 193),
-  rgb(0, 151, 167),
-  rgb(0, 131, 143),
-  rgb(0, 96, 100),
-  rgb(132, 255, 255),
-  rgb(24, 255, 255),
-  rgb(0, 229, 255),
-  rgb(0, 184, 212)
+$palette-cyan-50: rgb(224, 247, 250);
+$palette-cyan-100: rgb(178, 235, 242);
+$palette-cyan-200: rgb(128, 222, 234);
+$palette-cyan-300: rgb(77, 208, 225);
+$palette-cyan-400: rgb(38, 198, 218);
+$palette-cyan-500: rgb(0, 188, 212);
+$palette-cyan-600: rgb(0, 172, 193);
+$palette-cyan-700: rgb(0, 151, 167);
+$palette-cyan-800: rgb(0, 131, 143);
+$palette-cyan-900: rgb(0, 96, 100);
+$palette-cyan-A100: rgb(132, 255, 255);
+$palette-cyan-A200: rgb(24, 255, 255);
+$palette-cyan-A400: rgb(0, 229, 255);
+$palette-cyan-A700: rgb(0, 184, 212);
+
+$cyan: (
+  'cyan': $palette-cyan-500,
+  'cyan-50': $palette-cyan-50,
+  'cyan-100': $palette-cyan-100,
+  'cyan-200': $palette-cyan-200,
+  'cyan-300': $palette-cyan-300,
+  'cyan-400': $palette-cyan-400,
+  'cyan-500': $palette-cyan-500,
+  'cyan-600': $palette-cyan-600,
+  'cyan-700': $palette-cyan-700,
+  'cyan-800': $palette-cyan-800,
+  'cyan-900': $palette-cyan-900,
+  'cyan-A100': $palette-cyan-A100,
+  'cyan-A200': $palette-cyan-A200,
+  'cyan-A400': $palette-cyan-A400,
+  'cyan-A700': $palette-cyan-A700
 );
 
-$palette-cyan-50: nth($palette-cyan, 1);
-$palette-cyan-100: nth($palette-cyan, 2);
-$palette-cyan-200: nth($palette-cyan, 3);
-$palette-cyan-300: nth($palette-cyan, 4);
-$palette-cyan-400: nth($palette-cyan, 5);
-$palette-cyan-500: nth($palette-cyan, 6);
-$palette-cyan-600: nth($palette-cyan, 7);
-$palette-cyan-700: nth($palette-cyan, 8);
-$palette-cyan-800: nth($palette-cyan, 9);
-$palette-cyan-900: nth($palette-cyan, 10);
-$palette-cyan-A100: nth($palette-cyan, 11);
-$palette-cyan-A200: nth($palette-cyan, 12);
-$palette-cyan-A400: nth($palette-cyan, 13);
-$palette-cyan-A700: nth($palette-cyan, 14);
+$cyan-text: (
+  'cyan-text': $palette-cyan-500,
+  'cyan-text-50': $palette-cyan-50,
+  'cyan-text-100': $palette-cyan-100,
+  'cyan-text-200': $palette-cyan-200,
+  'cyan-text-300': $palette-cyan-300,
+  'cyan-text-400': $palette-cyan-400,
+  'cyan-text-500': $palette-cyan-500,
+  'cyan-text-600': $palette-cyan-600,
+  'cyan-text-700': $palette-cyan-700,
+  'cyan-text-800': $palette-cyan-800,
+  'cyan-text-900': $palette-cyan-900,
+  'cyan-text-A100': $palette-cyan-A100,
+  'cyan-text-A200': $palette-cyan-A200,
+  'cyan-text-A400': $palette-cyan-A400,
+  'cyan-text-A700': $palette-cyan-A700
+);
 
 
 // Teal
-$palette-teal: (
-  rgb(224, 242, 241),
-  rgb(178, 223, 219),
-  rgb(128, 203, 196),
-  rgb(77, 182, 172),
-  rgb(38, 166, 154),
-  rgb(0, 150, 136),
-  rgb(0, 137, 123),
-  rgb(0, 121, 107),
-  rgb(0, 105, 92),
-  rgb(0, 77, 64),
-  rgb(167, 255, 235),
-  rgb(100, 255, 218),
-  rgb(29, 233, 182),
-  rgb(0, 191, 165)
+$palette-teal-50: rgb(224, 242, 241);
+$palette-teal-100: rgb(178, 223, 219);
+$palette-teal-200: rgb(128, 203, 196);
+$palette-teal-300: rgb(77, 182, 172);
+$palette-teal-400: rgb(38, 166, 154);
+$palette-teal-500: rgb(0, 150, 136);
+$palette-teal-600: rgb(0, 137, 123);
+$palette-teal-700: rgb(0, 121, 107);
+$palette-teal-800: rgb(0, 105, 92);
+$palette-teal-900: rgb(0, 77, 64);
+$palette-teal-A100: rgb(167, 255, 235);
+$palette-teal-A200: rgb(100, 255, 218);
+$palette-teal-A400: rgb(29, 233, 182);
+$palette-teal-A700: rgb(0, 191, 165);
+
+$teal: (
+  'teal': $palette-teal-500,
+  'teal-50': $palette-teal-50,
+  'teal-100': $palette-teal-100,
+  'teal-200': $palette-teal-200,
+  'teal-300': $palette-teal-300,
+  'teal-400': $palette-teal-400,
+  'teal-500': $palette-teal-500,
+  'teal-600': $palette-teal-600,
+  'teal-700': $palette-teal-700,
+  'teal-800': $palette-teal-800,
+  'teal-900': $palette-teal-900,
+  'teal-A100': $palette-teal-A100,
+  'teal-A200': $palette-teal-A200,
+  'teal-A400': $palette-teal-A400,
+  'teal-A700': $palette-teal-A700
 );
 
-$palette-teal-50: nth($palette-teal, 1);
-$palette-teal-100: nth($palette-teal, 2);
-$palette-teal-200: nth($palette-teal, 3);
-$palette-teal-300: nth($palette-teal, 4);
-$palette-teal-400: nth($palette-teal, 5);
-$palette-teal-500: nth($palette-teal, 6);
-$palette-teal-600: nth($palette-teal, 7);
-$palette-teal-700: nth($palette-teal, 8);
-$palette-teal-800: nth($palette-teal, 9);
-$palette-teal-900: nth($palette-teal, 10);
-$palette-teal-A100: nth($palette-teal, 11);
-$palette-teal-A200: nth($palette-teal, 12);
-$palette-teal-A400: nth($palette-teal, 13);
-$palette-teal-A700: nth($palette-teal, 14);
+$teal-text: (
+  'teal-text': $palette-teal-500,
+  'teal-text-50': $palette-teal-50,
+  'teal-text-100': $palette-teal-100,
+  'teal-text-200': $palette-teal-200,
+  'teal-text-300': $palette-teal-300,
+  'teal-text-400': $palette-teal-400,
+  'teal-text-500': $palette-teal-500,
+  'teal-text-600': $palette-teal-600,
+  'teal-text-700': $palette-teal-700,
+  'teal-text-800': $palette-teal-800,
+  'teal-text-900': $palette-teal-900,
+  'teal-text-A100': $palette-teal-A100,
+  'teal-text-A200': $palette-teal-A200,
+  'teal-text-A400': $palette-teal-A400,
+  'teal-text-A700': $palette-teal-A700
+);
 
 
 // Green
-$palette-green: (
-  rgb(232, 245, 233),
-  rgb(200, 230, 201),
-  rgb(165, 214, 167),
-  rgb(129, 199, 132),
-  rgb(102, 187, 106),
-  rgb(76, 175, 80),
-  rgb(67, 160, 71),
-  rgb(56, 142, 60),
-  rgb(46, 125, 50),
-  rgb(27, 94, 32),
-  rgb(185, 246, 202),
-  rgb(105, 240, 174),
-  rgb(0, 230, 118),
-  rgb(0, 200, 83)
+$palette-green-50: rgb(232, 245, 233);
+$palette-green-100: rgb(200, 230, 201);
+$palette-green-200: rgb(165, 214, 167);
+$palette-green-300: rgb(129, 199, 132);
+$palette-green-400: rgb(102, 187, 106);
+$palette-green-500: rgb(76, 175, 80);
+$palette-green-600: rgb(67, 160, 71);
+$palette-green-700: rgb(56, 142, 60);
+$palette-green-800: rgb(46, 125, 50);
+$palette-green-900: rgb(27, 94, 32);
+$palette-green-A100: rgb(185, 246, 202);
+$palette-green-A200: rgb(105, 240, 174);
+$palette-green-A400: rgb(0, 230, 118);
+$palette-green-A700: rgb(0, 200, 83);
+
+$green: (
+  'green': $palette-green-500,
+  'green-50': $palette-green-50,
+  'green-100': $palette-green-100,
+  'green-200': $palette-green-200,
+  'green-300': $palette-green-300,
+  'green-400': $palette-green-400,
+  'green-500': $palette-green-500,
+  'green-600': $palette-green-600,
+  'green-700': $palette-green-700,
+  'green-800': $palette-green-800,
+  'green-900': $palette-green-900,
+  'green-A100': $palette-green-A100,
+  'green-A200': $palette-green-A200,
+  'green-A400': $palette-green-A400,
+  'green-A700': $palette-green-A700
 );
 
-$palette-green-50: nth($palette-green, 1);
-$palette-green-100: nth($palette-green, 2);
-$palette-green-200: nth($palette-green, 3);
-$palette-green-300: nth($palette-green, 4);
-$palette-green-400: nth($palette-green, 5);
-$palette-green-500: nth($palette-green, 6);
-$palette-green-600: nth($palette-green, 7);
-$palette-green-700: nth($palette-green, 8);
-$palette-green-800: nth($palette-green, 9);
-$palette-green-900: nth($palette-green, 10);
-$palette-green-A100: nth($palette-green, 11);
-$palette-green-A200: nth($palette-green, 12);
-$palette-green-A400: nth($palette-green, 13);
-$palette-green-A700: nth($palette-green, 14);
+$green-text: (
+  'green-text': $palette-green-500,
+  'green-text-50': $palette-green-50,
+  'green-text-100': $palette-green-100,
+  'green-text-200': $palette-green-200,
+  'green-text-300': $palette-green-300,
+  'green-text-400': $palette-green-400,
+  'green-text-500': $palette-green-500,
+  'green-text-600': $palette-green-600,
+  'green-text-700': $palette-green-700,
+  'green-text-800': $palette-green-800,
+  'green-text-900': $palette-green-900,
+  'green-text-A100': $palette-green-A100,
+  'green-text-A200': $palette-green-A200,
+  'green-text-A400': $palette-green-A400,
+  'green-text-A700': $palette-green-A700
+);
 
 
 // Light Green
-$palette-light-green: (
-  rgb(241, 248, 233),
-  rgb(220, 237, 200),
-  rgb(197, 225, 165),
-  rgb(174, 213, 129),
-  rgb(156, 204, 101),
-  rgb(139, 195, 74),
-  rgb(124, 179, 66),
-  rgb(104, 159, 56),
-  rgb(85, 139, 47),
-  rgb(51, 105, 30),
-  rgb(204, 255, 144),
-  rgb(178, 255, 89),
-  rgb(118, 255, 3),
-  rgb(100, 221, 23)
+$palette-light-green-50: rgb(241, 248, 233);
+$palette-light-green-100: rgb(220, 237, 200);
+$palette-light-green-200: rgb(197, 225, 165);
+$palette-light-green-300: rgb(174, 213, 129);
+$palette-light-green-400: rgb(156, 204, 101);
+$palette-light-green-500: rgb(139, 195, 74);
+$palette-light-green-600: rgb(124, 179, 66);
+$palette-light-green-700: rgb(104, 159, 56);
+$palette-light-green-800: rgb(85, 139, 47);
+$palette-light-green-900: rgb(51, 105, 30);
+$palette-light-green-A100: rgb(204, 255, 144);
+$palette-light-green-A200: rgb(178, 255, 89);
+$palette-light-green-A400: rgb(118, 255, 3);
+$palette-light-green-A700: rgb(100, 221, 23);
+
+$light-green: (
+  'light-green': $palette-light-green-500,
+  'light-green-50': $palette-light-green-50,
+  'light-green-100': $palette-light-green-100,
+  'light-green-200': $palette-light-green-200,
+  'light-green-300': $palette-light-green-300,
+  'light-green-400': $palette-light-green-400,
+  'light-green-500': $palette-light-green-500,
+  'light-green-600': $palette-light-green-600,
+  'light-green-700': $palette-light-green-700,
+  'light-green-800': $palette-light-green-800,
+  'light-green-900': $palette-light-green-900,
+  'light-green-A100': $palette-light-green-A100,
+  'light-green-A200': $palette-light-green-A200,
+  'light-green-A400': $palette-light-green-A400,
+  'light-green-A700': $palette-light-green-A700
 );
 
-$palette-light-green-50: nth($palette-light-green, 1);
-$palette-light-green-100: nth($palette-light-green, 2);
-$palette-light-green-200: nth($palette-light-green, 3);
-$palette-light-green-300: nth($palette-light-green, 4);
-$palette-light-green-400: nth($palette-light-green, 5);
-$palette-light-green-500: nth($palette-light-green, 6);
-$palette-light-green-600: nth($palette-light-green, 7);
-$palette-light-green-700: nth($palette-light-green, 8);
-$palette-light-green-800: nth($palette-light-green, 9);
-$palette-light-green-900: nth($palette-light-green, 10);
-$palette-light-green-A100: nth($palette-light-green, 11);
-$palette-light-green-A200: nth($palette-light-green, 12);
-$palette-light-green-A400: nth($palette-light-green, 13);
-$palette-light-green-A700: nth($palette-light-green, 14);
+$light-green-text: (
+  'light-green-text': $palette-light-green-500,
+  'light-green-text-50': $palette-light-green-50,
+  'light-green-text-100': $palette-light-green-100,
+  'light-green-text-200': $palette-light-green-200,
+  'light-green-text-300': $palette-light-green-300,
+  'light-green-text-400': $palette-light-green-400,
+  'light-green-text-500': $palette-light-green-500,
+  'light-green-text-600': $palette-light-green-600,
+  'light-green-text-700': $palette-light-green-700,
+  'light-green-text-800': $palette-light-green-800,
+  'light-green-text-900': $palette-light-green-900,
+  'light-green-text-A100': $palette-light-green-A100,
+  'light-green-text-A200': $palette-light-green-A200,
+  'light-green-text-A400': $palette-light-green-A400,
+  'light-green-text-A700': $palette-light-green-A700
+);
 
 
 // Lime
-$palette-lime: (
-  rgb(249, 251, 231),
-  rgb(240, 244, 195),
-  rgb(230, 238, 156),
-  rgb(220, 231, 117),
-  rgb(212, 225, 87),
-  rgb(205, 220, 57),
-  rgb(192, 202, 51),
-  rgb(175, 180, 43),
-  rgb(158, 157, 36),
-  rgb(130, 119, 23),
-  rgb(244, 255, 129),
-  rgb(238, 255, 65),
-  rgb(198, 255, 0),
-  rgb(174, 234, 0)
+$palette-lime-50: rgb(249, 251, 231);
+$palette-lime-100: rgb(240, 244, 195);
+$palette-lime-200: rgb(230, 238, 156);
+$palette-lime-300: rgb(220, 231, 117);
+$palette-lime-400: rgb(212, 225, 87);
+$palette-lime-500: rgb(205, 220, 57);
+$palette-lime-600: rgb(192, 202, 51);
+$palette-lime-700: rgb(175, 180, 43);
+$palette-lime-800: rgb(158, 157, 36);
+$palette-lime-900: rgb(130, 119, 23);
+$palette-lime-A100: rgb(244, 255, 129);
+$palette-lime-A200: rgb(238, 255, 65);
+$palette-lime-A400: rgb(198, 255, 0);
+$palette-lime-A700: rgb(174, 234, 0);
+
+$lime: (
+  'lime': $palette-lime-500,
+  'lime-50': $palette-lime-50,
+  'lime-100': $palette-lime-100,
+  'lime-200': $palette-lime-200,
+  'lime-300': $palette-lime-300,
+  'lime-400': $palette-lime-400,
+  'lime-500': $palette-lime-500,
+  'lime-600': $palette-lime-600,
+  'lime-700': $palette-lime-700,
+  'lime-800': $palette-lime-800,
+  'lime-900': $palette-lime-900,
+  'lime-A100': $palette-lime-A100,
+  'lime-A200': $palette-lime-A200,
+  'lime-A400': $palette-lime-A400,
+  'lime-A700': $palette-lime-A700
 );
 
-$palette-lime-50: nth($palette-lime, 1);
-$palette-lime-100: nth($palette-lime, 2);
-$palette-lime-200: nth($palette-lime, 3);
-$palette-lime-300: nth($palette-lime, 4);
-$palette-lime-400: nth($palette-lime, 5);
-$palette-lime-500: nth($palette-lime, 6);
-$palette-lime-600: nth($palette-lime, 7);
-$palette-lime-700: nth($palette-lime, 8);
-$palette-lime-800: nth($palette-lime, 9);
-$palette-lime-900: nth($palette-lime, 10);
-$palette-lime-A100: nth($palette-lime, 11);
-$palette-lime-A200: nth($palette-lime, 12);
-$palette-lime-A400: nth($palette-lime, 13);
-$palette-lime-A700: nth($palette-lime, 14);
+$lime-text: (
+  'lime-text': $palette-lime-500,
+  'lime-text-50': $palette-lime-50,
+  'lime-text-100': $palette-lime-100,
+  'lime-text-200': $palette-lime-200,
+  'lime-text-300': $palette-lime-300,
+  'lime-text-400': $palette-lime-400,
+  'lime-text-500': $palette-lime-500,
+  'lime-text-600': $palette-lime-600,
+  'lime-text-700': $palette-lime-700,
+  'lime-text-800': $palette-lime-800,
+  'lime-text-900': $palette-lime-900,
+  'lime-text-A100': $palette-lime-A100,
+  'lime-text-A200': $palette-lime-A200,
+  'lime-text-A400': $palette-lime-A400,
+  'lime-text-A700': $palette-lime-A700
+);
 
 
 // Yellow
-$palette-yellow: (
-  rgb(255, 253, 231),
-  rgb(255, 249, 196),
-  rgb(255, 245, 157),
-  rgb(255, 241, 118),
-  rgb(255, 238, 88),
-  rgb(255, 235, 59),
-  rgb(253, 216, 53),
-  rgb(251, 192, 45),
-  rgb(249, 168, 37),
-  rgb(245, 127, 23),
-  rgb(255, 255, 141),
-  rgb(255, 255, 0),
-  rgb(255, 234, 0),
-  rgb(255, 214, 0)
+$palette-yellow-50: rgb(255, 253, 231);
+$palette-yellow-100: rgb(255, 249, 196);
+$palette-yellow-200: rgb(255, 245, 157);
+$palette-yellow-300: rgb(255, 241, 118);
+$palette-yellow-400: rgb(255, 238, 88);
+$palette-yellow-500: rgb(255, 235, 59);
+$palette-yellow-600: rgb(253, 216, 53);
+$palette-yellow-700: rgb(251, 192, 45);
+$palette-yellow-800: rgb(249, 168, 37);
+$palette-yellow-900: rgb(245, 127, 23);
+$palette-yellow-A100: rgb(255, 255, 141);
+$palette-yellow-A200: rgb(255, 255, 0);
+$palette-yellow-A400: rgb(255, 234, 0);
+$palette-yellow-A700: rgb(255, 214, 0);
+
+$yellow: (
+  'yellow': $palette-yellow-500,
+  'yellow-50': $palette-yellow-50,
+  'yellow-100': $palette-yellow-100,
+  'yellow-200': $palette-yellow-200,
+  'yellow-300': $palette-yellow-300,
+  'yellow-400': $palette-yellow-400,
+  'yellow-500': $palette-yellow-500,
+  'yellow-600': $palette-yellow-600,
+  'yellow-700': $palette-yellow-700,
+  'yellow-800': $palette-yellow-800,
+  'yellow-900': $palette-yellow-900,
+  'yellow-A100': $palette-yellow-A100,
+  'yellow-A200': $palette-yellow-A200,
+  'yellow-A400': $palette-yellow-A400,
+  'yellow-A700': $palette-yellow-A700
 );
 
-$palette-yellow-50: nth($palette-yellow, 1);
-$palette-yellow-100: nth($palette-yellow, 2);
-$palette-yellow-200: nth($palette-yellow, 3);
-$palette-yellow-300: nth($palette-yellow, 4);
-$palette-yellow-400: nth($palette-yellow, 5);
-$palette-yellow-500: nth($palette-yellow, 6);
-$palette-yellow-600: nth($palette-yellow, 7);
-$palette-yellow-700: nth($palette-yellow, 8);
-$palette-yellow-800: nth($palette-yellow, 9);
-$palette-yellow-900: nth($palette-yellow, 10);
-$palette-yellow-A100: nth($palette-yellow, 11);
-$palette-yellow-A200: nth($palette-yellow, 12);
-$palette-yellow-A400: nth($palette-yellow, 13);
-$palette-yellow-A700: nth($palette-yellow, 14);
+$yellow-text: (
+  'yellow-text': $palette-yellow-500,
+  'yellow-text-50': $palette-yellow-50,
+  'yellow-text-100': $palette-yellow-100,
+  'yellow-text-200': $palette-yellow-200,
+  'yellow-text-300': $palette-yellow-300,
+  'yellow-text-400': $palette-yellow-400,
+  'yellow-text-500': $palette-yellow-500,
+  'yellow-text-600': $palette-yellow-600,
+  'yellow-text-700': $palette-yellow-700,
+  'yellow-text-800': $palette-yellow-800,
+  'yellow-text-900': $palette-yellow-900,
+  'yellow-text-A100': $palette-yellow-A100,
+  'yellow-text-A200': $palette-yellow-A200,
+  'yellow-text-A400': $palette-yellow-A400,
+  'yellow-text-A700': $palette-yellow-A700
+);
 
 
 // Amber
-$palette-amber: (
-  rgb(255, 248, 225),
-  rgb(255, 236, 179),
-  rgb(255, 224, 130),
-  rgb(255, 213, 79),
-  rgb(255, 202, 40),
-  rgb(255, 193, 7),
-  rgb(255, 179, 0),
-  rgb(255, 160, 0),
-  rgb(255, 143, 0),
-  rgb(255, 111, 0),
-  rgb(255, 229, 127),
-  rgb(255, 215, 64),
-  rgb(255, 196, 0),
-  rgb(255, 171, 0)
+$palette-amber-50: rgb(255, 248, 225);
+$palette-amber-100: rgb(255, 236, 179);
+$palette-amber-200: rgb(255, 224, 130);
+$palette-amber-300: rgb(255, 213, 79);
+$palette-amber-400: rgb(255, 202, 40);
+$palette-amber-500: rgb(255, 193, 7);
+$palette-amber-600: rgb(255, 179, 0);
+$palette-amber-700: rgb(255, 160, 0);
+$palette-amber-800: rgb(255, 143, 0);
+$palette-amber-900: rgb(255, 111, 0);
+$palette-amber-A100: rgb(255, 229, 127);
+$palette-amber-A200: rgb(255, 215, 64);
+$palette-amber-A400: rgb(255, 196, 0);
+$palette-amber-A700: rgb(255, 171, 0);
+
+$amber: (
+  'amber': $palette-amber-500,
+  'amber-50': $palette-amber-50,
+  'amber-100': $palette-amber-100,
+  'amber-200': $palette-amber-200,
+  'amber-300': $palette-amber-300,
+  'amber-400': $palette-amber-400,
+  'amber-500': $palette-amber-500,
+  'amber-600': $palette-amber-600,
+  'amber-700': $palette-amber-700,
+  'amber-800': $palette-amber-800,
+  'amber-900': $palette-amber-900,
+  'amber-A100': $palette-amber-A100,
+  'amber-A200': $palette-amber-A200,
+  'amber-A400': $palette-amber-A400,
+  'amber-A700': $palette-amber-A700
 );
 
-$palette-amber-50: nth($palette-amber, 1);
-$palette-amber-100: nth($palette-amber, 2);
-$palette-amber-200: nth($palette-amber, 3);
-$palette-amber-300: nth($palette-amber, 4);
-$palette-amber-400: nth($palette-amber, 5);
-$palette-amber-500: nth($palette-amber, 6);
-$palette-amber-600: nth($palette-amber, 7);
-$palette-amber-700: nth($palette-amber, 8);
-$palette-amber-800: nth($palette-amber, 9);
-$palette-amber-900: nth($palette-amber, 10);
-$palette-amber-A100: nth($palette-amber, 11);
-$palette-amber-A200: nth($palette-amber, 12);
-$palette-amber-A400: nth($palette-amber, 13);
-$palette-amber-A700: nth($palette-amber, 14);
+$amber-text: (
+  'amber-text': $palette-amber-500,
+  'amber-text-50': $palette-amber-50,
+  'amber-text-100': $palette-amber-100,
+  'amber-text-200': $palette-amber-200,
+  'amber-text-300': $palette-amber-300,
+  'amber-text-400': $palette-amber-400,
+  'amber-text-500': $palette-amber-500,
+  'amber-text-600': $palette-amber-600,
+  'amber-text-700': $palette-amber-700,
+  'amber-text-800': $palette-amber-800,
+  'amber-text-900': $palette-amber-900,
+  'amber-text-A100': $palette-amber-A100,
+  'amber-text-A200': $palette-amber-A200,
+  'amber-text-A400': $palette-amber-A400,
+  'amber-text-A700': $palette-amber-A700
+);
 
 
 // Orange
-$palette-orange: (
-  rgb(255, 243, 224),
-  rgb(255, 224, 178),
-  rgb(255, 204, 128),
-  rgb(255, 183, 77),
-  rgb(255, 167, 38),
-  rgb(255, 152, 0),
-  rgb(251, 140, 0),
-  rgb(245, 124, 0),
-  rgb(239, 108, 0),
-  rgb(230, 81, 0),
-  rgb(255, 209, 128),
-  rgb(255, 171, 64),
-  rgb(255, 145, 0),
-  rgb(255, 109, 0)
+$palette-orange-50: rgb(255, 243, 224);
+$palette-orange-100: rgb(255, 224, 178);
+$palette-orange-200: rgb(255, 204, 128);
+$palette-orange-300: rgb(255, 183, 77);
+$palette-orange-400: rgb(255, 167, 38);
+$palette-orange-500: rgb(255, 152, 0);
+$palette-orange-600: rgb(251, 140, 0);
+$palette-orange-700: rgb(245, 124, 0);
+$palette-orange-800: rgb(239, 108, 0);
+$palette-orange-900: rgb(230, 81, 0);
+$palette-orange-A100: rgb(255, 209, 128);
+$palette-orange-A200: rgb(255, 171, 64);
+$palette-orange-A400: rgb(255, 145, 0);
+$palette-orange-A700: rgb(255, 109, 0);
+
+$orange: (
+  'orange': $palette-orange-500,
+  'orange-50': $palette-orange-50,
+  'orange-100': $palette-orange-100,
+  'orange-200': $palette-orange-200,
+  'orange-300': $palette-orange-300,
+  'orange-400': $palette-orange-400,
+  'orange-500': $palette-orange-500,
+  'orange-600': $palette-orange-600,
+  'orange-700': $palette-orange-700,
+  'orange-800': $palette-orange-800,
+  'orange-900': $palette-orange-900,
+  'orange-A100': $palette-orange-A100,
+  'orange-A200': $palette-orange-A200,
+  'orange-A400': $palette-orange-A400,
+  'orange-A700': $palette-orange-A700
 );
 
-$palette-orange-50: nth($palette-orange, 1);
-$palette-orange-100: nth($palette-orange, 2);
-$palette-orange-200: nth($palette-orange, 3);
-$palette-orange-300: nth($palette-orange, 4);
-$palette-orange-400: nth($palette-orange, 5);
-$palette-orange-500: nth($palette-orange, 6);
-$palette-orange-600: nth($palette-orange, 7);
-$palette-orange-700: nth($palette-orange, 8);
-$palette-orange-800: nth($palette-orange, 9);
-$palette-orange-900: nth($palette-orange, 10);
-$palette-orange-A100: nth($palette-orange, 11);
-$palette-orange-A200: nth($palette-orange, 12);
-$palette-orange-A400: nth($palette-orange, 13);
-$palette-orange-A700: nth($palette-orange, 14);
+$orange-text: (
+  'orange-text': $palette-orange-500,
+  'orange-text-50': $palette-orange-50,
+  'orange-text-100': $palette-orange-100,
+  'orange-text-200': $palette-orange-200,
+  'orange-text-300': $palette-orange-300,
+  'orange-text-400': $palette-orange-400,
+  'orange-text-500': $palette-orange-500,
+  'orange-text-600': $palette-orange-600,
+  'orange-text-700': $palette-orange-700,
+  'orange-text-800': $palette-orange-800,
+  'orange-text-900': $palette-orange-900,
+  'orange-text-A100': $palette-orange-A100,
+  'orange-text-A200': $palette-orange-A200,
+  'orange-text-A400': $palette-orange-A400,
+  'orange-text-A700': $palette-orange-A700
+);
 
 
 // Deep Orange
-$palette-deep-orange: (
-  rgb(251, 233, 231),
-  rgb(255, 204, 188),
-  rgb(255, 171, 145),
-  rgb(255, 138, 101),
-  rgb(255, 112, 67),
-  rgb(255, 87, 34),
-  rgb(244, 81, 30),
-  rgb(230, 74, 25),
-  rgb(216, 67, 21),
-  rgb(191, 54, 12),
-  rgb(255, 158, 128),
-  rgb(255, 110, 64),
-  rgb(255, 61, 0),
-  rgb(221, 44, 0)
+$palette-deep-orange-50: rgb(251, 233, 231);
+$palette-deep-orange-100: rgb(255, 204, 188);
+$palette-deep-orange-200: rgb(255, 171, 145);
+$palette-deep-orange-300: rgb(255, 138, 101);
+$palette-deep-orange-400: rgb(255, 112, 67);
+$palette-deep-orange-500: rgb(255, 87, 34);
+$palette-deep-orange-600: rgb(244, 81, 30);
+$palette-deep-orange-700: rgb(230, 74, 25);
+$palette-deep-orange-800: rgb(216, 67, 21);
+$palette-deep-orange-900: rgb(191, 54, 12);
+$palette-deep-orange-A100: rgb(255, 158, 128);
+$palette-deep-orange-A200: rgb(255, 110, 64);
+$palette-deep-orange-A400: rgb(255, 61, 0);
+$palette-deep-orange-A700: rgb(221, 44, 0);
+
+$deep-orange: (
+  'deep-orange': $palette-deep-orange-500,
+  'deep-orange-50': $palette-deep-orange-50,
+  'deep-orange-100': $palette-deep-orange-100,
+  'deep-orange-200': $palette-deep-orange-200,
+  'deep-orange-300': $palette-deep-orange-300,
+  'deep-orange-400': $palette-deep-orange-400,
+  'deep-orange-500': $palette-deep-orange-500,
+  'deep-orange-600': $palette-deep-orange-600,
+  'deep-orange-700': $palette-deep-orange-700,
+  'deep-orange-800': $palette-deep-orange-800,
+  'deep-orange-900': $palette-deep-orange-900,
+  'deep-orange-A100': $palette-deep-orange-A100,
+  'deep-orange-A200': $palette-deep-orange-A200,
+  'deep-orange-A400': $palette-deep-orange-A400,
+  'deep-orange-A700': $palette-deep-orange-A700
 );
 
-$palette-deep-orange-50: nth($palette-deep-orange, 1);
-$palette-deep-orange-100: nth($palette-deep-orange, 2);
-$palette-deep-orange-200: nth($palette-deep-orange, 3);
-$palette-deep-orange-300: nth($palette-deep-orange, 4);
-$palette-deep-orange-400: nth($palette-deep-orange, 5);
-$palette-deep-orange-500: nth($palette-deep-orange, 6);
-$palette-deep-orange-600: nth($palette-deep-orange, 7);
-$palette-deep-orange-700: nth($palette-deep-orange, 8);
-$palette-deep-orange-800: nth($palette-deep-orange, 9);
-$palette-deep-orange-900: nth($palette-deep-orange, 10);
-$palette-deep-orange-A100: nth($palette-deep-orange, 11);
-$palette-deep-orange-A200: nth($palette-deep-orange, 12);
-$palette-deep-orange-A400: nth($palette-deep-orange, 13);
-$palette-deep-orange-A700: nth($palette-deep-orange, 14);
+$deep-orange-text: (
+  'deep-orange-text': $palette-deep-orange-500,
+  'deep-orange-text-50': $palette-deep-orange-50,
+  'deep-orange-text-100': $palette-deep-orange-100,
+  'deep-orange-text-200': $palette-deep-orange-200,
+  'deep-orange-text-300': $palette-deep-orange-300,
+  'deep-orange-text-400': $palette-deep-orange-400,
+  'deep-orange-text-500': $palette-deep-orange-500,
+  'deep-orange-text-600': $palette-deep-orange-600,
+  'deep-orange-text-700': $palette-deep-orange-700,
+  'deep-orange-text-800': $palette-deep-orange-800,
+  'deep-orange-text-900': $palette-deep-orange-900,
+  'deep-orange-text-A100': $palette-deep-orange-A100,
+  'deep-orange-text-A200': $palette-deep-orange-A200,
+  'deep-orange-text-A400': $palette-deep-orange-A400,
+  'deep-orange-text-A700': $palette-deep-orange-A700
+);
 
 
 // Brown
-$palette-brown: (
-  rgb(239, 235, 233),
-  rgb(215, 204, 200),
-  rgb(188, 170, 164),
-  rgb(161, 136, 127),
-  rgb(141, 110, 99),
-  rgb(121, 85, 72),
-  rgb(109, 76, 65),
-  rgb(93, 64, 55),
-  rgb(78, 52, 46),
-  rgb(62, 39, 35)
+$palette-brown-50: rgb(239, 235, 233);
+$palette-brown-100: rgb(215, 204, 200);
+$palette-brown-200: rgb(188, 170, 164);
+$palette-brown-300: rgb(161, 136, 127);
+$palette-brown-400: rgb(141, 110, 99);
+$palette-brown-500: rgb(121, 85, 72);
+$palette-brown-600: rgb(109, 76, 65);
+$palette-brown-700: rgb(93, 64, 55);
+$palette-brown-800: rgb(78, 52, 46);
+$palette-brown-900: rgb(62, 39, 35);
+
+$brown: (
+  'brown': $palette-brown-500,
+  'brown-50': $palette-brown-50,
+  'brown-100': $palette-brown-100,
+  'brown-200': $palette-brown-200,
+  'brown-300': $palette-brown-300,
+  'brown-400': $palette-brown-400,
+  'brown-500': $palette-brown-500,
+  'brown-600': $palette-brown-600,
+  'brown-700': $palette-brown-700,
+  'brown-800': $palette-brown-800,
+  'brown-900': $palette-brown-900
 );
 
-$palette-brown-50: nth($palette-brown, 1);
-$palette-brown-100: nth($palette-brown, 2);
-$palette-brown-200: nth($palette-brown, 3);
-$palette-brown-300: nth($palette-brown, 4);
-$palette-brown-400: nth($palette-brown, 5);
-$palette-brown-500: nth($palette-brown, 6);
-$palette-brown-600: nth($palette-brown, 7);
-$palette-brown-700: nth($palette-brown, 8);
-$palette-brown-800: nth($palette-brown, 9);
-$palette-brown-900: nth($palette-brown, 10);
+$brown-text: (
+  'brown-text': $palette-brown-500,
+  'brown-text-50': $palette-brown-50,
+  'brown-text-100': $palette-brown-100,
+  'brown-text-200': $palette-brown-200,
+  'brown-text-300': $palette-brown-300,
+  'brown-text-400': $palette-brown-400,
+  'brown-text-500': $palette-brown-500,
+  'brown-text-600': $palette-brown-600,
+  'brown-text-700': $palette-brown-700,
+  'brown-text-800': $palette-brown-800,
+  'brown-text-900': $palette-brown-900
+);
 
 
 // Grey
-$palette-grey: (
-  rgb(250, 250, 250),
-  rgb(245, 245, 245),
-  rgb(238, 238, 238),
-  rgb(224, 224, 224),
-  rgb(189, 189, 189),
-  rgb(158, 158, 158),
-  rgb(117, 117, 117),
-  rgb(97, 97, 97),
-  rgb(66, 66, 66),
-  rgb(33, 33, 33)
+$palette-grey-50: rgb(250, 250, 250);
+$palette-grey-100: rgb(245, 245, 245);
+$palette-grey-200: rgb(238, 238, 238);
+$palette-grey-300: rgb(224, 224, 224);
+$palette-grey-400: rgb(189, 189, 189);
+$palette-grey-500: rgb(158, 158, 158);
+$palette-grey-600: rgb(117, 117, 117);
+$palette-grey-700: rgb(97, 97, 97);
+$palette-grey-800: rgb(66, 66, 66);
+$palette-grey-900: rgb(33, 33, 33);
+
+$grey: (
+  'grey': $palette-grey-500,
+  'grey-50': $palette-grey-50,
+  'grey-100': $palette-grey-100,
+  'grey-200': $palette-grey-200,
+  'grey-300': $palette-grey-300,
+  'grey-400': $palette-grey-400,
+  'grey-500': $palette-grey-500,
+  'grey-600': $palette-grey-600,
+  'grey-700': $palette-grey-700,
+  'grey-800': $palette-grey-800,
+  'grey-900': $palette-grey-900
 );
 
-$palette-grey-50: nth($palette-grey, 1);
-$palette-grey-100: nth($palette-grey, 2);
-$palette-grey-200: nth($palette-grey, 3);
-$palette-grey-300: nth($palette-grey, 4);
-$palette-grey-400: nth($palette-grey, 5);
-$palette-grey-500: nth($palette-grey, 6);
-$palette-grey-600: nth($palette-grey, 7);
-$palette-grey-700: nth($palette-grey, 8);
-$palette-grey-800: nth($palette-grey, 9);
-$palette-grey-900: nth($palette-grey, 10);
+$grey-text: (
+  'grey-text': $palette-grey-500,
+  'grey-text-50': $palette-grey-50,
+  'grey-text-100': $palette-grey-100,
+  'grey-text-200': $palette-grey-200,
+  'grey-text-300': $palette-grey-300,
+  'grey-text-400': $palette-grey-400,
+  'grey-text-500': $palette-grey-500,
+  'grey-text-600': $palette-grey-600,
+  'grey-text-700': $palette-grey-700,
+  'grey-text-800': $palette-grey-800,
+  'grey-text-900': $palette-grey-900
+);
 
 
 // Blue Grey
-$palette-blue-grey: (
-  rgb(236, 239, 241),
-  rgb(207, 216, 220),
-  rgb(176, 190, 197),
-  rgb(144, 164, 174),
-  rgb(120, 144, 156),
-  rgb(96, 125, 139),
-  rgb(84, 110, 122),
-  rgb(69, 90, 100),
-  rgb(55, 71, 79),
-  rgb(38, 50, 56)
+$palette-blue-grey-50: rgb(236, 239, 241);
+$palette-blue-grey-100: rgb(207, 216, 220);
+$palette-blue-grey-200: rgb(176, 190, 197);
+$palette-blue-grey-300: rgb(144, 164, 174);
+$palette-blue-grey-400: rgb(120, 144, 156);
+$palette-blue-grey-500: rgb(96, 125, 139);
+$palette-blue-grey-600: rgb(84, 110, 122);
+$palette-blue-grey-700: rgb(69, 90, 100);
+$palette-blue-grey-800: rgb(55, 71, 79);
+$palette-blue-grey-900: rgb(38, 50, 56);
+
+$blue-grey: (
+  'blue-grey': $palette-blue-grey-500,
+  'blue-grey-50': $palette-blue-grey-50,
+  'blue-grey-100': $palette-blue-grey-100,
+  'blue-grey-200': $palette-blue-grey-200,
+  'blue-grey-300': $palette-blue-grey-300,
+  'blue-grey-400': $palette-blue-grey-400,
+  'blue-grey-500': $palette-blue-grey-500,
+  'blue-grey-600': $palette-blue-grey-600,
+  'blue-grey-700': $palette-blue-grey-700,
+  'blue-grey-800': $palette-blue-grey-800,
+  'blue-grey-900': $palette-blue-grey-900
 );
 
-$palette-blue-grey-50: nth($palette-blue-grey, 1);
-$palette-blue-grey-100: nth($palette-blue-grey, 2);
-$palette-blue-grey-200: nth($palette-blue-grey, 3);
-$palette-blue-grey-300: nth($palette-blue-grey, 4);
-$palette-blue-grey-400: nth($palette-blue-grey, 5);
-$palette-blue-grey-500: nth($palette-blue-grey, 6);
-$palette-blue-grey-600: nth($palette-blue-grey, 7);
-$palette-blue-grey-700: nth($palette-blue-grey, 8);
-$palette-blue-grey-800: nth($palette-blue-grey, 9);
-$palette-blue-grey-900: nth($palette-blue-grey, 10);
+$blue-grey-text: (
+  'blue-grey-text': $palette-blue-grey-500,
+  'blue-grey-text-50': $palette-blue-grey-50,
+  'blue-grey-text-100': $palette-blue-grey-100,
+  'blue-grey-text-200': $palette-blue-grey-200,
+  'blue-grey-text-300': $palette-blue-grey-300,
+  'blue-grey-text-400': $palette-blue-grey-400,
+  'blue-grey-text-500': $palette-blue-grey-500,
+  'blue-grey-text-600': $palette-blue-grey-600,
+  'blue-grey-text-700': $palette-blue-grey-700,
+  'blue-grey-text-800': $palette-blue-grey-800,
+  'blue-grey-text-900': $palette-blue-grey-900
+);
+
 
 // Black & White
 $color-black: rgb(0, 0, 0);
@@ -625,3 +975,47 @@ $color-white: rgb(255, 255, 255);
 
 $color-dark-contrast: $color-white !default;
 $color-light-contrast: $color-black !default;
+
+$colors: (
+  'red': $red,
+  'pink': $pink,
+  'purple': $purple,
+  'deep-purple': $deep-purple,
+  'indigo': $indigo,
+  'blue': $blue,
+  'light-blue': $light-blue,
+  'cyan': $cyan,
+  'teal': $teal,
+  'green': $green,
+  'light-green': $light-green,
+  'lime': $lime,
+  'yellow': $yellow,
+  'amber': $amber,
+  'orange': $orange,
+  'deep-orange': $deep-orange,
+  'brown': $brown,
+  'grey': $grey,
+  'blue-grey': $blue-grey
+);
+
+$colors-text: (
+  'red-text': $red-text,
+  'pink-text': $pink-text,
+  'purple-text': $purple-text,
+  'deep-purple-text': $deep-purple-text,
+  'indigo-text': $indigo-text,
+  'blue-text': $blue-text,
+  'light-blue-text': $light-blue-text,
+  'cyan-text': $cyan-text,
+  'teal-text': $teal-text,
+  'green-text': $green-text,
+  'light-green-text': $light-green-text,
+  'lime-text': $lime-text,
+  'yellow-text': $yellow-text,
+  'amber-text': $amber-text,
+  'orange-text': $orange-text,
+  'deep-orange-text': $deep-orange-text,
+  'brown-text': $brown-text,
+  'grey-text': $grey-text,
+  'blue-grey-text': $blue-grey-text
+);

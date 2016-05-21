@@ -1,0 +1,27 @@
+// Common
+.label {
+  display: inline;
+  padding: 0.1em 0.6em 0.2em;
+  border-radius: 0.25em;
+
+  font-size: 80%;
+  font-weight: 500;
+  line-height: inherit;
+  white-space: nowrap;
+
+  background-color: #fff;
+  box-shadow: 0 1px 1.5px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.24);
+}
+
+// Colorful Label
+@each $color_name, $color in $colors {
+  @each $color_key, $color_value in $color {
+    .label--#{$color_key} { background-color: $color_value; color: #fff; }
+  }
+}
+
+@each $color_name, $color in $colors-text {
+  @each $color_key, $color_value in $color {
+    .label--#{$color_key} { color: $color_value; }
+  }
+}
