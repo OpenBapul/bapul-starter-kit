@@ -1,0 +1,40 @@
+.link {
+  display: inline-block;
+  font-weight: 400;
+  color: $palette-grey-700;
+  transition: color .3s ease;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  &:hover {
+    color: tint($palette-grey-700, 40);
+  }
+}
+
+.link--black {
+  color: $color-black;
+
+  &:hover {
+    color: tint($color-black, 40);
+  }
+}
+
+.link--white {
+  color: $color-white;
+
+  &:hover {
+    color: shade($color-white, 20);
+  }
+}
+
+@each $color_name, $color in $colors {
+  @each $color_key, $color_value in $color {
+    .link--#{$color_key} {
+      color: $color_value;
+
+      &:hover {
+        color: tint($color_value, 40);
+      }
+    }
+  }
+}

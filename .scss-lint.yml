@@ -42,7 +42,7 @@ linters:
     enabled: true
 
   DeclarationOrder:
-    enabled: true
+    enabled: false
 
   DisableLinterReason:
     enabled: false
@@ -97,7 +97,7 @@ linters:
     width: 2
 
   LeadingZero:
-    enabled: true
+    enabled: false
     style: include_zero # or 'include_zero'
 
   MergeableSelector:
@@ -179,7 +179,7 @@ linters:
     enabled: false
 
   SpaceAfterComma:
-    enabled: true
+    enabled: false
     style: one_space # or 'no_space', or 'at_least_one_space'
 
   SpaceAfterPropertyColon:
@@ -229,7 +229,7 @@ linters:
     enabled: true
 
   UnnecessaryParentReference:
-    enabled: true
+    enabled: false
 
   UrlFormat:
     enabled: true

@@ -3,24 +3,6 @@
 /// @author jake <gjjoo@bapul.net>
 /// @access public
 /// @param {String} $color - 색상
-/// @example scss - 사용법
-///   .foo {
-///     background-color: #ffebee;
-///     color: auto-text-color(#ffebee);
-///   }
-///   .bar {
-///     background-color: #b71c1c;
-///     color: auto-text-color(#b71c1c);
-///   }
-/// @example css - CSS 아웃풋
-///   .foo {
-///     background-color: #ffebee;
-///     color: rgba(0, 0, 0, .87);
-///   }
-///   .bar {
-///     background-color: #b71c1c;
-///     color: rgb(255, 255, 255, 0.87);
-///   }
 @function auto-text-color($color) {
   @if (lightness($color) > 67) {
     @return rgba(0, 0, 0, 0.87); // Lighter background, return dark color
@@ -35,14 +17,6 @@
 /// @access public
 /// @param {String} $color - 색상
 /// @param {Number} $alpha - 알파
-/// @example scss - 사용법
-///   .foo {
-///     color: rgba-tpl(rgb(0, 0, 0), 0.87);
-///   }
-/// @example css - CSS 아웃풋
-///   .foo {
-///     color: rgba(0, 0, 0, 0.87);
-///   }
 @function rgba-tpl($color, $alpha) {
   @if type-of($color) == color {
     @return rgba($color, $alpha);

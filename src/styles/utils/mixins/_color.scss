@@ -1,0 +1,9 @@
+/// Lighten 믹스인
+@function tint($color, $percent) {
+  @return mix(#fff, $color, $percent);
+}
+
+/// Darken 믹스인
+@function shade($color, $percent) {
+  @return mix(#000, $color, $percent);
+}

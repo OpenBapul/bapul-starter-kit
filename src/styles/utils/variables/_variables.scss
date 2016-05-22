@@ -1,50 +1,36 @@
-// Roboto, Noto sans
+// 폰트 아이콘 위치
 $font-path: '../fonts';
-// Material Design Iconic Font
 $zmdi-font-path: '../fonts/Material-Design-Iconic-Font';
 $md-font-path: '../fonts/Material-Design-Iconic-Font';
-// Material Design Icons
 $material-font-path: '../fonts/Material-Design-Icons';
-// Weather Icons
 $wi-path: '../fonts/Weather-Icons';
 
+// 색상
+$color-primary: $palette-indigo-500 !default;
+$color-primary-dark: $palette-indigo-700 !default;
+$color-accent: $palette-pink-A200 !default;
+$color-primary-contrast: $color-dark-contrast !default;
+$color-accent-contrast: $color-dark-contrast !default;
 
-// 텍스트 검정색
+// 텍스트 색상
+$text-color-primary: rgba-tpl($color-black, 0.87) !default;
+$text-link-color: $color-accent !default;
 $text-color-black: rgba-tpl($color-black, 0.87) !default;
-// 텍스트 하얀색
 $text-color-white: rgba-tpl($color-white, 0.87) !default;
 
-
-// 기본 색상
-$color-primary: $palette-indigo-500 !default;
-// 어두운 기본색상
-$color-primary-dark: $palette-indigo-700 !default;
-// 강조 색상
-$color-accent: $palette-pink-A200 !default;
-// 기본 색상과 대비되는 색상
-$color-primary-contrast: $color-dark-contrast !default;
-// 강조 색상과 대비되는 색상
-$color-accent-contrast: $color-dark-contrast !default;
-// 기본 텍스트 색상
-$text-color-primary: rgba-tpl($color-black, 0.87) !default;
-// 링크 색상
-$text-link-color: $color-accent !default;
-
-
-// 버튼 최스 넓이
+// 기본 버튼
 $button-min-width: 64px !default;
-// 버튼 높이
 $button-height: 36px !default;
-// 버튼 패딩
 $button-padding: 16px !default;
-// 버튼 테두리 라운드
 $button-border-radius: 2px !default;
 
-// FAB 버튼 사이즈
+// FAB 버튼
 $button-fab-size: 56px !default;
-// FAB 버튼 큰 사이즈
 $button-fab-size-large: 72px !default;
-// FAB 버튼 작은 사이즈
 $button-fab-size-small: 40px !default;
-// FAB 버튼 폰트 사이즈
 $button-fab-font-size: 24px !default;
+
+// 쉐도우
+$shadow-key-umbra-opacity: 0.2 !default;
+$shadow-key-penumbra-opacity: 0.14 !default;
+$shadow-ambient-shadow-opacity: 0.12 !default;

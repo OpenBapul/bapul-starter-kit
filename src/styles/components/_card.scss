@@ -1,0 +1,72 @@
+// Common Card
+.card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+// Image area
+.card--image {
+  display: flex;
+  align-items: center;
+  justify-content: stretch;
+  padding: 16px;
+}
+
+.card--image-text {
+  display: flex;
+  align-self: flex-end;
+  margin: 0;
+  font-size: 24px;
+  line-height: 38px;
+}
+
+// Content area
+.card--content {
+  padding: 16px;
+}
+
+.card--title-text {
+  margin: 0;
+  font-size: 24px;
+  line-height: 38px;
+}
+
+.card--sub-title-text {
+  margin: 0;
+  font-size: 14px;
+  line-height: 28px;
+  color: $palette-grey-500;
+}
+
+.card--supporting-text {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+// Action area
+.card--actions {
+  padding: 8px;
+  width: 100%;
+
+  &.card--border {
+    border-top: 1px solid rgba(0,0,0,.1);
+  }
+
+  & > .button {
+    padding: 0 8px;
+  }
+}
+
+.card--expand {
+  flex-grow: 1;
+}
+
+.card--menu {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  color: #fff;
+}
