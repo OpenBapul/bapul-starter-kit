@@ -3,16 +3,16 @@
  */
 
 //import './serviceWorker';
-import jQuery from 'jquery';
-import angular from 'angular';
+//import jQuery from 'jquery';
+//import angular from 'angular';
 
 import {foo, bar} from './test';
 foo();
 bar();
 
-const dev = () => {
-  console.log('123');
-  console.log('456');
-};
-
-dev();
+import Textfield from './components/textfield';
+var textfields = document.querySelectorAll('.textfield');
+var textfieldsLen = textfields.length;
+for (var i = 0; i < textfieldsLen; i++) {
+  new Textfield(textfields[i]).init();
+}

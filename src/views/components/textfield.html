@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>Textfield</title>
+  <link rel="stylesheet" href="/styles/style.css">
+  <style>
+    form {
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body class="demo">
+
+  <h1 class="color-text--grey-700">Textfield</h1>
+
+  <!-- Simple Textfield -->
+  <dl>
+    <dt>Simple Textfield</dt>
+    <dd>
+      <form action="#">
+        <div class="textfield">
+          <input class="textfield--input" type="text" id="sample1">
+          <label class="textfield--label" for="sample1">Text...</label>
+        </div>
+      </form>
+    </dt>
+  </dl>
+  <!-- // Simple Textfield -->
+
+  <!-- Simple Numberfield -->
+  <dl>
+    <dt>Simple Numberfield</dt>
+    <dd>
+      <form action="#">
+        <div class="textfield">
+          <input class="textfield--input" type="text" id="sample2" pattern="-?[0-9]*(\.[0-9]+)?">
+          <label class="textfield--label" for="sample2">Number...</label>
+          <span class="textfield--error">Input is not a Number!</span>
+        </div>
+      </form>
+    </dd>
+  </dl>
+  <!-- // Simple Numberfield -->
+
+  <!-- Has Placeholder + Floating Textfield -->
+  <dl>
+    <dt>Placeholder, Floating Textfield</dt>
+    <dd>
+      <form action="#">
+        <div class="textfield textfield--floating-label has-placeholder">
+          <input class="textfield--input" type="text" id="sample3" placeholder="Text field..">
+          <label class="textfield--label" for="sample3">Text...</label>
+        </div>
+      </form>
+    </dd>
+  </dl>
+  <!-- // Has Placeholder Textfield -->
+
+  <!-- Has Placeholder Numberfield -->
+  <dl>
+    <dt>Placeholder Numberfield</dt>
+    <dd>
+      <form action="#">
+        <div class="textfield has-placeholder">
+          <input class="textfield--input" type="text" id="sample4" pattern="-?[0-9]*(\.[0-9]+)?" placeholder="Number field..">
+          <label class="textfield--label" for="sample4">Number...</label>
+          <span class="textfield--error">Input is not a Number!</span>
+        </div>
+      </form>
+    </dd>
+  </dl>
+  <!-- // Has Placeholder Numberfield -->
+
+  <!-- Floating Textfield -->
+  <dl>
+    <dt>Floating Textfield</dt>
+    <dd>
+      <form action="#">
+        <div class="textfield textfield--floating-label">
+          <input class="textfield--input" type="text" id="sample5">
+          <label class="textfield--label" for="sample3">Text...</label>
+        </div>
+      </form>
+    </dd>
+  </dl>
+  <!-- // Floating Textfield -->
+
+  <!-- Floating, Count Numberfield -->
+  <dl>
+    <dt>Floating, Count Numberfield</dt>
+    <dd>
+      <form action="#">
+        <div class="textfield textfield--floating-label">
+          <input class="textfield--input" type="text" id="sample6" pattern="-?[0-9]*(\.[0-9]+)?" length="10">
+          <label class="textfield--label" for="sample4">Number...</label>
+          <span class="textfield--error">Input is not a Number!</span>
+          <span class="textfield--count">0/10</span>
+        </div>
+      </form>
+    </dd>
+  </dl>
+  <!-- // Floating, Count Numberfield -->
+
+  <!-- Disabled Simple Textfield -->
+  <dl>
+    <dt>Disabled Textfield</dt>
+    <dd>
+      <form action="#">
+        <div class="textfield textfield--floating-label has-placeholder is-disabled">
+          <input class="textfield--input" type="text" id="sample7" placeholder="I am not editable" disabled>
+          <label class="textfield--label" for="sample7">Text...</label>
+        </div>
+      </form>
+    </dd>
+  </dl>
+  <!-- // Disabled Simple Textfield -->
+
+  <!-- Icon Textfield -->
+  <dl>
+    <dt>Icon Textfield</dt>
+    <dd>
+      <form action="#">
+        <div class="textfield textfield--floating-icon">
+          <i class="mdi textfield--icon">person</i>
+          <input class="textfield--input" type="text" id="sample8">
+          <label class="textfield--label" for="sample8">Text...</label>
+        </div>
+      </form>
+    </dd>
+  </dl>
+  <!-- // Icon Textfield -->
+
+  <!-- Icon Floating Textfield -->
+  <dl>
+    <dt>Icon, Floating Textfield</dt>
+    <dd>
+      <form action="#">
+        <div class="textfield textfield--floating-label textfield--floating-icon">
+          <i class="mdi textfield--icon">person</i>
+          <input class="textfield--input" type="text" id="sample9" length="10">
+          <label class="textfield--label" for="sample9">Text...</label>
+          <span class="textfield--count">0/10</span>
+        </div>
+      </form>
+    </dd>
+  </dl>
+  <!-- // Icon Floating Textfield -->
+
+  <!-- Main javascript -->
+  <script src="/scripts/script.js"></script>
+
+</body>
+</html>

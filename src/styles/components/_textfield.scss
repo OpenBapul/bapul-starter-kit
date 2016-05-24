@@ -1,0 +1,162 @@
+.textfield {
+  position: relative;
+  display: inline-block;
+  margin: 0;
+  padding: 20px 0;
+  max-width: 100%;
+  font-size: 16px;
+}
+
+.textfield--input {
+  display: block;
+  margin: 0;
+  border: 0;
+  border-bottom: 1px solid rgba-tpl($color-black, 0.12);
+  padding: 8px 0;
+  width: 100%;
+  background: none;
+  font-size: 16px;
+  color: inherit;
+  text-align: left;
+
+  .textfield.is-focused & {
+    outline: none;
+  }
+
+  .textfield.is-disabled & {
+    border-bottom: 1px dotted rgba-tpl($color-black, 0.26);
+    background-color: transparent;
+    color: rgba-tpl($color-black, 0.26);
+  }
+
+  .textfield--floating-icon & {
+    margin-left: 52px;
+  }
+}
+
+.textfield--label {
+  position: absolute;
+  top: 28px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: block;
+  width: 100%;
+  font-size: 16px;
+  color: $palette-grey-500;
+  overflow: hidden;
+  white-space: nowrap;
+  text-align: left;
+  pointer-events: none;
+
+  &:after {
+    position: absolute;
+    bottom: 20px;
+    left: 45%;
+    width: 10px;
+    height: 2px;
+    background-color: $palette-indigo-500;
+    content: '';
+    visibility: hidden;
+    transition-duration: .2s;
+    transition-timing-function: cubic-bezier(.4,0,.2,1);
+
+    .textfield.is-invalid &,
+    .textfield.is-count-over & {
+      background-color: $palette-red-500;
+    }
+  }
+
+  .textfield.is-focused &:after {
+    left: 0;
+    width: 100%;
+    visibility: visible;
+  }
+
+  .textfield.is-dirty &,
+  .textfield.has-placeholder & {
+    visibility: hidden;
+  }
+
+  .textfield--floating-label & {
+    transition-duration: .2s;
+    transition-timing-function: cubic-bezier(.4,0,.2,1);
+  }
+
+  .textfield--floating-label.is-focused &,
+  .textfield--floating-label.is-dirty & {
+    top: 6px;
+    font-size: 12px;
+    color: $palette-indigo-700;
+    visibility: visible;
+  }
+
+  .textfield--floating-label.has-placeholder & {
+    top: 4px;
+    font-size: 12px;
+    visibility: visible;
+  }
+
+  .textfield.is-invalid &,
+  .textfield.is-count-over & {
+    color: $palette-red-700;
+  }
+
+  .textfield.is-disabled & {
+    color: rgba-tpl($color-black, 0.26);
+  }
+
+  .textfield--floating-icon & {
+    margin-left: 52px;
+  }
+}
+
+.textfield--error {
+  position: absolute;
+  display: block;
+  margin-top: 3px;
+  font-size: 12px;
+  color: $palette-red-A700;
+  visibility: hidden;
+
+  .textfield.is-invalid & {
+    visibility: visible;
+  }
+}
+
+.textfield--count {
+  position: absolute;
+  right: 0;
+  display: block;
+  margin-top: 3px;
+  font-size: 12px;
+  color: $palette-grey-500;
+  visibility: hidden;
+
+  .textfield.is-focused & {
+    visibility: visible;
+  }
+
+  .textfield.is-count-over & {
+    color: $palette-red-A700;
+  }
+
+  .textfield--floating-icon & {
+    right: -52px;
+  }
+}
+
+.textfield--icon {
+  position: absolute;
+  padding: 8px;
+  font-size: 24px;
+
+  .textfield--floating-icon.is-focused &,
+  .textfield--floating-icon.is-dirty & {
+    color: $palette-indigo-700;
+  }
+
+  .textfield.is-count-over & {
+    color: $palette-red-A700;
+  }
+}

@@ -1,0 +1,17 @@
+.tooltip {
+  display: inline-block;
+  padding: 0 8px;
+  height: 22px;
+  border-radius: 2px;
+  background-color: $palette-grey-700;
+  color: $color-white;
+  font-size: 10px;
+  line-height: 22px;
+  opacity: .9;
+}
+
+.tooltip--large {
+  height: 32px;
+  font-size: 14px;
+  line-height: 32px;
+}
