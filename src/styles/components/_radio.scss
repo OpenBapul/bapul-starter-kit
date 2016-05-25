@@ -1,0 +1,99 @@
+.radio {
+  position: relative;
+  vertical-align: middle;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  padding-left: 20px;
+  width: 100%;
+  height: 24px;
+}
+
+.radio--input {
+  position: absolute;
+  margin: 0;
+  border: 0;
+  padding: 0;
+  width: 0;
+  height: 0;
+  appearance: none;
+  opacity: 0;
+}
+
+.radio--label {
+  position: relative;
+  margin: 0;
+  padding-left: 24px;
+  font-size: 16px;
+  line-height: 24px;
+  cursor: pointer;
+
+  .radio--input:disabled + & {
+    color: $palette-grey-500;
+    cursor: not-allowed;
+  }
+
+  &:before,
+  &:after {
+    position: absolute;
+    border-radius: 50%;
+    cursor: pointer;
+    overflow: hidden;
+    content: '';
+  }
+
+  &:before {
+    top: 9px;
+    left: 4px;
+    width: 8px;
+    height: 8px;
+    transition-duration: .28s;
+    transition-timing-function: cubic-bezier(.4,0,.2,1);
+    transition-property: transform;
+
+    .radio--input:checked + & {
+      background-color: $palette-indigo-500;
+      transform: scale3d(1,1,1);
+    }
+
+    .radio--input:not(:checked) + & {
+      background-color: transparent;
+      transform: scale3d(0,0,0);
+    }
+
+    .radio--input:disabled:checked + & {
+      background-color: $palette-grey-500;
+      cursor: not-allowed;
+    }
+
+    .radio--input:disabled:not(:checked) + & {
+      background-color: transparent;
+      cursor: not-allowed;
+    }
+  }
+
+  &:after {
+    top: 5px;
+    left: 0;
+    width: 16px;
+    height: 16px;
+
+    .radio--input:checked + & {
+      border: 2px solid $palette-indigo-500;
+    }
+
+    .radio--input:not(:checked) + & {
+      border: 2px solid $palette-grey-700;
+    }
+
+    .radio--input:disabled:checked + & {
+      border: 2px solid $palette-grey-500;
+      cursor: not-allowed;
+    }
+
+    .radio--input:disabled:not(:checked) + & {
+      border: 2px solid $palette-grey-500;
+      cursor: not-allowed;
+    }
+  }
+}

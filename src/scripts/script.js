@@ -26,3 +26,10 @@ for (let i = 0; i < checkboxesLen; i++) {
   new Checkbox(checkboxes[i]).init();
 }
 
+// Radio
+import Radio from './components/radio';
+let radios = document.querySelectorAll('.checkbox');
+let radiosLen = radios.length;
+for (let i = 0; i < radiosLen; i++) {
+  new Radio(radios[i]).init();
+}

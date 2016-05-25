@@ -2,11 +2,11 @@
  * Created by gjjoo on 2016. 5. 24..
  */
 
-export default class Checkbox {
+export default class Radio {
   static get CssClasses() {
     return {
-      LABEL: 'checkbox--label',
-      INPUT: 'checkbox--input',
+      LABEL: 'radio--label',
+      INPUT: 'radio--input',
       IS_FOCUSED: 'is-focused',
       IS_DISABLED: 'is-disabled'
     };
@@ -15,17 +15,17 @@ export default class Checkbox {
     this.element_ = element;
   }
   onFocus() {
-    this.element_.classList.add(Checkbox.CssClasses.IS_FOCUSED);
+    this.element_.classList.add(Radio.CssClasses.IS_FOCUSED);
   }
   onBlur() {
-    this.element_.classList.remove(Checkbox.CssClasses.IS_FOCUSED);
+    this.element_.classList.remove(Radio.CssClasses.IS_FOCUSED);
   }
   updateClasses() {
     // ...
   }
   init() {
     if (this.element_) {
-      this.input_ = this.element_.querySelector('.' + Checkbox.CssClasses.INPUT);
+      this.input_ = this.element_.querySelector('.' + Radio.CssClasses.INPUT);
 
       this.boundUpdateClassesHandler = this.updateClasses.bind(this);
       this.boundFocusHandler = this.onFocus.bind(this);

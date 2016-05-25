@@ -2026,8 +2026,8 @@ process.umask = function() { return 0; };
 },{"_process":5,"buffer":1}],6:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 'use strict';Object.defineProperty(exports, "__esModule", { value: true });var _createClass = function () {function defineProperties(target, props) {for (var i = 0; i < props.length; i++) {var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);}}return function (Constructor, protoProps, staticProps) {if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;};}();function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}} /**
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      * Created by gjjoo on 2016. 5. 24..
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      */var 
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       * Created by gjjoo on 2016. 5. 24..
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       */var 
 
 Checkbox = function () {_createClass(Checkbox, null, [{ key: 'CssClasses', get: function get() 
     {
@@ -2067,8 +2067,49 @@ Checkbox = function () {_createClass(Checkbox, null, [{ key: 'CssClasses', get: 
 },{"_process":5,"buffer":1}],7:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 'use strict';Object.defineProperty(exports, "__esModule", { value: true });var _createClass = function () {function defineProperties(target, props) {for (var i = 0; i < props.length; i++) {var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);}}return function (Constructor, protoProps, staticProps) {if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;};}();function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}} /**
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      * Created by gjjoo on 2016. 5. 24..
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      */var 
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       * Created by gjjoo on 2016. 5. 24..
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       */var 
+
+Radio = function () {_createClass(Radio, null, [{ key: 'CssClasses', get: function get() 
+    {
+      return { 
+        LABEL: 'radio--label', 
+        INPUT: 'radio--input', 
+        IS_FOCUSED: 'is-focused', 
+        IS_DISABLED: 'is-disabled' };} }]);
+
+
+  function Radio(element) {_classCallCheck(this, Radio);
+    this.element_ = element;}_createClass(Radio, [{ key: 'onFocus', value: function onFocus() 
+
+    {
+      this.element_.classList.add(Radio.CssClasses.IS_FOCUSED);} }, { key: 'onBlur', value: function onBlur() 
+
+    {
+      this.element_.classList.remove(Radio.CssClasses.IS_FOCUSED);} }, { key: 'updateClasses', value: function updateClasses() 
+
+    {
+      // ...
+    } }, { key: 'init', value: function init() 
+    {
+      if (this.element_) {
+        this.input_ = this.element_.querySelector('.' + Radio.CssClasses.INPUT);
+
+        this.boundUpdateClassesHandler = this.updateClasses.bind(this);
+        this.boundFocusHandler = this.onFocus.bind(this);
+        this.boundBlurHandler = this.onBlur.bind(this);
+
+        this.input_.addEventListener('input', this.boundUpdateClassesHandler);
+        this.input_.addEventListener('focus', this.boundFocusHandler);
+        this.input_.addEventListener('blur', this.boundBlurHandler);}} }]);return Radio;}();exports.default = Radio;
+
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/src/scripts/components/radio.js","/src/scripts/components")
+
+},{"_process":5,"buffer":1}],8:[function(require,module,exports){
+(function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
+'use strict';Object.defineProperty(exports, "__esModule", { value: true });var _createClass = function () {function defineProperties(target, props) {for (var i = 0; i < props.length; i++) {var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);}}return function (Constructor, protoProps, staticProps) {if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;};}();function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}} /**
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       * Created by gjjoo on 2016. 5. 24..
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       */var 
 
 Textfield = function () {_createClass(Textfield, null, [{ key: 'CssClasses', get: function get() 
     {
@@ -2142,7 +2183,7 @@ Textfield = function () {_createClass(Textfield, null, [{ key: 'CssClasses', get
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/src/scripts/components/textfield.js","/src/scripts/components")
 
-},{"_process":5,"buffer":1}],8:[function(require,module,exports){
+},{"_process":5,"buffer":1}],9:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 'use strict';
 
@@ -2165,18 +2206,27 @@ var _textfield = require('./components/textfield');var _textfield2 = _interopReq
 
 
 
-var _checkbox = require('./components/checkbox');var _checkbox2 = _interopRequireDefault(_checkbox);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}(0, _test.foo)(); /**
-                                                                                                                                                                                                                    * Created by gjjoo on 2016. 3. 1..
-                                                                                                                                                                                                                    */ //import './serviceWorker';
+var _checkbox = require('./components/checkbox');var _checkbox2 = _interopRequireDefault(_checkbox);
+
+
+
+
+
+
+
+var _radio = require('./components/radio');var _radio2 = _interopRequireDefault(_radio);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}(0, _test.foo)(); /**
+                                                                                                                                                                                                        * Created by gjjoo on 2016. 3. 1..
+                                                                                                                                                                                                        */ //import './serviceWorker';
 //import jQuery from 'jquery';
 //import angular from 'angular';
 (0, _test.bar)(); // Textfield
 var textfields = document.querySelectorAll('.textfield');var textfieldsLen = textfields.length;for (var i = 0; i < textfieldsLen; i++) {new _textfield2.default(textfields[i]).init();} // Checkbox
-var checkboxes = document.querySelectorAll('.checkbox');var checkboxesLen = checkboxes.length;for (var _i = 0; _i < checkboxesLen; _i++) {new _checkbox2.default(checkboxes[_i]).init();}
+var checkboxes = document.querySelectorAll('.checkbox');var checkboxesLen = checkboxes.length;for (var _i = 0; _i < checkboxesLen; _i++) {new _checkbox2.default(checkboxes[_i]).init();} // Radio
+var radios = document.querySelectorAll('.checkbox');var radiosLen = radios.length;for (var _i2 = 0; _i2 < radiosLen; _i2++) {new _radio2.default(radios[_i2]).init();}
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/src/scripts/script.js","/src/scripts")
 
-},{"./components/checkbox":6,"./components/textfield":7,"./test":9,"_process":5,"buffer":1}],9:[function(require,module,exports){
+},{"./components/checkbox":6,"./components/radio":7,"./components/textfield":8,"./test":10,"_process":5,"buffer":1}],10:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 'use strict';Object.defineProperty(exports, "__esModule", { value: true });exports.
 
@@ -2189,7 +2239,7 @@ bar = bar; /**
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/src/scripts/test.js","/src/scripts")
 
-},{"_process":5,"buffer":1}]},{},[8])
+},{"_process":5,"buffer":1}]},{},[9])
 
 
 //# sourceMappingURL=script.js.map
