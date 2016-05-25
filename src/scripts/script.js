@@ -10,9 +10,19 @@ import {foo, bar} from './test';
 foo();
 bar();
 
+// Textfield
 import Textfield from './components/textfield';
-var textfields = document.querySelectorAll('.textfield');
-var textfieldsLen = textfields.length;
-for (var i = 0; i < textfieldsLen; i++) {
+let textfields = document.querySelectorAll('.textfield');
+let textfieldsLen = textfields.length;
+for (let i = 0; i < textfieldsLen; i++) {
   new Textfield(textfields[i]).init();
 }
+
+// Checkbox
+import Checkbox from './components/checkbox';
+let checkboxes = document.querySelectorAll('.checkbox');
+let checkboxesLen = checkboxes.length;
+for (let i = 0; i < checkboxesLen; i++) {
+  new Checkbox(checkboxes[i]).init();
+}
+

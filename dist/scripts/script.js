@@ -2029,15 +2029,67 @@ process.umask = function() { return 0; };
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       * Created by gjjoo on 2016. 5. 24..
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       */var 
 
-Textfield = function () {
+Checkbox = function () {_createClass(Checkbox, null, [{ key: 'CssClasses', get: function get() 
+    {
+      return { 
+        LABEL: 'checkbox--label', 
+        INPUT: 'checkbox--input', 
+        IS_FOCUSED: 'is-focused', 
+        IS_DISABLED: 'is-disabled' };} }]);
+
+
+  function Checkbox(element) {_classCallCheck(this, Checkbox);
+    this.element_ = element;}_createClass(Checkbox, [{ key: 'onFocus', value: function onFocus() 
+
+    {
+      this.element_.classList.add(Checkbox.CssClasses.IS_FOCUSED);} }, { key: 'onBlur', value: function onBlur() 
+
+    {
+      this.element_.classList.remove(Checkbox.CssClasses.IS_FOCUSED);} }, { key: 'updateClasses', value: function updateClasses() 
+
+    {
+      // ...
+    } }, { key: 'init', value: function init() 
+    {
+      if (this.element_) {
+        this.input_ = this.element_.querySelector('.' + Checkbox.CssClasses.INPUT);
+
+        this.boundUpdateClassesHandler = this.updateClasses.bind(this);
+        this.boundFocusHandler = this.onFocus.bind(this);
+        this.boundBlurHandler = this.onBlur.bind(this);
+
+        this.input_.addEventListener('input', this.boundUpdateClassesHandler);
+        this.input_.addEventListener('focus', this.boundFocusHandler);
+        this.input_.addEventListener('blur', this.boundBlurHandler);}} }]);return Checkbox;}();exports.default = Checkbox;
+
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/src/scripts/components/checkbox.js","/src/scripts/components")
+
+},{"_process":5,"buffer":1}],7:[function(require,module,exports){
+(function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
+'use strict';Object.defineProperty(exports, "__esModule", { value: true });var _createClass = function () {function defineProperties(target, props) {for (var i = 0; i < props.length; i++) {var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);}}return function (Constructor, protoProps, staticProps) {if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;};}();function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}} /**
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      * Created by gjjoo on 2016. 5. 24..
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      */var 
+
+Textfield = function () {_createClass(Textfield, null, [{ key: 'CssClasses', get: function get() 
+    {
+      return { 
+        LABEL: 'textfield--label', 
+        INPUT: 'textfield--input', 
+        COUNT: 'textfield--count', 
+        IS_DIRTY: 'is-dirty', 
+        IS_FOCUSED: 'is-focused', 
+        IS_INVALID: 'is-invalid', 
+        IS_COUNT_OVER: 'is-count-over' };} }]);
+
+
   function Textfield(element) {_classCallCheck(this, Textfield);
     this.element_ = element;}_createClass(Textfield, [{ key: 'onFocus', value: function onFocus() 
 
     {
-      this.element_.classList.add('is-focused');} }, { key: 'onBlur', value: function onBlur() 
+      this.element_.classList.add(Textfield.CssClasses.IS_FOCUSED);} }, { key: 'onBlur', value: function onBlur() 
 
     {
-      this.element_.classList.remove('is-focused');} }, { key: 'updateClasses', value: function updateClasses() 
+      this.element_.classList.remove(Textfield.CssClasses.IS_FOCUSED);} }, { key: 'updateClasses', value: function updateClasses() 
 
     {
       this.checkDirty();
@@ -2046,34 +2098,34 @@ Textfield = function () {
 
     {
       if (this.input_.value && this.input_.value.length > 0) {
-        this.element_.classList.add('is-dirty');} else 
+        this.element_.classList.add(Textfield.CssClasses.IS_DIRTY);} else 
       {
-        this.element_.classList.remove('is-dirty');}} }, { key: 'checkValidity', value: function checkValidity() 
+        this.element_.classList.remove(Textfield.CssClasses.IS_DIRTY);}} }, { key: 'checkValidity', value: function checkValidity() 
 
 
     {
       if (this.input_.validity) {
         if (this.input_.validity.valid) {
-          this.element_.classList.remove('is-invalid');} else 
+          this.element_.classList.remove(Textfield.CssClasses.IS_INVALID);} else 
         {
-          this.element_.classList.add('is-invalid');}}} }, { key: 'checkCount', value: function checkCount() 
+          this.element_.classList.add(Textfield.CssClasses.IS_INVALID);}}} }, { key: 'checkCount', value: function checkCount() 
 
 
 
     {
       if (this.count_) {
         if (this.input_.value.length > this.input_.getAttribute('length')) {
-          this.element_.classList.add('is-count-over');} else 
+          this.element_.classList.add(Textfield.CssClasses.IS_COUNT_OVER);} else 
         {
-          this.element_.classList.remove('is-count-over');}
+          this.element_.classList.remove(Textfield.CssClasses.IS_COUNT_OVER);}
 
         this.count_.textContent = this.input_.value.length + '/' + this.input_.getAttribute('length');}} }, { key: 'init', value: function init() 
 
 
     {
       if (this.element_) {
-        this.input_ = this.element_.querySelector('.textfield--input');
-        this.count_ = this.element_.querySelector('.textfield--count');
+        this.input_ = this.element_.querySelector('.' + Textfield.CssClasses.INPUT);
+        this.count_ = this.element_.querySelector('.' + Textfield.CssClasses.COUNT);
 
         this.boundUpdateClassesHandler = this.updateClasses.bind(this);
         this.boundFocusHandler = this.onFocus.bind(this);
@@ -2083,14 +2135,14 @@ Textfield = function () {
         this.input_.addEventListener('focus', this.boundFocusHandler);
         this.input_.addEventListener('blur', this.boundBlurHandler);
 
-        var invalid = this.element_.classList.contains('is-invalid');
+        var invalid = this.element_.classList.contains(Textfield.CssClasses.IS_INVALID);
         this.updateClasses();
         if (invalid) {
-          this.element_.classList.add('is-invalid');}}} }]);return Textfield;}();exports.default = Textfield;
+          this.element_.classList.add(Textfield.CssClasses.IS_INVALID);}}} }]);return Textfield;}();exports.default = Textfield;
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/src/scripts/components/textfield.js","/src/scripts/components")
 
-},{"_process":5,"buffer":1}],7:[function(require,module,exports){
+},{"_process":5,"buffer":1}],8:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 'use strict';
 
@@ -2104,16 +2156,27 @@ var _test = require('./test');
 
 
 
-var _textfield = require('./components/textfield');var _textfield2 = _interopRequireDefault(_textfield);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}(0, _test.foo)(); /**
-                                                                                                                                                                                                                        * Created by gjjoo on 2016. 3. 1..
-                                                                                                                                                                                                                        */ //import './serviceWorker';
+
+var _textfield = require('./components/textfield');var _textfield2 = _interopRequireDefault(_textfield);
+
+
+
+
+
+
+
+var _checkbox = require('./components/checkbox');var _checkbox2 = _interopRequireDefault(_checkbox);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}(0, _test.foo)(); /**
+                                                                                                                                                                                                                    * Created by gjjoo on 2016. 3. 1..
+                                                                                                                                                                                                                    */ //import './serviceWorker';
 //import jQuery from 'jquery';
 //import angular from 'angular';
-(0, _test.bar)();var textfields = document.querySelectorAll('.textfield');var textfieldsLen = textfields.length;for (var i = 0; i < textfieldsLen; i++) {new _textfield2.default(textfields[i]).init();}
+(0, _test.bar)(); // Textfield
+var textfields = document.querySelectorAll('.textfield');var textfieldsLen = textfields.length;for (var i = 0; i < textfieldsLen; i++) {new _textfield2.default(textfields[i]).init();} // Checkbox
+var checkboxes = document.querySelectorAll('.checkbox');var checkboxesLen = checkboxes.length;for (var _i = 0; _i < checkboxesLen; _i++) {new _checkbox2.default(checkboxes[_i]).init();}
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/src/scripts/script.js","/src/scripts")
 
-},{"./components/textfield":6,"./test":8,"_process":5,"buffer":1}],8:[function(require,module,exports){
+},{"./components/checkbox":6,"./components/textfield":7,"./test":9,"_process":5,"buffer":1}],9:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 'use strict';Object.defineProperty(exports, "__esModule", { value: true });exports.
 
@@ -2126,7 +2189,7 @@ bar = bar; /**
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/src/scripts/test.js","/src/scripts")
 
-},{"_process":5,"buffer":1}]},{},[7])
+},{"_process":5,"buffer":1}]},{},[8])
 
 
 //# sourceMappingURL=script.js.map
