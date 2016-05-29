@@ -4761,10 +4761,219 @@ ul, ol {
   }
 }
 
+.layout {
+  width: 100%;
+  height: 100%;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: relative;
+  overflow-scrolling: touch;
+}
+
+.layout--container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.layout--header {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: none;
+  max-height: 1000px;
+  min-height: 64px;
+  background-color: #3f51b5;
+  color: #fff;
+  box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+  transition-duration: 0.2s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: max-height, box-shadow;
+}
+
+.layout--header-row {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+  -webkit-align-self: stretch;
+      -ms-flex-item-align: stretch;
+          align-self: stretch;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 64px;
+  margin: 0;
+  padding: 0 40px 0 80px;
+}
+
+.layout--header-row .navigation {
+  margin: 0;
+  padding: 0;
+  height: 64px;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+              -ms-grid-row-align: center;
+          align-items: center;
+}
+
+.layout--header-row .navigation--link {
+  display: block;
+  color: #fff;
+  line-height: 64px;
+  padding: 0 24px;
+}
+
+.layout--drawer {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  width: 240px;
+  height: 100%;
+  max-height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+  border-right: 1px solid #9e9e9e;
+  background-color: #fafafa;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  will-change: transform;
+  color: #424242;
+  overflow: visible;
+  overflow-y: auto;
+  z-index: 5;
+}
+
+.layout--drawer > * {
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+}
+
+.layout--drawer > .layout--title {
+  line-height: 64px;
+  padding-left: 40px;
+}
+
+.layout--drawer .navigation {
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-align-items: stretch;
+      -ms-flex-align: stretch;
+              -ms-grid-row-align: stretch;
+          align-items: stretch;
+  padding-top: 16px;
+}
+
+.layout--drawer .navigation .navigation--link {
+  display: block;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+  padding: 16px 40px;
+  margin: 0;
+  color: #424242;
+}
+
+.layout--drawer-button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+  text-align: center;
+  width: 48px;
+  height: 48px;
+  margin: 10px 12px;
+  border: 0;
+  font-size: 26px;
+  line-height: 50px;
+  cursor: pointer;
+  overflow: hidden;
+  z-index: 4;
+}
+
+.layout--title {
+  display: block;
+  position: relative;
+  font-size: 21px;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  font-weight: 400;
+}
+
 .layout-spacer {
   -webkit-flex-grow: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
+}
+
+.navigation {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+}
+
+.navigation--link {
+  color: #fff;
+  text-decoration: none;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0;
 }
 
 [class*="sprite-"] {
