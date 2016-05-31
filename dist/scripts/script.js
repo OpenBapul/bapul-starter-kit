@@ -2070,6 +2070,50 @@ Checkbox = function () {_createClass(Checkbox, null, [{ key: 'CssClasses', get: 
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        * Created by gjjoo on 2016. 5. 24..
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        */var 
 
+Layout = function () {_createClass(Layout, null, [{ key: 'CssClasses', get: function get() 
+    {
+      return { 
+        DRAWER: 'layout--drawer', 
+        DRAWER_BUTTON: 'layout--drawer-button', 
+        OBFUSCATOR: 'layout--obfuscator', 
+        IS_DRAWER_OPEN: 'is-visible' };} }]);
+
+
+  function Layout(element) {_classCallCheck(this, Layout);
+    this.element_ = element;}_createClass(Layout, [{ key: 'toggleDrawer', value: function toggleDrawer() 
+
+    {
+      this.drawer_.classList.toggle(Layout.CssClasses.IS_DRAWER_OPEN);
+      this.obfuscator_.classList.toggle(Layout.CssClasses.IS_DRAWER_OPEN);
+
+      if (this.drawer_.classList.contains(Layout.CssClasses.IS_DRAWER_OPEN)) {
+        this.drawer_.setAttribute('aria-hidden', 'false');
+        this.obfuscator_.setAttribute('aria-hidden', 'false');
+        this.drawerButton_.setAttribute('aria-expanded', 'true');} else 
+      {
+        this.drawer_.setAttribute('aria-hidden', 'true');
+        this.obfuscator_.setAttribute('aria-hidden', 'true');
+        this.drawerButton_.setAttribute('aria-expanded', 'false');}} }, { key: 'init', value: function init() 
+
+
+    {
+      if (this.element_) {
+        this.drawer_ = this.element_.querySelector('.' + Layout.CssClasses.DRAWER);
+        this.drawerButton_ = this.element_.querySelector('.' + Layout.CssClasses.DRAWER_BUTTON);
+        this.obfuscator_ = this.element_.querySelector('.' + Layout.CssClasses.OBFUSCATOR);
+
+        this.toggleDrawerHandler = this.toggleDrawer.bind(this);
+        this.drawerButton_.addEventListener('click', this.toggleDrawerHandler);
+        this.obfuscator_.addEventListener('click', this.toggleDrawerHandler);}} }]);return Layout;}();exports.default = Layout;
+
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/src/scripts/components/layout.js","/src/scripts/components")
+
+},{"_process":5,"buffer":1}],8:[function(require,module,exports){
+(function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
+'use strict';Object.defineProperty(exports, "__esModule", { value: true });var _createClass = function () {function defineProperties(target, props) {for (var i = 0; i < props.length; i++) {var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);}}return function (Constructor, protoProps, staticProps) {if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;};}();function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}} /**
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       * Created by gjjoo on 2016. 5. 24..
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       */var 
+
 Radio = function () {_createClass(Radio, null, [{ key: 'CssClasses', get: function get() 
     {
       return { 
@@ -2105,7 +2149,7 @@ Radio = function () {_createClass(Radio, null, [{ key: 'CssClasses', get: functi
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/src/scripts/components/radio.js","/src/scripts/components")
 
-},{"_process":5,"buffer":1}],8:[function(require,module,exports){
+},{"_process":5,"buffer":1}],9:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 'use strict';Object.defineProperty(exports, "__esModule", { value: true });var _createClass = function () {function defineProperties(target, props) {for (var i = 0; i < props.length; i++) {var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);}}return function (Constructor, protoProps, staticProps) {if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;};}();function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}} /**
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        * Created by gjjoo on 2016. 5. 24..
@@ -2183,7 +2227,7 @@ Textfield = function () {_createClass(Textfield, null, [{ key: 'CssClasses', get
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/src/scripts/components/textfield.js","/src/scripts/components")
 
-},{"_process":5,"buffer":1}],9:[function(require,module,exports){
+},{"_process":5,"buffer":1}],10:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 'use strict';
 
@@ -2194,6 +2238,14 @@ Textfield = function () {_createClass(Textfield, null, [{ key: 'CssClasses', get
 
 
 var _test = require('./test');
+
+
+
+
+var _layout = require('./components/layout');var _layout2 = _interopRequireDefault(_layout);
+
+
+
 
 
 
@@ -2219,14 +2271,15 @@ var _radio = require('./components/radio');var _radio2 = _interopRequireDefault(
                                                                                                                                                                                                         */ //import './serviceWorker';
 //import jQuery from 'jquery';
 //import angular from 'angular';
-(0, _test.bar)(); // Textfield
-var textfields = document.querySelectorAll('.textfield');var textfieldsLen = textfields.length;for (var i = 0; i < textfieldsLen; i++) {new _textfield2.default(textfields[i]).init();} // Checkbox
-var checkboxes = document.querySelectorAll('.checkbox');var checkboxesLen = checkboxes.length;for (var _i = 0; _i < checkboxesLen; _i++) {new _checkbox2.default(checkboxes[_i]).init();} // Radio
-var radios = document.querySelectorAll('.checkbox');var radiosLen = radios.length;for (var _i2 = 0; _i2 < radiosLen; _i2++) {new _radio2.default(radios[_i2]).init();}
+(0, _test.bar)(); // Layout
+var layout = document.querySelectorAll('.layout');var layoutLen = layout.length;for (var i = 0; i < layoutLen; i++) {new _layout2.default(layout[i]).init();} // Textfield
+var textfields = document.querySelectorAll('.textfield');var textfieldsLen = textfields.length;for (var _i = 0; _i < textfieldsLen; _i++) {new _textfield2.default(textfields[_i]).init();} // Checkbox
+var checkboxes = document.querySelectorAll('.checkbox');var checkboxesLen = checkboxes.length;for (var _i2 = 0; _i2 < checkboxesLen; _i2++) {new _checkbox2.default(checkboxes[_i2]).init();} // Radio
+var radios = document.querySelectorAll('.radio');var radiosLen = radios.length;for (var _i3 = 0; _i3 < radiosLen; _i3++) {new _radio2.default(radios[_i3]).init();}
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/src/scripts/script.js","/src/scripts")
 
-},{"./components/checkbox":6,"./components/radio":7,"./components/textfield":8,"./test":10,"_process":5,"buffer":1}],10:[function(require,module,exports){
+},{"./components/checkbox":6,"./components/layout":7,"./components/radio":8,"./components/textfield":9,"./test":11,"_process":5,"buffer":1}],11:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 'use strict';Object.defineProperty(exports, "__esModule", { value: true });exports.
 
@@ -2239,7 +2292,7 @@ bar = bar; /**
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/src/scripts/test.js","/src/scripts")
 
-},{"_process":5,"buffer":1}]},{},[9])
+},{"_process":5,"buffer":1}]},{},[10])
 
 
 //# sourceMappingURL=script.js.map

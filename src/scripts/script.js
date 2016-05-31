@@ -10,6 +10,14 @@ import {foo, bar} from './test';
 foo();
 bar();
 
+// Layout
+import Layout from './components/layout';
+let layout = document.querySelectorAll('.layout');
+let layoutLen = layout.length;
+for (let i = 0; i < layoutLen; i++) {
+  new Layout(layout[i]).init();
+}
+
 // Textfield
 import Textfield from './components/textfield';
 let textfields = document.querySelectorAll('.textfield');
@@ -28,7 +36,7 @@ for (let i = 0; i < checkboxesLen; i++) {
 
 // Radio
 import Radio from './components/radio';
-let radios = document.querySelectorAll('.checkbox');
+let radios = document.querySelectorAll('.radio');
 let radiosLen = radios.length;
 for (let i = 0; i < radiosLen; i++) {
   new Radio(radios[i]).init();
