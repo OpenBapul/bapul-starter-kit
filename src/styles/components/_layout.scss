@@ -32,10 +32,30 @@
   background-color: $palette-indigo-500;
   color: #fff;
 
-  @include shadow-2dp();
+  @include shadow-4dp();
   transition-duration: 0.2s;
   transition-timing-function: cubic-bezier(.4,0,.2,1);
-  transition-property: max-height, box-shadow;
+  transition-property: all;
+  z-index: 3;
+
+  @media screen and (min-width: 840px) {
+    padding-left: 190px;
+    background-color: #fff;
+    color: #000;
+    z-index: 6;
+  }
+
+  & > .layout--minified-button {
+    position: absolute;
+    top: 16px;
+    color: $palette-pink-500;
+    visibility: hidden;
+    transition-property: background;
+
+    @media screen and (min-width: 840px) {
+      visibility: visible;
+    }
+  }
 }
 
 .layout--header-row {
@@ -78,17 +98,17 @@
   top: 0;
   left: 0;
 
-  @include shadow-2dp();
+  @include shadow-3dp();
 
-  border-right: 1px solid $palette-grey-500;
+  border-right: 1px solid $palette-grey-300;
   background-color: $palette-grey-50;
 
   transform: translateX(-240px - 10px);
   transform-style: preserve-3d;
   transition-duration: 0.2s;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-property: transform;
-  will-change: transform;
+  transition-property: all;
+  will-change: all;
 
   color: $palette-grey-800;
   overflow: visible;
@@ -119,6 +139,54 @@
       padding: 16px 40px;
       margin: 0;
       color: $palette-grey-800;
+      white-space: nowrap;
+      transition-duration: 0.2s;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      transition-property: all;
+      will-change: all;
+
+      & > i {
+        margin-right: 12px;
+        width: 28px;
+        font-size: 24px;
+        text-align: center;
+        vertical-align: bottom;
+      }
+
+      &.active {
+        background-color: #e1e1e1;
+      }
+
+      @media screen and (min-width: 840px) {
+        color: rgba($palette-indigo-100, 0.9);
+
+        &.active {
+          background-color: $palette-indigo-600;
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 840px) {
+    border-right: 1px solid $palette-indigo-300;
+    background-color: $palette-indigo-500;
+    color: $palette-indigo-50;
+    transform: translateX(0);
+
+    &.minified {
+      width: 64px;
+
+      & .navigation--link {
+        padding: 16px 18px;
+
+        & > span {
+          transition-duration: 0.2s;
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-property: all;
+          display: none;
+        }
+      }
     }
   }
 }
@@ -134,11 +202,32 @@
   height: 48px;
   margin: 10px 12px;
   border: 0;
-  font-size: 26px;
+  font-size: 24px;
   line-height: 50px;
   cursor: pointer;
   overflow: hidden;
   z-index: 4;
+
+  @media screen and (min-width: 840px) {
+    display: none;
+  }
+}
+
+.layout--logo {
+  display: block;
+  position: absolute;
+  left: 0;
+  padding-left: 40px;
+  @include typo-title();
+  font-weight: 500;
+  color: $palette-grey-600;
+  line-height: 64px;
+  text-transform: uppercase;
+  visibility: hidden;
+
+  @media screen and (min-width: 840px) {
+    visibility: visible;
+  }
 }
 
 .layout--title {
@@ -146,16 +235,31 @@
   position: relative;
   @include typo-title();
   font-weight: 400;
+  line-height: 64px;
+  text-transform: uppercase;
 }
 
 .layout--content {
   position: relative;
   display: inline-block;
+  padding: 16px;
   flex-grow: 1;
   overflow-y: auto;
   overflow-x: hidden;
   z-index: 1;
   -webkit-overflow-scrolling: touch;
+  transition-duration: 0.2s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: all;
+
+  @media screen and (min-width: 840px) {
+    margin-left: 240px;
+    background-color: #f9f9f9;
+
+    .minified + & {
+      margin-left: 64px;
+    }
+  }
 }
 
 .layout--obfuscator {
@@ -168,7 +272,7 @@
   background-color: transparent;
   transition-duration: 0.2s;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-property: background-color;
+  transition-property: all;
   z-index: 4;
 
   &.is-visible {
@@ -187,8 +291,9 @@
 }
 
 .navigation--link {
+  margin: 0;
   color: #fff;
   text-decoration: none;
-  margin: 0;
   @include typo-body-1();
+  text-transform: uppercase;
 }

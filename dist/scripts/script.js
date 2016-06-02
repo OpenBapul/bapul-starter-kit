@@ -2073,10 +2073,14 @@ Checkbox = function () {_createClass(Checkbox, null, [{ key: 'CssClasses', get: 
 Layout = function () {_createClass(Layout, null, [{ key: 'CssClasses', get: function get() 
     {
       return { 
+        LAYOUT: 'layout', 
         DRAWER: 'layout--drawer', 
         DRAWER_BUTTON: 'layout--drawer-button', 
         OBFUSCATOR: 'layout--obfuscator', 
-        IS_DRAWER_OPEN: 'is-visible' };} }]);
+        NAVIGATION_LINK: 'navigation--link', 
+        IS_DRAWER_OPEN: 'is-visible', 
+        MINIFIED: 'minified', 
+        MINIFIED_BUTTON: 'layout--minified-button' };} }]);
 
 
   function Layout(element) {_classCallCheck(this, Layout);
@@ -2093,18 +2097,36 @@ Layout = function () {_createClass(Layout, null, [{ key: 'CssClasses', get: func
       {
         this.drawer_.setAttribute('aria-hidden', 'true');
         this.obfuscator_.setAttribute('aria-hidden', 'true');
-        this.drawerButton_.setAttribute('aria-expanded', 'false');}} }, { key: 'init', value: function init() 
+        this.drawerButton_.setAttribute('aria-expanded', 'false');}} }, { key: 'removeDrawer', value: function removeDrawer(
 
+
+    event) {
+      event.preventDefault();
+      this.drawer_.classList.remove(Layout.CssClasses.IS_DRAWER_OPEN);
+      this.obfuscator_.classList.remove(Layout.CssClasses.IS_DRAWER_OPEN);} }, { key: 'toggleMinified', value: function toggleMinified() 
+
+    {
+      this.drawer_.classList.toggle(Layout.CssClasses.MINIFIED);} }, { key: 'init', value: function init() 
 
     {
       if (this.element_) {
+        this.obfuscator_ = this.element_.querySelector('.' + Layout.CssClasses.OBFUSCATOR);
         this.drawer_ = this.element_.querySelector('.' + Layout.CssClasses.DRAWER);
         this.drawerButton_ = this.element_.querySelector('.' + Layout.CssClasses.DRAWER_BUTTON);
-        this.obfuscator_ = this.element_.querySelector('.' + Layout.CssClasses.OBFUSCATOR);
+        this.drawerNavigationLink_ = this.drawer_.querySelectorAll('.' + Layout.CssClasses.NAVIGATION_LINK);
+        this.minifiedButton_ = this.element_.querySelector('.' + Layout.CssClasses.MINIFIED_BUTTON);
 
         this.toggleDrawerHandler = this.toggleDrawer.bind(this);
         this.drawerButton_.addEventListener('click', this.toggleDrawerHandler);
-        this.obfuscator_.addEventListener('click', this.toggleDrawerHandler);}} }]);return Layout;}();exports.default = Layout;
+        this.obfuscator_.addEventListener('click', this.toggleDrawerHandler);
+
+        this.removeDrawerHandler = this.removeDrawer.bind(this);
+        for (var i = 0, len = this.drawerNavigationLink_.length; i < len; i++) {
+          this.drawerNavigationLink_[i].addEventListener('click', this.removeDrawerHandler);}
+
+
+        this.toggleMinifiedHandler = this.toggleMinified.bind(this);
+        this.minifiedButton_.addEventListener('click', this.toggleMinifiedHandler);}} }]);return Layout;}();exports.default = Layout;
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/src/scripts/components/layout.js","/src/scripts/components")
 
@@ -2237,10 +2259,6 @@ Textfield = function () {_createClass(Textfield, null, [{ key: 'CssClasses', get
 
 
 
-var _test = require('./test');
-
-
-
 
 var _layout = require('./components/layout');var _layout2 = _interopRequireDefault(_layout);
 
@@ -2266,33 +2284,20 @@ var _checkbox = require('./components/checkbox');var _checkbox2 = _interopRequir
 
 
 
-var _radio = require('./components/radio');var _radio2 = _interopRequireDefault(_radio);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}(0, _test.foo)(); /**
-                                                                                                                                                                                                        * Created by gjjoo on 2016. 3. 1..
-                                                                                                                                                                                                        */ //import './serviceWorker';
+var _radio = require('./components/radio');var _radio2 = _interopRequireDefault(_radio);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}var layout = document.querySelectorAll('.layout'); /**
+                                                                                                                                                                                                                                         * Created by gjjoo on 2016. 3. 1..
+                                                                                                                                                                                                                                         */ //import './serviceWorker';
 //import jQuery from 'jquery';
 //import angular from 'angular';
-(0, _test.bar)(); // Layout
-var layout = document.querySelectorAll('.layout');var layoutLen = layout.length;for (var i = 0; i < layoutLen; i++) {new _layout2.default(layout[i]).init();} // Textfield
+// Layout
+var layoutLen = layout.length;for (var i = 0; i < layoutLen; i++) {new _layout2.default(layout[i]).init();} // Textfield
 var textfields = document.querySelectorAll('.textfield');var textfieldsLen = textfields.length;for (var _i = 0; _i < textfieldsLen; _i++) {new _textfield2.default(textfields[_i]).init();} // Checkbox
 var checkboxes = document.querySelectorAll('.checkbox');var checkboxesLen = checkboxes.length;for (var _i2 = 0; _i2 < checkboxesLen; _i2++) {new _checkbox2.default(checkboxes[_i2]).init();} // Radio
 var radios = document.querySelectorAll('.radio');var radiosLen = radios.length;for (var _i3 = 0; _i3 < radiosLen; _i3++) {new _radio2.default(radios[_i3]).init();}
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/src/scripts/script.js","/src/scripts")
 
-},{"./components/checkbox":6,"./components/layout":7,"./components/radio":8,"./components/textfield":9,"./test":11,"_process":5,"buffer":1}],11:[function(require,module,exports){
-(function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
-'use strict';Object.defineProperty(exports, "__esModule", { value: true });exports.
-
-
-
-foo = foo;exports.
-bar = bar; /**
-            * Created by gjjoo on 2016. 5. 1..
-            */function foo() {console.log('푸우우우우우');}function bar() {console.log('바아아아아아알');}
-
-}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/src/scripts/test.js","/src/scripts")
-
-},{"_process":5,"buffer":1}]},{},[10])
+},{"./components/checkbox":6,"./components/layout":7,"./components/radio":8,"./components/textfield":9,"_process":5,"buffer":1}]},{},[10])
 
 
 //# sourceMappingURL=script.js.map

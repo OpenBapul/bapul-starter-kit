@@ -6,10 +6,6 @@
 //import jQuery from 'jquery';
 //import angular from 'angular';
 
-import {foo, bar} from './test';
-foo();
-bar();
-
 // Layout
 import Layout from './components/layout';
 let layout = document.querySelectorAll('.layout');
