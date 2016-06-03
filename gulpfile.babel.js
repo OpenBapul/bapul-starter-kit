@@ -130,6 +130,16 @@ const bundleHandler = () => {
     .pipe(gulp.dest(config.dir.js.dest))
     .pipe(browserSync.stream());
 };
+const defaultHandler = () => {
+  gulp.src(['src/scripts/components/*', 'src/scripts/script.js'])
+    .pipe($.sourcemaps.init())
+    .pipe($.concat('script.js'))
+    .pipe($.babel())
+    .pipe($.size({title: 'scripts: '}))
+    .pipe($.sourcemaps.write('./'))
+    .pipe(gulp.dest(config.dir.js.dest))
+    .pipe(browserSync.stream());
+};
 gulp.task('scripts', bundleHandler);
 
 /**

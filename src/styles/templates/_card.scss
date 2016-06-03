@@ -1,0 +1,32 @@
+.template-card--table {
+  background-color: #fff;
+
+  & .table {
+    border: 0;
+
+    tbody tr {
+      &:last-of-type {
+        td {
+          border-bottom: 1px solid rgba(#000, 0.24);
+        }
+      }
+    }
+  }
+  & .card--title-text {
+    line-height: 32px;
+  }
+  & .card--menu {
+    color: #616161;
+  }
+  & .card--menu .button:not(:last-of-type) {
+    margin-right: 8px;
+  }
+  & .card--actions .button,
+  & .card--actions .card--table-page-text {
+    color: #616161;
+  }
+  & .card--actions .card--table-page-text {
+    margin-right: 8px;
+    font-size: 12px;
+  }
+}

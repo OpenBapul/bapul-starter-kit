@@ -8,32 +8,35 @@
 
 // Layout
 import Layout from './components/layout';
-let layout = document.querySelectorAll('.layout');
-let layoutLen = layout.length;
-for (let i = 0; i < layoutLen; i++) {
-  new Layout(layout[i]).init();
+let layouts = document.querySelectorAll('.layout');
+for (let i = 0, len = layouts.length; i < len; i++) {
+  new Layout(layouts[i]).init();
 }
 
 // Textfield
 import Textfield from './components/textfield';
 let textfields = document.querySelectorAll('.textfield');
-let textfieldsLen = textfields.length;
-for (let i = 0; i < textfieldsLen; i++) {
+for (let i = 0, len = textfields.length; i < len; i++) {
   new Textfield(textfields[i]).init();
 }
 
 // Checkbox
 import Checkbox from './components/checkbox';
 let checkboxes = document.querySelectorAll('.checkbox');
-let checkboxesLen = checkboxes.length;
-for (let i = 0; i < checkboxesLen; i++) {
+for (let i = 0, len = checkboxes.length; i < len; i++) {
   new Checkbox(checkboxes[i]).init();
 }
 
 // Radio
 import Radio from './components/radio';
 let radios = document.querySelectorAll('.radio');
-let radiosLen = radios.length;
-for (let i = 0; i < radiosLen; i++) {
+for (let i = 0, len = radios.length; i < len; i++) {
   new Radio(radios[i]).init();
+}
+
+// Table
+import Table from './components/table';
+let tables = document.querySelectorAll('.table');
+for (let i = 0, len = tables.length; i < len; i++) {
+  new Table(tables[i]).init();
 }

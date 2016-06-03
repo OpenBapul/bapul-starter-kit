@@ -2174,6 +2174,56 @@ Radio = function () {_createClass(Radio, null, [{ key: 'CssClasses', get: functi
 },{"_process":5,"buffer":1}],9:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 'use strict';Object.defineProperty(exports, "__esModule", { value: true });var _createClass = function () {function defineProperties(target, props) {for (var i = 0; i < props.length; i++) {var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);}}return function (Constructor, protoProps, staticProps) {if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;};}();function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}} /**
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       * Created by gjjoo on 2016. 6. 2..
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       */var 
+
+Table = function () {_createClass(Table, null, [{ key: 'CssClasses', get: function get() 
+    {
+      return { 
+        TABLE: 'table', 
+        SELECT_ELEMENT: 'table--select', 
+        SELECT_ELEMENT_ALL: 'table--select-all', 
+        CHECKBOX_INPUT: 'checkbox--input', 
+        IS_SELECTED: 'is-selected' };} }]);
+
+
+  function Table(element) {_classCallCheck(this, Table);
+    this.element_ = element;}_createClass(Table, [{ key: 'selectRow', value: function selectRow(
+
+    event) {
+      event.target.closest('tr').classList.toggle(Table.CssClasses.IS_SELECTED);} }, { key: 'selectAllRow', value: function selectAllRow() 
+
+    {
+      var selectElementAllCheckbox = this.selectElementAll_.querySelector('.' + Table.CssClasses.CHECKBOX_INPUT);
+      var tableRows = this.element_.querySelectorAll('tbody > tr');
+
+      if (selectElementAllCheckbox.checked) {
+        for (var i = 0, len = tableRows.length; i < len; i++) {
+          this.selectElement_[i].querySelector('.' + Table.CssClasses.CHECKBOX_INPUT).checked = true;
+          tableRows[i].classList.add(Table.CssClasses.IS_SELECTED);}} else 
+
+      {
+        for (var _i = 0, _len = tableRows.length; _i < _len; _i++) {
+          this.selectElement_[_i].querySelector('.' + Table.CssClasses.CHECKBOX_INPUT).checked = false;
+          tableRows[_i].classList.remove(Table.CssClasses.IS_SELECTED);}}} }, { key: 'init', value: function init() 
+
+
+
+    {
+      if (this.element_) {
+        this.selectElementAll_ = this.element_.querySelector('.' + Table.CssClasses.SELECT_ELEMENT_ALL);
+        this.selectElement_ = this.element_.querySelectorAll('.' + Table.CssClasses.SELECT_ELEMENT);
+
+        this.selectAllRowHandler = this.selectAllRow.bind(this);
+        this.selectElementAll_.addEventListener('change', this.selectAllRowHandler);
+        for (var i = 0, len = this.selectElement_.length; i < len; i++) {
+          this.selectElement_[i].addEventListener('change', this.selectRow);}}} }]);return Table;}();exports.default = Table;
+
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/src/scripts/components/table.js","/src/scripts/components")
+
+},{"_process":5,"buffer":1}],10:[function(require,module,exports){
+(function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
+'use strict';Object.defineProperty(exports, "__esModule", { value: true });var _createClass = function () {function defineProperties(target, props) {for (var i = 0; i < props.length; i++) {var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);}}return function (Constructor, protoProps, staticProps) {if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;};}();function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}} /**
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        * Created by gjjoo on 2016. 5. 24..
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        */var 
 
@@ -2249,7 +2299,7 @@ Textfield = function () {_createClass(Textfield, null, [{ key: 'CssClasses', get
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/src/scripts/components/textfield.js","/src/scripts/components")
 
-},{"_process":5,"buffer":1}],10:[function(require,module,exports){
+},{"_process":5,"buffer":1}],11:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 'use strict';
 
@@ -2267,9 +2317,7 @@ var _layout = require('./components/layout');var _layout2 = _interopRequireDefau
 
 
 
-
 var _textfield = require('./components/textfield');var _textfield2 = _interopRequireDefault(_textfield);
-
 
 
 
@@ -2283,21 +2331,28 @@ var _checkbox = require('./components/checkbox');var _checkbox2 = _interopRequir
 
 
 
+var _radio = require('./components/radio');var _radio2 = _interopRequireDefault(_radio);
 
-var _radio = require('./components/radio');var _radio2 = _interopRequireDefault(_radio);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}var layout = document.querySelectorAll('.layout'); /**
-                                                                                                                                                                                                                                         * Created by gjjoo on 2016. 3. 1..
-                                                                                                                                                                                                                                         */ //import './serviceWorker';
+
+
+
+
+
+var _table = require('./components/table');var _table2 = _interopRequireDefault(_table);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}var layouts = document.querySelectorAll('.layout'); /**
+                                                                                                                                                                                                                                          * Created by gjjoo on 2016. 3. 1..
+                                                                                                                                                                                                                                          */ //import './serviceWorker';
 //import jQuery from 'jquery';
 //import angular from 'angular';
 // Layout
-var layoutLen = layout.length;for (var i = 0; i < layoutLen; i++) {new _layout2.default(layout[i]).init();} // Textfield
-var textfields = document.querySelectorAll('.textfield');var textfieldsLen = textfields.length;for (var _i = 0; _i < textfieldsLen; _i++) {new _textfield2.default(textfields[_i]).init();} // Checkbox
-var checkboxes = document.querySelectorAll('.checkbox');var checkboxesLen = checkboxes.length;for (var _i2 = 0; _i2 < checkboxesLen; _i2++) {new _checkbox2.default(checkboxes[_i2]).init();} // Radio
-var radios = document.querySelectorAll('.radio');var radiosLen = radios.length;for (var _i3 = 0; _i3 < radiosLen; _i3++) {new _radio2.default(radios[_i3]).init();}
+for (var i = 0, len = layouts.length; i < len; i++) {new _layout2.default(layouts[i]).init();} // Textfield
+var textfields = document.querySelectorAll('.textfield');for (var _i = 0, _len = textfields.length; _i < _len; _i++) {new _textfield2.default(textfields[_i]).init();} // Checkbox
+var checkboxes = document.querySelectorAll('.checkbox');for (var _i2 = 0, _len2 = checkboxes.length; _i2 < _len2; _i2++) {new _checkbox2.default(checkboxes[_i2]).init();} // Radio
+var radios = document.querySelectorAll('.radio');for (var _i3 = 0, _len3 = radios.length; _i3 < _len3; _i3++) {new _radio2.default(radios[_i3]).init();} // Table
+var tables = document.querySelectorAll('.table');for (var _i4 = 0, _len4 = tables.length; _i4 < _len4; _i4++) {new _table2.default(tables[_i4]).init();}
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/src/scripts/script.js","/src/scripts")
 
-},{"./components/checkbox":6,"./components/layout":7,"./components/radio":8,"./components/textfield":9,"_process":5,"buffer":1}]},{},[10])
+},{"./components/checkbox":6,"./components/layout":7,"./components/radio":8,"./components/table":9,"./components/textfield":10,"_process":5,"buffer":1}]},{},[11])
 
 
 //# sourceMappingURL=script.js.map

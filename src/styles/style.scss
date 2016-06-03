@@ -39,10 +39,14 @@
 @import 'components/badge';
 @import 'components/label';
 @import 'components/shadow';
-@import 'components/card';
 @import 'components/tooltip';
 @import 'components/list';
 @import 'components/textfield';
 @import 'components/checkbox';
 @import 'components/radio';
 @import 'components/switch';
+@import 'components/table';
+@import 'components/card';
+
+// Template
+@import 'templates/card';
