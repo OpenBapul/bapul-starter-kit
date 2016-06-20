@@ -23,8 +23,11 @@
   line-height: 38px;
 }
 
-// Content area
-.card--content {
+// Title area
+.card--title {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
   padding: 16px;
 }
 
@@ -41,6 +44,11 @@
   color: $palette-grey-500;
 }
 
+// Content area
+.card--content {
+  padding: 16px;
+}
+
 .card--supporting-text {
   font-size: 14px;
   line-height: 20px;
@@ -51,13 +59,13 @@
   padding: 8px;
   width: 100%;
 
-  &.card--border {
-    border-top: 1px solid rgba(0,0,0,.1);
-  }
-
   & > .button {
     padding: 0 8px;
   }
+}
+
+.card--border {
+  border-top: 1px solid rgba(0,0,0,.1);
 }
 
 .card--expand {

@@ -1,0 +1,146 @@
+.panel {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border-radius: 2px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.panel--title {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  padding: 16px;
+  background-color: #fff;
+}
+
+.panel--menu {
+  & > .button {
+    color: $palette-grey-500;
+  }
+}
+
+.panel--sub {
+  & > .panel--menu {
+    position: relative;
+    top: -10px;
+  }
+}
+
+.panel--title-text {
+  margin: 0;
+  font-size: 16px;
+  line-height: 16px;
+
+  & > i {
+    font-size: 20px;
+    line-height: 20px;
+    vertical-align: text-bottom;
+  }
+
+  & > small {
+    display: block;
+    margin-top: 5px;
+    font-size: 12px;
+  }
+}
+
+.panel--non-boundary {
+  padding-top: 0 !important;
+}
+
+.panel--content {
+  padding: 16px;
+  background-color: #fff;
+}
+
+.panel--supporting-text {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.panel--action {
+  position: absolute;
+  top: 46px;
+  right: 40px;
+}
+
+.panel--border {
+  border-top: 1px solid rgba(0,0,0,.1);
+}
+
+.panel--reveal {
+  visibility: hidden;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: #fff;
+  transform: translateY(0px);
+  transition-duration: 0.3s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: all;
+
+  &.is-visibled {
+    visibility: visible;
+    transform: translateY(-100%);
+  }
+
+  & > .panel--content {
+    height: calc(100% - 64px);
+  }
+
+  & .table {
+    width: 100%;
+    height: 100%;
+
+    th {
+      padding: 4px 18px 4px 18px;
+
+      &:nth-of-type(1) {
+        width: 100%;
+      }
+
+      &:nth-of-type(2) {
+        width: initial;
+      }
+    }
+
+    td {
+      padding: 8px 18px 8px 18px;
+
+      &:nth-of-type(1) {
+        width: 100%;
+      }
+
+      &:nth-of-type(2) {
+        width: initial;
+      }
+    }
+  }
+}
+
+// Colorful Panel
+.panel--title-alternative {
+  background-color: #f7f7f7 !important;
+
+  & > .panel--menu > .button {
+    color: $palette-grey-500;
+  }
+}
+
+@each $color_name, $color in $colors {
+  @each $color_key, $color_value in $color {
+    .panel--title-#{$color_key} {
+      background-color: $color_value !important;
+      color: #fff;
+
+      & > .panel--title-text > small,
+      & > .panel--menu > .button {
+        color: #fff;
+      }
+    }
+  }
+}

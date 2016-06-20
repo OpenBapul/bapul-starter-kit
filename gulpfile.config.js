@@ -57,7 +57,16 @@ const _dir = {
 
   // JS
   js: {
-    src: _source + 'scripts/**/*.js',
+    src: [
+      './src/scripts/components/componentHandler.js',
+      './src/scripts/components/layout.js',
+      './src/scripts/components/checkbox.js',
+      './src/scripts/components/radio.js',
+      './src/scripts/components/switch.js',
+      './src/scripts/components/textfield.js',
+      './src/scripts/components/table.js',
+      './src/scripts/components/panel.js'
+    ],
     dest: _development + 'scripts/'
   },
 

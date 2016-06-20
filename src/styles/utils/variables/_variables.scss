@@ -1,9 +1,12 @@
+// 폰트
+$preferred_font: 'Noto Sans KR', sans-serif !default;
+
 // 폰트 아이콘 위치
-$font-path: '../fonts';
-$zmdi-font-path: '../fonts/Material-Design-Iconic-Font';
-$md-font-path: '../fonts/Material-Design-Iconic-Font';
-$material-font-path: '../fonts/Material-Design-Icons';
-$wi-path: '../fonts/Weather-Icons';
+$font-path: '../fonts' !default;
+$zmdi-font-path: '../fonts/Material-Design-Iconic-Font' !default;
+$md-font-path: '../fonts/Material-Design-Iconic-Font' !default;
+$material-font-path: '../fonts/Material-Design-Icons' !default;
+$wi-path: '../fonts/Weather-Icons' !default;
 
 // 색상
 $color-primary: $palette-indigo-500 !default;
@@ -19,12 +22,12 @@ $text-color-black: rgba-tpl($color-black, 0.87) !default;
 $text-color-white: rgba-tpl($color-white, 0.87) !default;
 
 // 기본 버튼
-$button-min-width: 64px !default;
-$button-height: 36px !default;
 $button-padding: 16px !default;
 $button-border-radius: 2px !default;
+$button-height-large: 44px !default;
+$button-height: 36px !default;
+$button-height-small: 30px !default;
 
-// FAB 버튼
 $button-fab-size: 56px !default;
 $button-fab-size-large: 72px !default;
 $button-fab-size-small: 40px !default;

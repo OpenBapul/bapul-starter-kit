@@ -71,7 +71,8 @@ gulp.task('serve', ['views', 'styles', 'scripts'], () => {
 
   gulp.watch([config.dir.html.src], ['views']);
   gulp.watch([config.dir.sass.src], ['styles']);
-  bundler.on('update', bundleHandler).on('log', $.util.log);
+  gulp.watch(config.dir.js.src, ['scripts']);
+  //bundler.on('update', defaultHandler).on('log', $.util.log);
 });
 
 /**
@@ -117,21 +118,21 @@ gulp.task('styles:lint', () => {
  * Scripts Task
  * 자바스크립트 번들링
  */
-const opts = assign({}, watchify.args, config.BROWSERIFY);
-const bundler = watchify(browserify(opts).transform(babelify));
-const bundleHandler = () => {
-  return bundler.bundle()
-    .on('error', $.util.log.bind($.util, 'browserify error'))
-    .pipe(source('script.js'))
-    .pipe(buffer())
-    .pipe($.sourcemaps.init({loadMaps: true}))
-    .pipe($.sourcemaps.write('./'))
-    .pipe($.size({title: 'scripts: '}))
-    .pipe(gulp.dest(config.dir.js.dest))
-    .pipe(browserSync.stream());
-};
+//const opts = assign({}, watchify.args, config.BROWSERIFY);
+//const bundler = watchify(browserify(opts).transform(babelify));
+//const bundleHandler = () => {
+//  return bundler.bundle()
+//    .on('error', $.util.log.bind($.util, 'browserify error'))
+//    .pipe(source('script.js'))
+//    .pipe(buffer())
+//    .pipe($.sourcemaps.init({loadMaps: true}))
+//    .pipe($.sourcemaps.write('./'))
+//    .pipe($.size({title: 'scripts: '}))
+//    .pipe(gulp.dest(config.dir.js.dest))
+//    .pipe(browserSync.stream());
+//};
 const defaultHandler = () => {
-  gulp.src(['src/scripts/components/*', 'src/scripts/script.js'])
+  gulp.src(config.dir.js.src)
     .pipe($.sourcemaps.init())
     .pipe($.concat('script.js'))
     .pipe($.babel())
@@ -140,7 +141,7 @@ const defaultHandler = () => {
     .pipe(gulp.dest(config.dir.js.dest))
     .pipe(browserSync.stream());
 };
-gulp.task('scripts', bundleHandler);
+gulp.task('scripts', defaultHandler);
 
 /**
  * Scripts Lint Task

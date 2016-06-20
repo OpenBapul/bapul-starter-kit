@@ -65,12 +65,62 @@
     @include typo-body-2();
     height: 48px;
     font-size: 12px;
-    font-weight: 600;
+    font-weight: 500;
     color: $palette-grey-700;
     text-overflow: ellipsis;
     vertical-align: bottom;
+    cursor: pointer;
+
+    &:active {
+      color: $palette-grey-600;
+    }
+
+    &.is-filtered {
+      font-weight: 600;
+      color: $palette-grey-800;
+    }
+
+    & > i {
+      position: relative;
+      top: 3px;
+      font-size: 16px;
+    }
   }
 }
+
+.table--non-border {
+  border: 0;
+}
+
+//.table--body-scroll {
+//  thead {
+//    display: block;
+//
+//    & tr {
+//      display: block;
+//    }
+//
+//    & th {
+//      display: inline-block;
+//      height: auto;
+//    }
+//  }
+//  tbody {
+//    display: block;
+//    height: calc(100% - 48px);
+//    overflow-y: auto;
+//
+//    & tr {
+//      display: block;
+//      height: auto;
+//    }
+//
+//    & td {
+//      display: inline-block;
+//      height: auto;
+//    }
+//  }
+//}
 
 .table-cell--non-numeric.table-cell--non-numeric {
   text-align: left;
