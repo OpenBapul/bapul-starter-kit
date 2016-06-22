@@ -16761,12 +16761,12 @@ ul, ol {
 }
 
 .button {
+  display: inline-block;
   position: relative;
   margin: 0;
-  padding: 0 16px;
   border: 0;
   border-radius: 2px;
-  display: inline-block;
+  padding: 0 16px;
   height: 36px;
   font-size: 14px;
   font-weight: 500;
@@ -16836,8 +16836,8 @@ ul, ol {
 }
 
 .button--fab {
-  border-radius: 50%;
   margin: auto;
+  border-radius: 50%;
   padding: 0;
   width: 56px;
   min-width: 56px;
@@ -16874,7 +16874,7 @@ ul, ol {
 }
 
 .button--flat:hover {
-  background-color: rgba(158, 158, 158, 0.2);
+  background-color: rgba(0, 0, 0, 0.1);
   box-shadow: none;
 }
 
@@ -16909,8 +16909,8 @@ ul, ol {
 }
 
 .button--icon {
-  border-radius: 50%;
   margin: 0;
+  border-radius: 50%;
   padding: 0;
   width: 32px;
   min-width: 32px;
@@ -16938,10 +16938,10 @@ ul, ol {
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
   width: 24px;
   line-height: 24px;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .button--icon.button--icon-large {
@@ -16957,15 +16957,15 @@ ul, ol {
 }
 
 .button--icon.button--icon-small {
-  width: 26px;
-  min-width: 26px;
-  height: 26px;
-  font-size: 18px;
+  width: 38px;
+  min-width: 38px;
+  height: 38px;
+  font-size: 30px;
 }
 
 .button--icon.button--icon-small > i {
-  width: 18px;
-  line-height: 18px;
+  width: 30px;
+  line-height: 30px;
 }
 
 .button--red {
@@ -22739,7 +22739,7 @@ ul, ol {
   position: absolute;
   top: -11px;
   right: -24px;
-  font-family: 'Noto Sans KR', sans-serif;
+  font-family: "Noto Sans KR", sans-serif;
   font-size: 12px;
   line-height: 12px;
   font-weight: 600;
@@ -28542,6 +28542,7 @@ ul, ol {
   border-radius: 2px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   overflow: hidden;
+  z-index: 1;
 }
 
 .panel--title {
@@ -28556,6 +28557,10 @@ ul, ol {
           flex-direction: row;
   padding: 16px;
   background-color: #fff;
+}
+
+.panel--menu {
+  z-index: 2;
 }
 
 .panel--menu > .button {
@@ -28603,6 +28608,7 @@ ul, ol {
   position: absolute;
   top: 46px;
   right: 40px;
+  z-index: 3;
 }
 
 .panel--border {
@@ -28615,7 +28621,7 @@ ul, ol {
   top: 100%;
   width: 100%;
   height: 100%;
-  z-index: 1;
+  z-index: 9;
   background-color: #fff;
   -webkit-transform: translateY(0px);
           transform: translateY(0px);

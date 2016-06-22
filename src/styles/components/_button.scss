@@ -1,11 +1,11 @@
 // Common
 .button {
+  display: inline-block;
   position: relative;
   margin: 0;
-  padding: 0 $button-padding;
   border: 0;
   border-radius: $button-border-radius;
-  display: inline-block;
+  padding: 0 $button-padding;
   height: $button-height;
   @include typo-button();
   line-height: $button-height;
@@ -57,28 +57,28 @@
 .button--default {
   background-color: #fafafa;
 
-  & > i { font-size: 20px; }
+  & > i { font-size: $button--default-icon-size; }
 
   &.button--default-large {
-    height: $button-height-large;
-    line-height: $button-height-large;
+    height: $button--default-height-large;
+    line-height: $button--default-height-large;
   }
 
   &.button--default-small {
-    height: $button-height-small;
-    line-height: $button-height-small;
+    height: $button--default-height-small;
+    line-height: $button--default-height-small;
   }
 }
 
 // FAB Button
 .button--fab {
-  border-radius: 50%;
   margin: auto;
+  border-radius: 50%;
   padding: 0;
-  width: $button-fab-size;
-  min-width: $button-fab-size;
-  height: $button-fab-size;
-  font-size: $button-fab-font-size;
+  width: $button--fab-size;
+  min-width: $button--fab-size;
+  height: $button--fab-size;
+  font-size: $button--fab-font-size;
   background-color: #fafafa;
 
   & > i {
@@ -86,20 +86,20 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 24px;
-    line-height: 24px;
+    width: $button--fab-icon-size;
+    line-height: $button--fab-icon-size;
   }
 
   &.button--fab-large {
-    width: $button-fab-size-large;
-    min-width: $button-fab-size-large;
-    height: $button-fab-size-large;
+    width: $button--fab-size-large;
+    min-width: $button--fab-size-large;
+    height: $button--fab-size-large;
   }
 
   &.button--fab-small {
-    width: $button-fab-size-small;
-    min-width: $button-fab-size-small;
-    height: $button-fab-size-small;
+    width: $button--fab-size-small;
+    min-width: $button--fab-size-small;
+    height: $button--fab-size-small;
   }
 }
 
@@ -109,7 +109,7 @@
   box-shadow: none;
 
   &:hover {
-    background-color: rgba(158, 158, 158, 0.2);
+    background-color: rgba(0, 0, 0, 0.1);
     box-shadow: none;
   }
 
@@ -122,32 +122,32 @@
     }
   }
 
-  & > i { font-size: 20px; }
+  & > i { font-size: $button--flat-icon-size; }
 
   &.button--flat-large {
-    font-size: 20px;
-    line-height: 20px;
+    font-size: $button--flat-font-size-large;
+    line-height: $button--flat-font-size-large;
 
-    & > i { font-size: 24px; }
+    & > i { font-size: $button--flat-icon-size-large; }
   }
 
   &.button--flat-small {
-    font-size: 12px;
-    line-height: 12px;
+    font-size: $button--flat-font-size-small;
+    line-height: $button--flat-font-size-small;
 
-    & > i { font-size: 16px; }
+    & > i { font-size: $button--flat-icon-size-small; }
   }
 }
 
 // Icon Button
 .button--icon {
-  border-radius: 50%;
   margin: 0;
+  border-radius: 50%;
   padding: 0;
-  width: 32px;
-  min-width: 32px;
-  height: 32px;
-  font-size: 24px;
+  width: $button--icon-size;
+  min-width: $button--icon-size;
+  height: $button--icon-size;
+  font-size: $button--icon-font-size;
   color: inherit;
   background-color: transparent;
   box-shadow: none;
@@ -170,32 +170,32 @@
     position: absolute;
     top: 50%;
     left: 50%;
+    width: $button--icon-icon-size;
+    line-height: $button--icon-icon-size;
     transform: translate(-50%, -50%);
-    width: 24px;
-    line-height: 24px;
   }
 
   &.button--icon-large {
-    width: 38px;
-    min-width: 38px;
-    height: 38px;
-    font-size: 30px;
+    width: $button--icon-large-size;
+    min-width: $button--icon-large-size;
+    height: $button--icon-large-size;
+    font-size: $button--icon-large-font-size;
 
     & > i {
-      width: 30px;
-      line-height: 30px;
+      width: $button--icon-large-icon-size;
+      line-height: $button--icon-large-icon-size;
     }
   }
 
   &.button--icon-small {
-    width: 26px;
-    min-width: 26px;
-    height: 26px;
-    font-size: 18px;
+    width: $button--icon-small-size;
+    min-width: $button--icon-small-size;
+    height: $button--icon-small-size;
+    font-size: $button--icon-small-font-size;
 
     & > i {
-      width: 18px;
-      line-height: 18px;
+      width: $button--icon-small-icon-size;
+      line-height: $button--icon-small-icon-size;
     }
   }
 }

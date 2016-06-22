@@ -1,37 +1,62 @@
-// 폰트
+// FONT
 $preferred_font: 'Noto Sans KR', sans-serif !default;
 
-// 폰트 아이콘 위치
+// ICON PATH
 $font-path: '../fonts' !default;
 $zmdi-font-path: '../fonts/Material-Design-Iconic-Font' !default;
 $md-font-path: '../fonts/Material-Design-Iconic-Font' !default;
 $material-font-path: '../fonts/Material-Design-Icons' !default;
 $wi-path: '../fonts/Weather-Icons' !default;
 
-// 색상
+// THEME COLOR
 $color-primary: $palette-indigo-500 !default;
 $color-primary-dark: $palette-indigo-700 !default;
 $color-accent: $palette-pink-A200 !default;
 $color-primary-contrast: $color-dark-contrast !default;
 $color-accent-contrast: $color-dark-contrast !default;
 
-// 텍스트 색상
+// TEXT COLOR
 $text-color-primary: rgba-tpl($color-black, 0.87) !default;
 $text-link-color: $color-accent !default;
 $text-color-black: rgba-tpl($color-black, 0.87) !default;
 $text-color-white: rgba-tpl($color-white, 0.87) !default;
 
-// 기본 버튼
+// BUTTON
 $button-padding: 16px !default;
 $button-border-radius: 2px !default;
-$button-height-large: 44px !default;
 $button-height: 36px !default;
-$button-height-small: 30px !default;
 
-$button-fab-size: 56px !default;
-$button-fab-size-large: 72px !default;
-$button-fab-size-small: 40px !default;
-$button-fab-font-size: 24px !default;
+$button--default-icon-size: 20px !default;
+$button--default-height-large: 44px !default;
+$button--default-height-small: 30px !default;
+
+$button--fab-size: 56px !default;
+$button--fab-font-size: 24px !default;
+$button--fab-icon-size: 24px !default;
+$button--fab-size-large: 72px !default;
+$button--fab-size-small: 40px !default;
+
+$button--flat-icon-size: 20px !default;
+$button--flat-icon-size-large: 24px !default;
+$button--flat-font-size-large: 20px !default;
+$button--flat-icon-size-small: 16px !default;
+$button--flat-font-size-small: 12px !default;
+
+$button--icon-size: 32px !default;
+$button--icon-font-size: 24px !default;
+$button--icon-icon-size: 24px !default;
+$button--icon-large-size: 38px !default;
+$button--icon-large-font-size: 30px !default;
+$button--icon-large-icon-size: 30px !default;
+$button--icon-small-size: 38px !default;
+$button--icon-small-font-size: 30px !default;
+$button--icon-small-icon-size: 30px !default;
+
+// BADGE
+$badge-size: 22px !default;
+$badge-padding: 2px !default;
+$badge-font-size: 12px !default;
+$badge-overlap: 12px !default;
 
 // 쉐도우
 $shadow-key-umbra-opacity: 0.2 !default;
