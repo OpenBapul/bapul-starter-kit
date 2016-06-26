@@ -1,6 +1,7 @@
 // FONT
 $preferred_font: 'Noto Sans KR', sans-serif !default;
 
+
 // ICON PATH
 $font-path: '../fonts' !default;
 $zmdi-font-path: '../fonts/Material-Design-Iconic-Font' !default;
@@ -8,18 +9,28 @@ $md-font-path: '../fonts/Material-Design-Iconic-Font' !default;
 $material-font-path: '../fonts/Material-Design-Icons' !default;
 $wi-path: '../fonts/Weather-Icons' !default;
 
+
 // THEME COLOR
-$color-primary: $palette-indigo-500 !default;
-$color-primary-dark: $palette-indigo-700 !default;
-$color-accent: $palette-pink-A200 !default;
-$color-primary-contrast: $color-dark-contrast !default;
-$color-accent-contrast: $color-dark-contrast !default;
+$brand-primary: $palette-indigo-500 !default;
+$brand-primary-text: $palette-indigo-700 !default;
+$brand-accent: $palette-pink-500 !default;
+$brand-accent-text: $palette-pink-700 !default;
+$brand-success: $palette-blue-500 !default;
+$brand-success-text: $palette-blue-700 !default;
+$brand-info: $palette-cyan-500 !default;
+$brand-info-text: $palette-cyan-700 !default;
+$brand-warning: $palette-orange-500 !default;
+$brand-warning-text: $palette-orange-700 !default;
+$brand-danger: $palette-red-500 !default;
+$brand-danger-text: $palette-red-700 !default;
+
 
 // TEXT COLOR
 $text-color-primary: rgba-tpl($color-black, 0.87) !default;
-$text-link-color: $color-accent !default;
+$text-link-color: $brand-accent !default;
 $text-color-black: rgba-tpl($color-black, 0.87) !default;
 $text-color-white: rgba-tpl($color-white, 0.87) !default;
+
 
 // BUTTON
 $button-padding: 16px !default;
@@ -52,13 +63,113 @@ $button--icon-small-size: 38px !default;
 $button--icon-small-font-size: 30px !default;
 $button--icon-small-icon-size: 30px !default;
 
+
 // BADGE
 $badge-size: 22px !default;
 $badge-padding: 2px !default;
 $badge-font-size: 12px !default;
 $badge-overlap: 12px !default;
 
-// 쉐도우
+
+// LABEL
+$label-border-radius: 0.25em !default;
+$label-padding: 0.1em 0.6em 0.2em !default;
+$label-font-size: 80% !default;
+
+
+// TOOLTIP
+$tooltip-border-radius: 2px !default;
+$tooltip-padding: 0 8px !default;
+$tooltip-size: 22px !default;
+$tooltip-font-size: 10px !default;
+
+$tooltip-large-size: 32px !default;
+$tooltip-large-font-size: 14px !default;
+
+
+// LIST
+$list-padding: 8px 0 !default;
+$list--item-min-height: 48px !default;
+$list--item-padding: 16px !default;
+
+$list--item-primary-content-margin: 32px !default;
+$list--item-icon-size: 24px !default;
+$list--item-icon-font-size: 24px !default;
+
+$list--item-avater-border-radius: 50% !default;
+$list--item-avatar-size: 40px !default;
+$list--item-avatar-font-size: 40px !default;
+
+
+// TEXTFIELD
+$textfield-vertical-padding: 20px !default;
+$textfield-font-size: 16px !default;
+
+$textfield--input-vertical-padding: 8px !default;
+$textfield--input-font-size: 16px !default;
+
+$textfield--label-font-size: 16px !default;
+$textfield--floating-label-font-size: 12px !default;
+$textfield--error-font-size: 12px !default;
+$textfield--count-font-size: 12px !default;
+$textfield--icon-font-size: 24px !default;
+$textfield--icon-padding: 8px !default;
+
+
+// CHECKBOX
+$checkbox-size: 24px !default;
+$checkbox--label-size: 24px !default;
+$checkbox--label-font-size: 16px !default;
+
+$checkbox-check-checked-top-offset: 7px !default;
+$checkbox-check-checked-left-offset: 1px !default;
+$checkbox-check-checked-width: 6px !default;
+$checkbox-check-checked-height: 10px !default;
+$checkbox-check-non-checked-top-offset: 12px !default;
+$checkbox-check-non-checked-left-offset: 6px !default;
+
+$checkbox-background-top-offset: 5px !default;
+$checkbox-background-left-offset: 0 !default;
+$checkbox-background-border-radius: 2px !default;
+$checkbox-background-size: 16px !default;
+
+
+// RADIO
+$radio-size: 24px !default;
+$radio--label-font-size: 16px !default;
+
+$radio-check-top-offset: 9px !default;
+$radio-check-left-offset: 4px !default;
+$radio-check-size: 8px !default;
+
+$radio-background-top-offset: 5px !default;
+$radio-background-left-offset: 0 !default;
+$radio-background-size: 16px !default;
+
+
+// SWITCH
+$switch-size: 24px;
+
+$switch--label-border-radius: 14px !default;
+$switch--label-width: 36px !default;
+$switch--label-height: 14px !default;
+
+$switch-check-top-offset: -3px !default;
+$switch-check-border-radius: 50% !default;
+$switch-check-size: 20px !default;
+
+
+// LAYOUT
+$layout--header-max-height: 1000px !default;
+$layout--header-min-height-mobile: 56px !default;
+$layout--header-min-height-desktop: 64px !default;
+$layout--content-padding-mobile: 8px !default;
+$layout--content-padding-desktop: 16px !default;
+$layout--header-row-padding-mobile: 0 40px 0 70px !default;
+$layout--header-row-padding-desktop: 0 40px 0 80px !default;
+
+
+// SHADOW
 $shadow-key-umbra-opacity: 0.2 !default;
 $shadow-key-penumbra-opacity: 0.14 !default;
 $shadow-ambient-shadow-opacity: 0.12 !default;

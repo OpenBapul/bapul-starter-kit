@@ -4,9 +4,8 @@
   display: inline-block;
   margin: 0;
   padding: 0;
-  padding-left: 20px;
   width: 100%;
-  height: 24px;
+  height: $radio-size;
 }
 
 .radio--input {
@@ -23,9 +22,9 @@
 .radio--label {
   position: relative;
   margin: 0;
-  padding-left: 24px;
-  font-size: 16px;
-  line-height: 24px;
+  padding-left: $radio-size;
+  font-size: $radio--label-font-size;
+  line-height: $radio-size;
   cursor: pointer;
 
   .radio--input:disabled + & {
@@ -42,17 +41,16 @@
     content: '';
   }
 
+  // check
   &:before {
-    top: 9px;
-    left: 4px;
-    width: 8px;
-    height: 8px;
-    transition-duration: .28s;
-    transition-timing-function: cubic-bezier(.4,0,.2,1);
-    transition-property: transform;
+    top: $radio-check-top-offset;
+    left: $radio-check-left-offset;
+    width: $radio-check-size;
+    height: $radio-check-size;
+    transition: transform 0.3s ease;
 
     .radio--input:checked + & {
-      background-color: $palette-indigo-500;
+      background-color: $brand-primary;
       transform: scale3d(1,1,1);
     }
 
@@ -72,14 +70,15 @@
     }
   }
 
+  // background
   &:after {
-    top: 5px;
-    left: 0;
-    width: 16px;
-    height: 16px;
+    top: $radio-background-top-offset;
+    left: $radio-background-left-offset;
+    width: $radio-background-size;
+    height: $radio-background-size;
 
     .radio--input:checked + & {
-      border: 2px solid $palette-indigo-500;
+      border: 2px solid $brand-primary;
     }
 
     .radio--input:not(:checked) + & {

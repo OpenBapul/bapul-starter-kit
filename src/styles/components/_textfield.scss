@@ -2,9 +2,9 @@
   position: relative;
   display: inline-block;
   margin: 0;
-  padding: 20px 0;
+  padding: $textfield-vertical-padding 0;
   max-width: 100%;
-  font-size: 16px;
+  font-size: $textfield-font-size;
 }
 
 .textfield--input {
@@ -12,12 +12,16 @@
   margin: 0;
   border: 0;
   border-bottom: 1px solid rgba-tpl($color-black, 0.12);
-  padding: 8px 0;
+  padding: $textfield--input-vertical-padding 0;
   width: 100%;
   background: none;
-  font-size: 16px;
+  font-size: $textfield--input-font-size;
   color: inherit;
   text-align: left;
+
+  &[type='number'] {
+    text-align: right;
+  }
 
   .textfield.is-focused & {
     outline: none;
@@ -27,22 +31,23 @@
     border-bottom: 1px dotted rgba-tpl($color-black, 0.26);
     background-color: transparent;
     color: rgba-tpl($color-black, 0.26);
+    cursor: not-allowed;
   }
 
   .textfield--floating-icon & {
-    margin-left: 52px;
+    margin-left: ($textfield-vertical-padding + $textfield-font-size * 2);
   }
 }
 
 .textfield--label {
   position: absolute;
-  top: 28px;
+  top: ($textfield-vertical-padding + $textfield--input-vertical-padding);
   bottom: 0;
   left: 0;
   right: 0;
   display: block;
   width: 100%;
-  font-size: 16px;
+  font-size: $textfield--label-font-size;
   color: $palette-grey-500;
   overflow: hidden;
   white-space: nowrap;
@@ -51,19 +56,18 @@
 
   &:after {
     position: absolute;
-    bottom: 20px;
+    bottom: $textfield-vertical-padding;
     left: 45%;
     width: 10px;
     height: 2px;
-    background-color: $palette-indigo-500;
+    background-color: $brand-primary;
     content: '';
     visibility: hidden;
-    transition-duration: .2s;
-    transition-timing-function: cubic-bezier(.4,0,.2,1);
+    transition: all 0.2s ease;
 
     .textfield.is-invalid &,
     .textfield.is-count-over & {
-      background-color: $palette-red-500;
+      background-color: $brand-danger;
     }
   }
 
@@ -79,27 +83,26 @@
   }
 
   .textfield--floating-label & {
-    transition-duration: .2s;
-    transition-timing-function: cubic-bezier(.4,0,.2,1);
+    transition: all 0.2s ease;
   }
 
   .textfield--floating-label.is-focused &,
   .textfield--floating-label.is-dirty & {
     top: 6px;
-    font-size: 12px;
-    color: $palette-indigo-700;
+    font-size: $textfield--floating-label-font-size;
+    color: $brand-primary-text;
     visibility: visible;
   }
 
   .textfield--floating-label.has-placeholder & {
     top: 4px;
-    font-size: 12px;
+    font-size: $textfield--floating-label-font-size;
     visibility: visible;
   }
 
   .textfield.is-invalid &,
   .textfield.is-count-over & {
-    color: $palette-red-700;
+    color: $brand-danger-text;
   }
 
   .textfield.is-disabled & {
@@ -107,7 +110,7 @@
   }
 
   .textfield--floating-icon & {
-    margin-left: 52px;
+    margin-left: ($textfield-vertical-padding + $textfield--label-font-size * 2);
   }
 }
 
@@ -115,8 +118,8 @@
   position: absolute;
   display: block;
   margin-top: 3px;
-  font-size: 12px;
-  color: $palette-red-A700;
+  font-size: $textfield--error-font-size;
+  color: $brand-danger-text;
   visibility: hidden;
 
   .textfield.is-invalid & {
@@ -129,7 +132,7 @@
   right: 0;
   display: block;
   margin-top: 3px;
-  font-size: 12px;
+  font-size: $textfield--count-font-size;
   color: $palette-grey-500;
   visibility: hidden;
 
@@ -138,25 +141,25 @@
   }
 
   .textfield.is-count-over & {
-    color: $palette-red-A700;
+    color: $brand-danger-text;
   }
 
   .textfield--floating-icon & {
-    right: -52px;
+    right: -($textfield-vertical-padding + $textfield-font-size * 2);
   }
 }
 
 .textfield--icon {
   position: absolute;
-  padding: 8px;
-  font-size: 24px;
+  padding: $textfield--icon-padding;
+  font-size: $textfield--icon-font-size;
 
   .textfield--floating-icon.is-focused &,
   .textfield--floating-icon.is-dirty & {
-    color: $palette-indigo-700;
+    color: $brand-primary-text;
   }
 
   .textfield.is-count-over & {
-    color: $palette-red-A700;
+    color: $brand-danger-text;
   }
 }

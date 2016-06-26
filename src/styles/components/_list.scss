@@ -1,6 +1,6 @@
 .list {
   display: block;
-  padding: 8px 0;
+  padding: $list-padding;
   list-style: none;
 }
 
@@ -8,12 +8,12 @@
   @include typo-subhead();
   line-height: 1;
   display: flex;
-  min-height: 48px;
+  min-height: $list--item-min-height;
   box-sizing: border-box;
   flex-direction: row;
   flex-wrap: nowrap;
   align-items: center;
-  padding: 16px;
+  padding: $list--item-padding;
   cursor: default;
   overflow: hidden;
 
@@ -27,20 +27,20 @@
 
     & .list--item-icon,
     & .list--item-avatar {
-      margin-right: 32px;
+      margin-right: $list--item-primary-content-margin;
     }
   }
 }
 
 .list--item-icon {
-  width: 24px;
-  height: 24px;
-  font-size: 24px;
+  width: $list--item-icon-size;
+  height: $list--item-icon-size;
+  font-size: $list--item-icon-font-size;
 }
 
 .list--item-avatar {
-  width: 40px;
-  height: 40px;
-  font-size: 40px;
-  border-radius: 50%;
+  border-radius: $list--item-avater-border-radius;
+  width: $list--item-avatar-size;
+  height: $list--item-avatar-size;
+  font-size: $list--item-avatar-font-size;
 }

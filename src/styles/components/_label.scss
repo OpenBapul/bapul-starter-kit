@@ -1,10 +1,10 @@
 // Common
 .label {
   display: inline;
-  padding: 0.1em 0.6em 0.2em;
-  border-radius: 0.25em;
+  border-radius: $label-border-radius;
+  padding: $label-padding;
 
-  font-size: 80%;
+  font-size: $label-font-size;
   font-weight: 500;
   line-height: inherit;
   white-space: nowrap;

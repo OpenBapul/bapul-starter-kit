@@ -1,16 +1,16 @@
+// Variables
+@import 'utils/variables/variables-colors';
+@import 'utils/variables/variables';
+
 // Mixins
-@import 'utils/mixins/color';
 @import 'utils/mixins/size';
 @import 'utils/mixins/font';
 @import 'utils/mixins/typography';
 @import 'utils/mixins/shadow';
+@import 'utils/mixins/animation';
 
 // Functions
 @import 'utils/functions/color';
-
-// Variables
-@import 'utils/variables/variables-colors';
-@import 'utils/variables/variables';
 
 // Base
 @import 'vendors/normalize/normalize';

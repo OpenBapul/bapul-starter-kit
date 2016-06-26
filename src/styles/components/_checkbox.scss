@@ -5,7 +5,7 @@
   margin: 0;
   padding: 0;
   width: 100%;
-  height: 24px;
+  height: $checkbox-size;
 }
 
 .checkbox--input {
@@ -22,9 +22,9 @@
 .checkbox--label {
   position: relative;
   margin: 0;
-  padding-left: 24px;
-  font-size: 16px;
-  line-height: 24px;
+  padding-left: $checkbox--label-size;
+  font-size: $checkbox--label-font-size;
+  line-height: $checkbox--label-size;
   cursor: pointer;
 
   .checkbox--input:disabled + & {
@@ -41,29 +41,30 @@
     content: '';
   }
 
+  // check
   &:before {
     z-index: 1;
 
     .checkbox--input:checked + & {
-      top: 7px;
-      left: 1px;
+      top: $checkbox-check-checked-top-offset;
+      left: $checkbox-check-checked-left-offset;
       border-top: 2px solid transparent;
       border-left: 2px solid transparent;
       border-right: 2px solid #fff;
       border-bottom: 2px solid #fff;
-      width: 6px;
-      height: 10px;
+      width: $checkbox-check-checked-width;
+      height: $checkbox-check-checked-height;
       transform: rotateZ(40deg);
       transform-origin: 100% 100%;
     }
 
     .checkbox--input:not(:checked) + & {
-      top: 12px;
-      left: 6px;
+      top: $checkbox-check-non-checked-top-offset;
+      left: $checkbox-check-non-checked-left-offset;
       border: 3px solid transparent;
       width: 0;
       height: 0;
-      transform: rotateZ(37deg);
+      transform: rotateZ(40deg);
       transform-origin: 100% 100%;
     }
 
@@ -78,18 +79,19 @@
     }
   }
 
+  // background
   &:after {
-    top: 5px;
-    left: 0;
+    top: $checkbox-background-top-offset;
+    left: $checkbox-background-left-offset;
     display: inline-block;
     margin: 0;
-    border-radius: 2px;
-    width: 16px;
-    height: 16px;
+    border-radius: $checkbox-background-border-radius;
+    width: $checkbox-background-size;
+    height: $checkbox-background-size;
 
     .checkbox--input:checked + & {
-      border: 2px solid $palette-indigo-500;
-      background-color: $palette-indigo-500;
+      border: 2px solid $brand-primary;
+      background-color: $brand-primary;
     }
 
     .checkbox--input:not(:checked) + & {
