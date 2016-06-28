@@ -1,18 +1,9 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Textfield</title>
-  <link rel="stylesheet" href="/styles/style.css">
-  <style>
-    form {
-      margin-bottom: 20px;
-    }
-  </style>
-</head>
-<body class="demo">
+<style>
+  form {
+    margin-bottom: 20px;
+  }
+</style>
+<section class="demo">
 
   <h1 class="color-text--grey-700">Textfield</h1>
 
@@ -21,7 +12,7 @@
     <dt>Simple Textfield</dt>
     <dd>
       <form action="#">
-        <div class="textfield">
+        <div class="textfield textfield-js">
           <input class="textfield--input" type="number" id="sample1">
           <label class="textfield--label" for="sample1">Text...</label>
         </div>
@@ -35,7 +26,7 @@
     <dt>Simple Numberfield</dt>
     <dd>
       <form action="#">
-        <div class="textfield">
+        <div class="textfield textfield-js">
           <input class="textfield--input" type="text" id="sample2" pattern="-?[0-9]*(\.[0-9]+)?">
           <label class="textfield--label" for="sample2">Number...</label>
           <span class="textfield--error">Input is not a Number!</span>
@@ -50,7 +41,7 @@
     <dt>Placeholder, Floating Textfield</dt>
     <dd>
       <form action="#">
-        <div class="textfield textfield--floating-label has-placeholder">
+        <div class="textfield textfield-js textfield--floating-label has-placeholder">
           <input class="textfield--input" type="text" id="sample3" placeholder="Text field..">
           <label class="textfield--label" for="sample3">Text...</label>
         </div>
@@ -64,7 +55,7 @@
     <dt>Placeholder Numberfield</dt>
     <dd>
       <form action="#">
-        <div class="textfield has-placeholder">
+        <div class="textfield textfield-js has-placeholder">
           <input class="textfield--input" type="text" id="sample4" pattern="-?[0-9]*(\.[0-9]+)?" placeholder="Number field..">
           <label class="textfield--label" for="sample4">Number...</label>
           <span class="textfield--error">Input is not a Number!</span>
@@ -79,7 +70,7 @@
     <dt>Floating Textfield</dt>
     <dd>
       <form action="#">
-        <div class="textfield textfield--floating-label">
+        <div class="textfield textfield-js textfield--floating-label">
           <input class="textfield--input" type="text" id="sample5">
           <label class="textfield--label" for="sample3">Text...</label>
         </div>
@@ -93,7 +84,7 @@
     <dt>Floating, Count Numberfield</dt>
     <dd>
       <form action="#">
-        <div class="textfield textfield--floating-label">
+        <div class="textfield textfield-js textfield--floating-label">
           <input class="textfield--input" type="text" id="sample6" pattern="-?[0-9]*(\.[0-9]+)?" length="10">
           <label class="textfield--label" for="sample4">Number...</label>
           <span class="textfield--error">Input is not a Number!</span>
@@ -109,7 +100,7 @@
     <dt>Disabled Textfield</dt>
     <dd>
       <form action="#">
-        <div class="textfield textfield--floating-label has-placeholder is-disabled">
+        <div class="textfield textfield-js textfield--floating-label has-placeholder is-disabled">
           <input class="textfield--input" type="text" id="sample7" placeholder="I am not editable" disabled>
           <label class="textfield--label" for="sample7">Text...</label>
         </div>
@@ -123,7 +114,7 @@
     <dt>Icon Textfield</dt>
     <dd>
       <form action="#">
-        <div class="textfield textfield--floating-icon">
+        <div class="textfield textfield-js textfield--floating-icon">
           <i class="mdi textfield--icon">person</i>
           <input class="textfield--input" type="text" id="sample8">
           <label class="textfield--label" for="sample8">Text...</label>
@@ -138,7 +129,7 @@
     <dt>Icon, Floating Textfield</dt>
     <dd>
       <form action="#">
-        <div class="textfield textfield--floating-label textfield--floating-icon">
+        <div class="textfield textfield-js textfield--floating-label textfield--floating-icon">
           <i class="mdi textfield--icon">person</i>
           <input class="textfield--input" type="text" id="sample9" length="10">
           <label class="textfield--label" for="sample9">Text...</label>
@@ -154,7 +145,7 @@
     <dt>Simple TextArea</dt>
     <dd>
       <form action="#">
-        <div class="textfield">
+        <div class="textfield textfield-js">
           <textarea class="textfield--input" type="text" id="sample10" rows="3"></textarea>
           <label class="textfield--label" for="sample10">Text...</label>
         </div>
@@ -168,7 +159,7 @@
     <dt>Placeholder TextArea</dt>
     <dd>
       <form action="#">
-        <div class="textfield has-placeholder">
+        <div class="textfield textfield-js has-placeholder">
           <textarea class="textfield--input" type="text" id="sample11" rows="3" placeholder="Textarea fields.."></textarea>
           <label class="textfield--label" for="sample11">Text...</label>
         </div>
@@ -182,7 +173,7 @@
     <dt>Floating TextArea</dt>
     <dd>
       <form action="#">
-        <div class="textfield textfield--floating-label">
+        <div class="textfield textfield-js textfield--floating-label">
           <textarea class="textfield--input" type="text" id="sample12" rows="3"></textarea>
           <label class="textfield--label" for="sample12">Text...</label>
         </div>
@@ -196,7 +187,7 @@
     <dt>Count TextArea</dt>
     <dd>
       <form action="#">
-        <div class="textfield">
+        <div class="textfield textfield-js">
           <textarea class="textfield--input" type="text" id="sample13" rows="3" length="30"></textarea>
           <label class="textfield--label" for="sample13">Text...</label>
           <span class="textfield--count">0/10</span>
@@ -206,8 +197,4 @@
   </dl>
   <!-- // Count TextArea -->
 
-  <!-- Main javascript -->
-  <script src="/scripts/script.js"></script>
-
-</body>
-</html>
+</section>

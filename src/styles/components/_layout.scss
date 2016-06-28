@@ -165,6 +165,11 @@
         font-size: 24px;
         text-align: center;
         vertical-align: bottom;
+        pointer-events: none;
+      }
+
+      & > span {
+        pointer-events: none;
       }
 
       &.active {

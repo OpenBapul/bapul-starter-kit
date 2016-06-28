@@ -4800,7 +4800,7 @@ ul, ol {
   margin: 0;
   padding: 0;
   border: 0;
-  max-height: 1000px;
+  max-height: 100%;
   min-height: 56px;
   background-color: #3f51b5;
   color: #fff;
@@ -4981,6 +4981,11 @@ ul, ol {
   font-size: 24px;
   text-align: center;
   vertical-align: bottom;
+  pointer-events: none;
+}
+
+.layout--drawer .navigation .navigation--link > span {
+  pointer-events: none;
 }
 
 .layout--drawer .navigation .navigation--link.active {
@@ -28582,10 +28587,17 @@ ul, ol {
       -ms-flex-direction: column;
           flex-direction: column;
   position: relative;
+  margin-bottom: 8px;
   border-radius: 4px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   overflow: hidden;
   z-index: 1;
+}
+
+@media screen and (min-width: 840px) {
+  .panel {
+    margin-bottom: 16px;
+  }
 }
 
 .panel--title {

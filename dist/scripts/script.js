@@ -135,6 +135,8 @@ window.addEventListener('load', function () {
       {
         return { 
           LAYOUT: 'layout', 
+          TITLE: 'layout--title', 
+          CONTENT: 'layout--content', 
           DRAWER: 'layout--drawer', 
           DRAWER_BUTTON: 'layout--drawer-button', 
           OBFUSCATOR: 'layout--obfuscator', 
@@ -163,12 +165,32 @@ window.addEventListener('load', function () {
 
 
       event) {
-        //event.preventDefault(); // Angular is not in use.
         this.drawer_.classList.remove(Layout.CssClasses.IS_DRAWER_OPEN);
-        this.obfuscator_.classList.remove(Layout.CssClasses.IS_DRAWER_OPEN);} }, { key: 'toggleMinified', value: function toggleMinified() 
+        this.obfuscator_.classList.remove(Layout.CssClasses.IS_DRAWER_OPEN);
+
+        for (var i = 0, len = this.drawerNavigationLink_.length; i < len; i++) {
+          this.drawerNavigationLink_[i].classList.remove('active');}
+
+        event.target.classList.add('active');
+
+        var fileName = event.target.getAttribute('href').split('#')[1];
+        this.element_.querySelector('.' + Layout.CssClasses.TITLE).textContent = fileName;
+        this.loadDoc('/views/components/' + fileName + '.html');
+        event.preventDefault();} }, { key: 'toggleMinified', value: function toggleMinified() 
 
       {
-        this.drawer_.classList.toggle(Layout.CssClasses.MINIFIED);} }, { key: 'init', value: function init() 
+        this.drawer_.classList.toggle(Layout.CssClasses.MINIFIED);} }, { key: 'loadDoc', value: function loadDoc(
+
+      path) {var _this = this;
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function () {
+          if (xhttp.readyState === 4 && xhttp.status === 200) {
+            _this.element_.querySelector('.' + Layout.CssClasses.CONTENT).innerHTML = xhttp.responseText;}
+
+          componentHandler.upgradeAllRegistered();};
+
+        xhttp.open('GET', path, false);
+        xhttp.send();} }, { key: 'init', value: function init() 
 
       {
         if (this.element_) {
@@ -184,7 +206,13 @@ window.addEventListener('load', function () {
 
           this.removeDrawerHandler = this.removeDrawer.bind(this);
           for (var i = 0, len = this.drawerNavigationLink_.length; i < len; i++) {
-            this.drawerNavigationLink_[i].addEventListener('click', this.removeDrawerHandler);}
+            this.drawerNavigationLink_[i].addEventListener('click', this.removeDrawerHandler);
+
+            if (this.drawerNavigationLink_[i].classList.contains('active')) {
+              var fileName = this.drawerNavigationLink_[i].getAttribute('href').split('#')[1];
+              this.element_.querySelector('.' + Layout.CssClasses.TITLE).textContent = fileName;
+              this.loadDoc('/views/components/' + fileName + '.html');}}
+
 
 
           this.toggleMinifiedHandler = this.toggleMinified.bind(this);
@@ -196,148 +224,7 @@ window.addEventListener('load', function () {
   componentHandler.register({ 
     constructor: Layout, 
     classAsString: 'Layout', 
-    cssClass: 'layout' });})();
-
-
-
-
-/**
- * Created by gjjoo on 2016. 5. 24..
- */
-
-(function () {
-  'use strict';var 
-
-  Checkbox = function () {_createClass(Checkbox, null, [{ key: 'CssClasses', get: function get() 
-      {
-        return { 
-          LABEL: 'checkbox--label', 
-          INPUT: 'checkbox--input', 
-          IS_FOCUSED: 'is-focused', 
-          IS_DISABLED: 'is-disabled' };} }]);
-
-
-    function Checkbox(element) {_classCallCheck(this, Checkbox);
-      this.element_ = element;
-      this.init();}_createClass(Checkbox, [{ key: 'onFocus', value: function onFocus() 
-
-      {
-        this.element_.classList.add(Checkbox.CssClasses.IS_FOCUSED);} }, { key: 'onBlur', value: function onBlur() 
-
-      {
-        this.element_.classList.remove(Checkbox.CssClasses.IS_FOCUSED);} }, { key: 'init', value: function init() 
-
-      {
-        if (this.element_) {
-          this.input_ = this.element_.querySelector('.' + Checkbox.CssClasses.INPUT);
-
-          this.boundFocusHandler = this.onFocus.bind(this);
-          this.boundBlurHandler = this.onBlur.bind(this);
-
-          this.input_.addEventListener('focus', this.boundFocusHandler);
-          this.input_.addEventListener('blur', this.boundBlurHandler);}} }]);return Checkbox;}();
-
-
-
-
-  componentHandler.register({ 
-    constructor: Checkbox, 
-    classAsString: 'Checkbox', 
-    cssClass: 'checkbox' });})();
-
-
-
-
-/**
- * Created by gjjoo on 2016. 5. 24..
- */
-
-(function () {
-  'use strict';var 
-
-  Radio = function () {_createClass(Radio, null, [{ key: 'CssClasses', get: function get() 
-      {
-        return { 
-          LABEL: 'radio--label', 
-          INPUT: 'radio--input', 
-          IS_FOCUSED: 'is-focused', 
-          IS_DISABLED: 'is-disabled' };} }]);
-
-
-    function Radio(element) {_classCallCheck(this, Radio);
-      this.element_ = element;
-      this.init();}_createClass(Radio, [{ key: 'onFocus', value: function onFocus() 
-
-      {
-        this.element_.classList.add(Radio.CssClasses.IS_FOCUSED);} }, { key: 'onBlur', value: function onBlur() 
-
-      {
-        this.element_.classList.remove(Radio.CssClasses.IS_FOCUSED);} }, { key: 'init', value: function init() 
-
-      {
-        if (this.element_) {
-          this.input_ = this.element_.querySelector('.' + Radio.CssClasses.INPUT);
-
-          this.boundFocusHandler = this.onFocus.bind(this);
-          this.boundBlurHandler = this.onBlur.bind(this);
-
-          this.input_.addEventListener('focus', this.boundFocusHandler);
-          this.input_.addEventListener('blur', this.boundBlurHandler);}} }]);return Radio;}();
-
-
-
-
-  componentHandler.register({ 
-    constructor: Radio, 
-    classAsString: 'Radio', 
-    cssClass: 'radio' });})();
-
-
-
-
-/**
- * Created by gjjoo on 2016. 5. 24..
- */
-
-(function () {
-  'use strict';var 
-
-  Switch = function () {_createClass(Switch, null, [{ key: 'CssClasses', get: function get() 
-      {
-        return { 
-          LABEL: 'switch--label', 
-          INPUT: 'switch--input', 
-          IS_FOCUSED: 'is-focused', 
-          IS_DISABLED: 'is-disabled' };} }]);
-
-
-    function Switch(element) {_classCallCheck(this, Switch);
-      this.element_ = element;
-      this.init();}_createClass(Switch, [{ key: 'onFocus', value: function onFocus() 
-
-      {
-        this.element_.classList.add(Switch.CssClasses.IS_FOCUSED);} }, { key: 'onBlur', value: function onBlur() 
-
-      {
-        this.element_.classList.remove(Switch.CssClasses.IS_FOCUSED);} }, { key: 'init', value: function init() 
-
-      {
-        if (this.element_) {
-          this.input_ = this.element_.querySelector('.' + Switch.CssClasses.INPUT);
-
-          this.boundFocusHandler = this.onFocus.bind(this);
-          this.boundBlurHandler = this.onBlur.bind(this);
-
-          this.input_.addEventListener('focus', this.boundFocusHandler);
-          this.input_.addEventListener('blur', this.boundBlurHandler);}} }]);return Switch;}();
-
-
-
-
-  componentHandler.register({ 
-    constructor: Switch, 
-    classAsString: 'Switch', 
-    cssClass: 'switch' });})();
+    cssClass: 'layout-js' });})();
 
 
 
@@ -427,7 +314,7 @@ window.addEventListener('load', function () {
   componentHandler.register({ 
     constructor: Textfield, 
     classAsString: 'Textfield', 
-    cssClass: 'textfield' });})();
+    cssClass: 'textfield-js' });})();
 
 
 

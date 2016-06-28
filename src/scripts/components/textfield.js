@@ -83,7 +83,7 @@
   componentHandler.register({
     constructor: Textfield,
     classAsString: 'Textfield',
-    cssClass: 'textfield'
+    cssClass: 'textfield-js'
   });
 
 })();

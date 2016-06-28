@@ -9,6 +9,8 @@
     static get CssClasses() {
       return {
         LAYOUT: 'layout',
+        TITLE: 'layout--title',
+        CONTENT: 'layout--content',
         DRAWER: 'layout--drawer',
         DRAWER_BUTTON: 'layout--drawer-button',
         OBFUSCATOR: 'layout--obfuscator',
@@ -37,12 +39,32 @@
       }
     }
     removeDrawer(event) {
-      //event.preventDefault(); // Angular is not in use.
       this.drawer_.classList.remove(Layout.CssClasses.IS_DRAWER_OPEN);
       this.obfuscator_.classList.remove(Layout.CssClasses.IS_DRAWER_OPEN);
+
+      for (let i = 0, len = this.drawerNavigationLink_.length; i < len; i++) {
+        this.drawerNavigationLink_[i].classList.remove('active');
+      }
+      event.target.classList.add('active');
+
+      const fileName = event.target.getAttribute('href').split('#')[1];
+      this.element_.querySelector('.' + Layout.CssClasses.TITLE).textContent = fileName;
+      this.loadDoc('/views/components/' + fileName + '.html');
+      event.preventDefault();
     }
     toggleMinified() {
       this.drawer_.classList.toggle(Layout.CssClasses.MINIFIED);
+    }
+    loadDoc(path) {
+      const xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = () => {
+        if (xhttp.readyState === 4 && xhttp.status === 200) {
+          this.element_.querySelector('.' + Layout.CssClasses.CONTENT).innerHTML = xhttp.responseText;
+        }
+        componentHandler.upgradeAllRegistered();
+      };
+      xhttp.open('GET', path, false);
+      xhttp.send();
     }
     init() {
       if (this.element_) {
@@ -59,6 +81,12 @@
         this.removeDrawerHandler = this.removeDrawer.bind(this);
         for (let i = 0, len = this.drawerNavigationLink_.length; i < len; i++) {
           this.drawerNavigationLink_[i].addEventListener('click', this.removeDrawerHandler);
+
+          if (this.drawerNavigationLink_[i].classList.contains('active')) {
+            const fileName = this.drawerNavigationLink_[i].getAttribute('href').split('#')[1];
+            this.element_.querySelector('.' + Layout.CssClasses.TITLE).textContent = fileName;
+            this.loadDoc('/views/components/' + fileName + '.html');
+          }
         }
 
         this.toggleMinifiedHandler = this.toggleMinified.bind(this);
@@ -70,7 +98,7 @@
   componentHandler.register({
     constructor: Layout,
     classAsString: 'Layout',
-    cssClass: 'layout'
+    cssClass: 'layout-js'
   });
 
 })();
