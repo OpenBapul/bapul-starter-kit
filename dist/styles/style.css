@@ -814,8 +814,8 @@ textarea {
 
 body {
   font-family: "Noto Sans KR", sans-serif;
-  font-size: 14px;
   font-weight: 400;
+  font-size: 14px;
   line-height: 20px;
   color: rgba-tpl(black, 0.87);
 }
@@ -4951,7 +4951,13 @@ ul, ol {
       -ms-flex-align: stretch;
               -ms-grid-row-align: stretch;
           align-items: stretch;
-  padding-top: 16px;
+  padding-top: 8px;
+}
+
+@media screen and (min-width: 840px) {
+  .layout--drawer .navigation {
+    padding-top: 16px;
+  }
 }
 
 .layout--drawer .navigation .navigation--link {
@@ -4959,7 +4965,7 @@ ul, ol {
   -webkit-flex-shrink: 0;
       -ms-flex-negative: 0;
           flex-shrink: 0;
-  padding: 16px 40px;
+  padding: 12px 40px;
   margin: 0;
   color: #424242;
   white-space: nowrap;
@@ -4983,6 +4989,7 @@ ul, ol {
 
 @media screen and (min-width: 840px) {
   .layout--drawer .navigation .navigation--link {
+    padding: 16px 40px;
     color: rgba(255, 255, 255, 0.64);
   }
   .layout--drawer .navigation .navigation--link.active {
@@ -28107,7 +28114,7 @@ ul, ol {
 }
 
 .checkbox--input:checked + .checkbox--label:before {
-  top: 7px;
+  top: 5px;
   left: 1px;
   border-top: 2px solid transparent;
   border-left: 2px solid transparent;
@@ -28121,8 +28128,14 @@ ul, ol {
           transform-origin: 100% 100%;
 }
 
+@media screen and (min-width: 840px) {
+  .checkbox--input:checked + .checkbox--label:before {
+    top: 7px;
+  }
+}
+
 .checkbox--input:not(:checked) + .checkbox--label:before {
-  top: 12px;
+  top: 10px;
   left: 6px;
   border: 3px solid transparent;
   width: 0;
@@ -28131,6 +28144,12 @@ ul, ol {
           transform: rotateZ(40deg);
   -webkit-transform-origin: 100% 100%;
           transform-origin: 100% 100%;
+}
+
+@media screen and (min-width: 840px) {
+  .checkbox--input:not(:checked) + .checkbox--label:before {
+    top: 12px;
+  }
 }
 
 .checkbox--input:disabled:checked + .checkbox--label:before {
@@ -28144,13 +28163,19 @@ ul, ol {
 }
 
 .checkbox--label:after {
-  top: 5px;
+  top: 3px;
   left: 0;
   display: inline-block;
   margin: 0;
   border-radius: 2px;
   width: 16px;
   height: 16px;
+}
+
+@media screen and (min-width: 840px) {
+  .checkbox--label:after {
+    top: 5px;
+  }
 }
 
 .checkbox--input:checked + .checkbox--label:after {

@@ -141,12 +141,16 @@
   & .navigation {
     flex-direction: column;
     align-items: stretch;
-    padding-top: 16px;
+    padding-top: 8px;
+
+    @media screen and (min-width: 840px) {
+      padding-top: 16px;
+    }
 
     & .navigation--link {
       display: block;
       flex-shrink: 0;
-      padding: 16px 40px;
+      padding: 12px 40px;
       margin: 0;
       color: $palette-grey-800;
       white-space: nowrap;
@@ -168,6 +172,7 @@
       }
 
       @media screen and (min-width: 840px) {
+        padding: 16px 40px;
         color: rgba(255, 255, 255, 0.64);
 
         &.active {

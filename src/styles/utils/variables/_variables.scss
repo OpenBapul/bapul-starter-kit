@@ -1,5 +1,9 @@
 // FONT
-$preferred_font: 'Noto Sans KR', sans-serif !default;
+$preferred-font: 'Noto Sans KR', sans-serif !default;
+$root-mobile-font-size: 12px !default;
+$root-tablet-font-size: 13px !default;
+$root-desktop-font-size: 14px !default;
+$em-base: $root-desktop-font-size;
 
 
 // ICON PATH
@@ -36,23 +40,19 @@ $text-color-white: rgba-tpl($color-white, 0.87) !default;
 $button-padding: 16px !default;
 $button-border-radius: 2px !default;
 $button-height: 36px !default;
-
 $button--default-icon-size: 20px !default;
 $button--default-height-large: 44px !default;
 $button--default-height-small: 30px !default;
-
 $button--fab-size: 56px !default;
 $button--fab-font-size: 24px !default;
 $button--fab-icon-size: 24px !default;
 $button--fab-size-large: 72px !default;
 $button--fab-size-small: 40px !default;
-
 $button--flat-icon-size: 20px !default;
 $button--flat-icon-size-large: 24px !default;
 $button--flat-font-size-large: 20px !default;
 $button--flat-icon-size-small: 16px !default;
 $button--flat-font-size-small: 12px !default;
-
 $button--icon-size: 32px !default;
 $button--icon-font-size: 24px !default;
 $button--icon-icon-size: 24px !default;
@@ -82,7 +82,6 @@ $tooltip-border-radius: 2px !default;
 $tooltip-padding: 0 8px !default;
 $tooltip-size: 22px !default;
 $tooltip-font-size: 10px !default;
-
 $tooltip-large-size: 32px !default;
 $tooltip-large-font-size: 14px !default;
 
@@ -91,11 +90,9 @@ $tooltip-large-font-size: 14px !default;
 $list-padding: 8px 0 !default;
 $list--item-min-height: 48px !default;
 $list--item-padding: 16px !default;
-
 $list--item-primary-content-margin: 32px !default;
 $list--item-icon-size: 24px !default;
 $list--item-icon-font-size: 24px !default;
-
 $list--item-avater-border-radius: 50% !default;
 $list--item-avatar-size: 40px !default;
 $list--item-avatar-font-size: 40px !default;
@@ -104,10 +101,8 @@ $list--item-avatar-font-size: 40px !default;
 // TEXTFIELD
 $textfield-vertical-padding: 20px !default;
 $textfield-font-size: 16px !default;
-
 $textfield--input-vertical-padding: 8px !default;
 $textfield--input-font-size: 16px !default;
-
 $textfield--label-font-size: 16px !default;
 $textfield--floating-label-font-size: 12px !default;
 $textfield--error-font-size: 12px !default;
@@ -120,16 +115,8 @@ $textfield--icon-padding: 8px !default;
 $checkbox-size: 24px !default;
 $checkbox--label-size: 24px !default;
 $checkbox--label-font-size: 16px !default;
-
-$checkbox-check-checked-top-offset: 7px !default;
-$checkbox-check-checked-left-offset: 1px !default;
 $checkbox-check-checked-width: 6px !default;
 $checkbox-check-checked-height: 10px !default;
-$checkbox-check-non-checked-top-offset: 12px !default;
-$checkbox-check-non-checked-left-offset: 6px !default;
-
-$checkbox-background-top-offset: 5px !default;
-$checkbox-background-left-offset: 0 !default;
 $checkbox-background-border-radius: 2px !default;
 $checkbox-background-size: 16px !default;
 
@@ -137,24 +124,15 @@ $checkbox-background-size: 16px !default;
 // RADIO
 $radio-size: 24px !default;
 $radio--label-font-size: 16px !default;
-
-$radio-check-top-offset: 9px !default;
-$radio-check-left-offset: 4px !default;
 $radio-check-size: 8px !default;
-
-$radio-background-top-offset: 5px !default;
-$radio-background-left-offset: 0 !default;
 $radio-background-size: 16px !default;
 
 
 // SWITCH
 $switch-size: 24px;
-
 $switch--label-border-radius: 14px !default;
 $switch--label-width: 36px !default;
 $switch--label-height: 14px !default;
-
-$switch-check-top-offset: -3px !default;
 $switch-check-border-radius: 50% !default;
 $switch-check-size: 20px !default;
 

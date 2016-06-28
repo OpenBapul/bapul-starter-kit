@@ -46,8 +46,8 @@
     z-index: 1;
 
     .checkbox--input:checked + & {
-      top: $checkbox-check-checked-top-offset;
-      left: $checkbox-check-checked-left-offset;
+      top: 5px;
+      left: 1px;
       border-top: 2px solid transparent;
       border-left: 2px solid transparent;
       border-right: 2px solid #fff;
@@ -56,16 +56,24 @@
       height: $checkbox-check-checked-height;
       transform: rotateZ(40deg);
       transform-origin: 100% 100%;
+
+      @media screen and (min-width: 840px) {
+        top: 7px;
+      }
     }
 
     .checkbox--input:not(:checked) + & {
-      top: $checkbox-check-non-checked-top-offset;
-      left: $checkbox-check-non-checked-left-offset;
+      top: 10px;
+      left: 6px;
       border: 3px solid transparent;
       width: 0;
       height: 0;
       transform: rotateZ(40deg);
       transform-origin: 100% 100%;
+
+      @media screen and (min-width: 840px) {
+        top: 12px;
+      }
     }
 
     .checkbox--input:disabled:checked + & {
@@ -81,13 +89,17 @@
 
   // background
   &:after {
-    top: $checkbox-background-top-offset;
-    left: $checkbox-background-left-offset;
+    top: 3px;
+    left: 0;
     display: inline-block;
     margin: 0;
     border-radius: $checkbox-background-border-radius;
     width: $checkbox-background-size;
     height: $checkbox-background-size;
+
+    @media screen and (min-width: 840px) {
+      top: 5px;
+    }
 
     .checkbox--input:checked + & {
       border: 2px solid $brand-primary;

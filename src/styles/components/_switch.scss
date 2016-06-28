@@ -45,7 +45,7 @@
   // check
   &:after {
     position: absolute;
-    top: $switch-check-top-offset;
+    top: -3px;
     display: inline-block;
     border-radius: $switch-check-border-radius;
     width: $switch-check-size;

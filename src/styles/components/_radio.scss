@@ -43,8 +43,8 @@
 
   // check
   &:before {
-    top: $radio-check-top-offset;
-    left: $radio-check-left-offset;
+    top: 9px;
+    left: 4px;
     width: $radio-check-size;
     height: $radio-check-size;
     transition: transform 0.3s ease;
@@ -72,8 +72,8 @@
 
   // background
   &:after {
-    top: $radio-background-top-offset;
-    left: $radio-background-left-offset;
+    top: 5px;
+    left: 0;
     width: $radio-background-size;
     height: $radio-background-size;
 

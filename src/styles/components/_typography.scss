@@ -1,8 +1,8 @@
 // Basic Styles
 body {
-  font-family: $preferred_font;
-  font-size: 14px;
+  font-family: $preferred-font;
   font-weight: 400;
+  font-size: $root-desktop-font-size;
   line-height: 20px;
   color: $text-color-primary;
 }
