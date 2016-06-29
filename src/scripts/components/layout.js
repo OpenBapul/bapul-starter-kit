@@ -89,8 +89,11 @@
           }
         }
 
-        this.toggleMinifiedHandler = this.toggleMinified.bind(this);
-        this.minifiedButton_.addEventListener('click', this.toggleMinifiedHandler);
+        if (this.minifiedButton_) {
+          this.toggleMinifiedHandler = this.toggleMinified.bind(this);
+          this.minifiedButton_.addEventListener('click', this.toggleMinifiedHandler);
+        }
+
       }
     }
   }

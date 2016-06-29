@@ -896,6 +896,7 @@ p {
 a {
   color: #e91e63;
   font-weight: 500;
+  word-break: break-all;
 }
 
 blockquote {
@@ -4943,6 +4944,12 @@ ul, ol {
   padding-left: 40px;
 }
 
+@media screen and (min-width: 840px) {
+  .layout--drawer > .layout--title {
+    line-height: 64px;
+  }
+}
+
 .layout--drawer .navigation {
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
@@ -5083,6 +5090,10 @@ ul, ol {
   font-weight: 400;
   line-height: 56px;
   text-transform: uppercase;
+  min-width: 230px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 @media screen and (min-width: 840px) {
@@ -28119,7 +28130,7 @@ ul, ol {
 }
 
 .checkbox--input:checked + .checkbox--label:before {
-  top: 5px;
+  top: 7px;
   left: 1px;
   border-top: 2px solid transparent;
   border-left: 2px solid transparent;
@@ -28133,14 +28144,8 @@ ul, ol {
           transform-origin: 100% 100%;
 }
 
-@media screen and (min-width: 840px) {
-  .checkbox--input:checked + .checkbox--label:before {
-    top: 7px;
-  }
-}
-
 .checkbox--input:not(:checked) + .checkbox--label:before {
-  top: 10px;
+  top: 12px;
   left: 6px;
   border: 3px solid transparent;
   width: 0;
@@ -28149,12 +28154,6 @@ ul, ol {
           transform: rotateZ(40deg);
   -webkit-transform-origin: 100% 100%;
           transform-origin: 100% 100%;
-}
-
-@media screen and (min-width: 840px) {
-  .checkbox--input:not(:checked) + .checkbox--label:before {
-    top: 12px;
-  }
 }
 
 .checkbox--input:disabled:checked + .checkbox--label:before {
@@ -28168,19 +28167,13 @@ ul, ol {
 }
 
 .checkbox--label:after {
-  top: 3px;
+  top: 5px;
   left: 0;
   display: inline-block;
   margin: 0;
   border-radius: 2px;
   width: 16px;
   height: 16px;
-}
-
-@media screen and (min-width: 840px) {
-  .checkbox--label:after {
-    top: 5px;
-  }
 }
 
 .checkbox--input:checked + .checkbox--label:after {
@@ -28622,13 +28615,26 @@ ul, ol {
   width: 28px;
   min-width: 28px;
   height: 28px;
-  color: #9e9e9e;
+  color: #757575;
 }
 
 .panel--menu > .button > i {
   width: 18px;
   font-size: 18px;
   line-height: 18px;
+}
+
+@media screen and (min-width: 840px) {
+  .panel--menu > .button {
+    width: 32px;
+    min-width: 32px;
+    height: 32px;
+  }
+  .panel--menu > .button > i {
+    width: 22px;
+    font-size: 22px;
+    line-height: 22px;
+  }
 }
 
 .panel--sub > .panel--menu {
@@ -28731,10 +28737,6 @@ ul, ol {
 
 .panel--title-alternative {
   background-color: #f7f7f7 !important;
-}
-
-.panel--title-alternative > .panel--menu > .button {
-  color: #9e9e9e;
 }
 
 .panel--title-red {

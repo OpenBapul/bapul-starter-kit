@@ -69,6 +69,7 @@ p {
 a {
   color: $text-link-color;
   font-weight: 500;
+  word-break: break-all;
 }
 
 blockquote {

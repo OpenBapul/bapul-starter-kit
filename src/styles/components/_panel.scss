@@ -27,12 +27,26 @@
     width: 28px;
     min-width: 28px;
     height: 28px;
-    color: $palette-grey-500;
+    color: $palette-grey-600;
 
     & > i {
       width: 18px;
       font-size: 18px;
       line-height: 18px;
+    }
+  }
+
+  @media screen and (min-width: 840px) {
+    & > .button {
+      width: 32px;
+      min-width: 32px;
+      height: 32px;
+
+      & > i {
+        width: 22px;
+        font-size: 22px;
+        line-height: 22px;
+      }
     }
   }
 }
@@ -138,10 +152,6 @@
 // Colorful Panel
 .panel--title-alternative {
   background-color: #f7f7f7 !important;
-
-  & > .panel--menu > .button {
-    color: $palette-grey-500;
-  }
 }
 
 @each $color_name, $color in $colors {

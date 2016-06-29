@@ -136,6 +136,10 @@
   & > .layout--title {
     line-height: $layout--header-min-height-mobile;
     padding-left: 40px;
+
+    @media screen and (min-width: 840px) {
+      line-height: $layout--header-min-height-desktop;
+    }
   }
 
   & .navigation {
@@ -257,6 +261,10 @@
   font-weight: 400;
   line-height: $layout--header-min-height-mobile;
   text-transform: uppercase;
+  min-width: 230px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 
   @media screen and (min-width: 840px) {
     font-size: 21px;
