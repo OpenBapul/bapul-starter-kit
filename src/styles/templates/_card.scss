@@ -33,6 +33,13 @@
     color: #616161;
   }
 
+  & .card--actions .button {
+    &[disabled],
+    &.button--disabled {
+      color: tint(#616161, 60);
+    }
+  }
+
   & .card--actions .card--table-page-text {
     margin-right: 8px;
     font-size: 12px;

@@ -50,7 +50,6 @@
       const fileName = event.target.getAttribute('href').split('#')[1];
       this.element_.querySelector('.' + Layout.CssClasses.TITLE).textContent = fileName;
       this.loadDoc('/views/components/' + fileName + '.html');
-      event.preventDefault();
     }
     toggleMinified() {
       this.drawer_.classList.toggle(Layout.CssClasses.MINIFIED);
@@ -82,11 +81,19 @@
         for (let i = 0, len = this.drawerNavigationLink_.length; i < len; i++) {
           this.drawerNavigationLink_[i].addEventListener('click', this.removeDrawerHandler);
 
-          if (this.drawerNavigationLink_[i].classList.contains('active')) {
-            const fileName = this.drawerNavigationLink_[i].getAttribute('href').split('#')[1];
-            this.element_.querySelector('.' + Layout.CssClasses.TITLE).textContent = fileName;
-            this.loadDoc('/views/components/' + fileName + '.html');
+          if (!location.hash) {
+            if (this.drawerNavigationLink_[i].classList.contains('active')) {
+              let fileName = this.drawerNavigationLink_[i].getAttribute('href').split('#')[1];
+              this.element_.querySelector('.' + Layout.CssClasses.TITLE).textContent = fileName;
+              this.loadDoc('/views/components/' + fileName + '.html');
+            }
           }
+        }
+
+        if (location.hash) {
+          let fileName = location.hash.split('#')[1];
+          this.element_.querySelector('.' + Layout.CssClasses.TITLE).textContent = fileName;
+          this.loadDoc('/views/components/' + fileName + '.html');
         }
 
         if (this.minifiedButton_) {

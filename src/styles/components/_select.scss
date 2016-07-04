@@ -1,0 +1,110 @@
+.select--container {
+  display: inline-block;
+  z-index: 90;
+}
+
+.select {
+  display: flex;
+  cursor: pointer;
+}
+
+.select--value {
+  display: flex;
+  align-items: center;
+  padding: 2px;
+
+  background-color: transparent;
+  position: relative;
+  box-sizing: content-box;
+  min-width: 64px;
+  min-height: 26px;
+  flex-grow: 1;
+
+  & > span:first-of-type {
+    max-width: 100%;
+    flex: 1 1 auto;
+    transform: translate3d(0,2px,0);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  & > i {
+    display: block;
+    -ms-flex-align: end;
+    align-items: flex-end;
+    text-align: end;
+    font-size: 18px;
+    margin: 0 4px;
+    transform: translate3d(0,1px,0);
+  }
+}
+
+
+.select--menu-container {
+  visibility: hidden;
+  display: block;
+  position: fixed;
+  margin-top: -36px;
+  margin-left: -6px;
+  min-width: 100px;
+  background-color: #fff;
+  opacity: 0;
+  z-index: 9;
+  transition: all 0.3s ease-in-out;
+
+  &.is-visible {
+    visibility: visible;
+    opacity: 1;
+    z-index: 90;
+  }
+}
+
+.select--menu {
+  display: flex;
+  flex-direction: column;
+  max-height: 256px;
+  min-height: 48px;
+  overflow-y: hidden;
+  transform-origin: left top;
+  transform: scale(1);
+  @include shadow-2dp();
+}
+
+.select--menu-content {
+  min-width: 136px;
+  min-height: 48px;
+  max-height: 256px;
+  overflow-y: auto;
+}
+
+.select--menu-option {
+  cursor: pointer;
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  width: auto;
+  transition: background .15s linear;
+  padding: 0 16px;
+  height: 48px;
+
+  &:hover {
+    background-color: rgb(238,238,238);
+  }
+
+  &.is-selected {
+    background-color: rgb(238,238,238);
+    color: $brand-primary;
+  }
+}
+
+.select--menu-text {
+  width: auto;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 16px;
+  pointer-events: none;
+}

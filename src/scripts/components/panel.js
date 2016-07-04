@@ -12,7 +12,7 @@
         ACTION: 'panel--action',
         REVEAL: 'panel--reveal',
         REVEAL_CLOSE: 'panel--reveal-close',
-        IS_VISIBLED: 'is-visibled'
+        IS_VISIBLE: 'is-visible'
       };
     }
     constructor(element) {
@@ -20,10 +20,10 @@
       this.init();
     }
     onShowRevealPanel() {
-      this.reveal_.classList.add(Panel.CssClasses.IS_VISIBLED);
+      this.reveal_.classList.add(Panel.CssClasses.IS_VISIBLE);
     }
     onHideRevealPanel() {
-      this.reveal_.classList.remove(Panel.CssClasses.IS_VISIBLED);
+      this.reveal_.classList.remove(Panel.CssClasses.IS_VISIBLE);
     }
     init() {
       if (this.element_) {

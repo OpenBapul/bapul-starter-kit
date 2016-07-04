@@ -62,7 +62,8 @@ const _dir = {
       './src/scripts/components/layout.js',
       './src/scripts/components/textfield.js',
       './src/scripts/components/table.js',
-      './src/scripts/components/panel.js'
+      './src/scripts/components/panel.js',
+      './src/scripts/components/select.js'
     ],
     dest: _development + 'scripts/'
   },
